@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="Author" content="Bryan Franco">
+    <meta name="Description" content="Create an account and share your projects with companies ">
+    <title>MUP - My University Project</title>
+    <link rel="stylesheet" href="assets/css/uikit.min.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/styles/mainStyles.css">
+    <link rel="shortcut icon" href="assets/image/idea_job_icon.png">
+
+</head>
+
+<body>
+    <nav class="uk-navbar-container" uk-navbar>
+
+        <div class="uk-navbar-left">
+
+            <ul class="uk-navbar-nav">
+                <li class="uk-active uk-padding-small icon-logo">
+                    <img src="assets/image/idea_job_icon.png" width="50px">
+                </li>
+                <li class="uk-active"><a href="!#">M.U.P</a></li>
+            </ul>
+        </div>
+
+        <div class="uk-navbar-right">
+            <!-- 
+                ==> this div contain a section for search anything on the web page
+
+                <div class="uk-navbar-item" class="menu-right-ocult">
+            <form action="javascript:void(0)">
+                <input class="uk-input uk-form-width-medium" type="text" placeholder="Input">
+                <button class="uk-button uk-button-primary">Search</button>
+            </form>
+        </div> -->
+            <ul class="uk-navbar-nav">
+                <!-- 
+                    ==> to insert a section with images
+                    
+                    <div class="uk-navbar-nav bar-background-menu">
+                <li class="uk-active uk-padding-small icon-logo">
+                    <img src="assets/image/idea_job_icon.png" width="40px">
+                </li>
+                <li class="uk-active uk-padding-small icon-logo">
+                    <img src="assets/image/converstion_project.png" width="40px">
+                </li>
+                <li class="uk-active uk-padding-small icon-logo">
+                    <img src="assets/image/world_job_icon.png" width="40px">
+                </li>
+            </div> -->
+                <li class="menu-right-ocult">
+                    <a href="#">
+                        <span uk-icon="icon: cog;ratio: 1.3;" class="uk-text-primary"></span> Options
+                    </a>
+                    <div uk-dropdown="pos: top-left">
+                        <ul class="uk-nav uk-dropdown-nav">
+                            <li class="uk-active uk-nav-header"><a href="#">Log Option</a></li>
+                            <li class="uk-nav-divider"></li>
+                            <li>
+                                <a href="#modal-login" uk-toggle>
+                                    <span uk-icon="icon: user;" class="uk-text-primary"></span> Login
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#modal-register" uk-toggle>
+                                    <span uk-icon="icon: user;" class="uk-text-primary"></span> Register
+                                </a>
+                            </li>
+                            <!-- Second section menu -->
+                            <li class="uk-active uk-nav-header"><a href="#">M.U.P</a></li>
+                            <li class="uk-nav-divider"></li>
+                            <li>
+                                <a href="#">
+                                    <span uk-icon="icon: users;" class="uk-text-primary"></span> About us
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span uk-icon="icon: question;" class="uk-text-primary"></span> What is MUP
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span uk-icon="icon: receiver;" class="uk-text-primary"></span> Contact
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span uk-icon="icon: heart;" class="uk-text-primary"></span> Success case projects
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </li>
+                <li class="menu-device">
+                    <a class="uk-navbar-toggle" uk-toggle="target: #offcanvas-push" uk-navbar-toggle-icon href="#">
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+
+    </nav>
+    <!-- end menu -->
+    <div id="modal-login" uk-modal>
+        <div class="uk-modal-dialog uk-modal-body modal-login">
+            <div class="uk-card-header">
+                <div class="uk-grid-small uk-flex-middle" uk-grid>
+                    <div class="uk-width-auto">
+                        <img class="uk-border-circle" width="60px" height="40" src="assets/image/idea_job_icon.png">
+                    </div>
+                    <div class="uk-width-expand">
+                        <h3 class="uk-card-title uk-margin-remove-bottom" style="color: #000;">Log-in</h3>
+                        <p class="uk-divider-icon"></p>
+                    </div>
+                </div>
+            </div>
+            <form id="formLogin">
+                <div class="uk-margin">
+                    <div class="uk-inline">
+                        <span class="uk-form-icon uk-text-primary" uk-icon="icon: user"></span>
+                        <input class="uk-input uk-form-width-large" type="text" id="nameUserLogin" placeholder="Put your name user">
+                    </div>
+                </div>
+
+                <div class="uk-margin">
+                    <div class="uk-inline">
+                        <span class="uk-form-icon uk-text-primary" uk-icon="icon: lock"></span>
+                        <input class="uk-input uk-form-width-large" type="password" id="passwordLogin" placeholder="Put your password">
+                    </div>
+                </div>
+                <button class="uk-button uk-button-primary" type="submit" name="btnEnter">
+                Enter
+            </button>
+                <button class="uk-button uk-button-danger uk-modal-close" type="button" id="btnCancelLogin">Cancel</button>
+                <hr>
+                <p>
+                    You do not have account? - <a href="#modal-register" uk-toggle> Sign up</a>
+                </p>
+            </form>
+            <p class="uk-text-right"></p>
+        </div>
+    </div>
+    <!-- Modal registro -->
+    <div id="modal-register" uk-modal>
+        <div class="uk-modal-dialog uk-modal-body modal-login">
+            <div class="uk-card-header">
+                <div class="uk-grid-small uk-flex-middle" uk-grid>
+                    <div class="uk-width-auto">
+                        <img class="" width="60px" height="40" src="assets/image/register-dates.png">
+                    </div>
+                    <div class="uk-width-expand">
+                        <h3 class="uk-card-title uk-margin-remove-bottom" style="color: #000;">Sign-up</h3>
+                        <p class="uk-divider-icon"></p>
+                    </div>
+                </div>
+            </div>
+            <ul class="uk-subnav uk-subnav-pill" uk-switcher="animation: uk-animation-slide-left-medium, uk-animation-slide-right-medium">
+                <li><a href="#">Register as a  Student</a></li>
+                <li><a href="#">Register as a  Enterprise</a></li>
+            </ul>
+
+            <ul class="uk-switcher uk-margin">
+                <li>
+                    <div>
+                        <form method="POST" id="registerUserForm">
+                            <div class="uk-margin">
+                                <div class="uk-inline">
+                                    <span class="uk-form-icon uk-text-primary" uk-icon="icon: user"></span>
+                                    <input class="uk-input uk-form-width-large" type="text" id="nameUserRegister" name="nameUserRegister" placeholder="Put your name username">
+                                </div>
+                            </div>
+
+                            <div class="uk-margin uk-grid-small uk-child-width-auto uk-grid">
+                                <label>
+                                <input class="uk-radio sexoUserReg" type="radio"
+                                       name="sexoUserReg" value="Woman">
+                                 Woman
+                            </label>
+                                <label>
+                                <input class="uk-radio sexoUserReg" type="radio"
+                                       name="sexoUserReg" value="Man">
+                                Man
+                            </label>
+                            </div>
+
+                            <div class="uk-margin">
+                                <div class="uk-inline">
+                                    <span class="uk-form-icon uk-text-primary" uk-icon="icon: lock"></span>
+                                    <input class="uk-input uk-form-width-large" type="password" id="passwordReg" placeholder="Put your password">
+                                </div>
+                            </div>
+
+                            <div class="uk-margin">
+                                <div class="uk-inline">
+                                    <span class="uk-form-icon uk-text-primary" uk-icon="icon: lock"></span>
+                                    <input class="uk-input uk-form-width-large" type="password" id="passwordConfirm" placeholder="Confirm your password">
+                                </div>
+                            </div>
+                            <div class="uk-margin uk-grid-small uk-child-width-auto uk-grid">
+                                <label>Selected as Student</label>
+
+                                <label>
+                                <input class="uk-radio enterpriseStudent" type="radio" 
+                                       name="enterpriseStudent" value="Student"
+                                       disabled="" checked="">
+                                Student
+                            </label>
+                            </div>
+                            <div class="uk-margin uk-grid-small uk-child-width-auto uk-grid">
+                                <label><input class="uk-checkbox" type="checkbox" name="termsCodition"
+                                    value="true" >
+                                <a href="termsconditions-myprojectuniversity.html">
+                                    I accept terms and conditions
+                                </a>
+                            </label>
+                            </div>
+
+
+                            <button class="uk-button uk-button-primary" type="submit" name="btnEnter">
+                            Register
+                        </button>
+                            <button class="uk-button uk-button-danger uk-modal-close" id="btnCancelRegister" type="reset">Cancelar</button>
+
+                        </form>
+                        <p class="uk-text-right">
+                            Are you are register? - <a href="#modal-login" uk-toggle> Log in</a>
+                        </p>
+                    </div>
+                </li>
+                <!--  selection who enterprise  -->
+                <li>
+                    <div>
+                        <form method="POST" id="registerUserForm">
+                            <div class="uk-margin">
+                                <div class="uk-inline">
+                                    <span class="uk-form-icon uk-text-primary" uk-icon="icon: user"></span>
+                                    <input class="uk-input uk-form-width-large" type="text" id="nameUserRegister" name="nameUserRegister" placeholder="Put your name username">
+                                </div>
+                            </div>
+
+                            <div class="uk-margin uk-grid-small uk-child-width-auto uk-grid">
+                                <label>
+                                <input class="uk-radio sexoUserReg" type="radio"
+                                       name="sexoUserReg" value="Woman">
+                                 Woman
+                            </label>
+                                <label>
+                                <input class="uk-radio sexoUserReg" type="radio"
+                                       name="sexoUserReg" value="Man">
+                                Man
+                            </label>
+                            </div>
+
+                            <div class="uk-margin">
+                                <div class="uk-inline">
+                                    <span class="uk-form-icon uk-text-primary" uk-icon="icon: lock"></span>
+                                    <input class="uk-input uk-form-width-large" type="password" id="passwordReg" placeholder="Put your password">
+                                </div>
+                            </div>
+
+                            <div class="uk-margin">
+                                <div class="uk-inline">
+                                    <span class="uk-form-icon uk-text-primary" uk-icon="icon: lock"></span>
+                                    <input class="uk-input uk-form-width-large" type="password" id="passwordConfirm" placeholder="Confirm your password">
+                                </div>
+                            </div>
+                            <div class="uk-margin uk-grid-small uk-child-width-auto uk-grid">
+                                <label>Selected as Enterprise</label>
+                                <label>
+                                <input class="uk-radio enterpriseStudent" type="radio" 
+                                       name="enterpriseStudent" value="Enterprise"
+                                       disabled="" checked="">
+                                 Enterprise
+                            </label>
+                            </div>
+                            <div class="uk-margin uk-grid-small uk-child-width-auto uk-grid">
+                                <label><input class="uk-checkbox" type="checkbox" name="termsCodition"
+                                    value="true" >
+                                <a href="termsconditions-myprojectuniversity.html">
+                                    I accept terms and conditions
+                                </a>
+                            </label>
+                            </div>
+
+
+                            <button class="uk-button uk-button-primary" type="submit" name="btnEnter">
+                            Register
+                        </button>
+                            <button class="uk-button uk-button-danger uk-modal-close" id="btnCancelRegister" type="reset">Cancelar</button>
+
+                        </form>
+                        <p class="uk-text-right">
+                            Are you are register? - <a href="#modal-login" uk-toggle> Log in</a>
+                        </p>
+                    </div>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+
+
+    <!-- menu push -->
+    <div id="offcanvas-push" uk-offcanvas="mode: push; overlay: true" class="">
+        <div class="uk-offcanvas-bar menu-push">
+
+            <button class="uk-offcanvas-close" type="button" uk-close></button>
+
+            <h3 class="uk-text-left">
+                <img src="assets/image/idea_job_icon.png" width="50px"> M.U.P
+            </h3>
+            <hr class="uk-divider-small">
+            <ul uk-accordion="collapsible: true">
+                <li>
+                    <a class="uk-accordion-title" href="#">User Options</a>
+                    <div class="uk-accordion-content">
+                        <ul class="uk-list uk-list-striped">
+                            <li>
+                                <a href="#modal-login" uk-toggle>
+                                    <span uk-icon="icon: user;" class="uk-text-primary"></span> Login
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#modal-register" uk-toggle>
+                                    <span uk-icon="icon: user;" class="uk-text-primary"></span> Register
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a class="uk-accordion-title" href="#">M.U.P</a>
+                    <div class="uk-accordion-content">
+                        <ul class="uk-list uk-list-striped">
+                            <li>List item 1</li>
+                            <li>List item 2</li>
+                            <li>List item 3</li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+            <div class="uk-divider-icon"></div>
+        </div>
+    </div>
+
+    <div class="uk-section" uk-parallax="bgy: -300" id="bck-image-presentation" style="margin: 0;">
+        <h1 class="uk-text-center title-h1">
+            <!-- Mi Proyecto Universitario -->
+            University Projects
+        </h1>
+        <div class="uk-container uk-container-expand">
+            <div class="uk-child-width-1-2@s uk-child-width-1-3@m uk-text-center" uk-grid>
+                <div class="card-image">
+                    <div class="uk-card uk-card- uk-card-body">
+                        <img src="assets/image/converstion_project.png" width="240px" class="main-image">
+                    </div>
+                </div>
+                <div class="card-image">
+                    <div class="uk-card uk-card- uk-card-body">
+                        <img src="assets/image/idea_job_icon.png" width="280px" class="main-image" id="imgMedia">
+                    </div>
+                </div>
+                <div class="card-image">
+                    <div class="uk-card uk-card- uk-card-body">
+                        <img src="assets/image/world_job_icon.png" width="240px" class="main-image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="uk-container- uk-padding-small container-descriptions">
+        <div class="uk-container uk-container-large planes" style="padding: 0;">
+            <h1 class="uk-text-center uk-padding-small">M.U.P ?</h1>
+
+            <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin boxes-description" uk-grid>
+                <div class="uk-flex-last@s uk-card-media-right uk-cover-container" id="aboutUs">
+                    <canvas width="600" height="300"></canvas>
+                </div>
+                <div>
+                    <div class="uk-card-body container-box-description">
+                        <h3 class="uk-card-title uk-text-center">Why do we create MUP?</h3>
+                        <p></p>> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid id="box-middle-description">
+                <div class="uk-card-media-left uk-cover-container" id="ourObjetives">
+
+                    <canvas width="600" height="300"></canvas>
+                </div>
+                <div>
+                    <div class="uk-card-body container-box-description">
+                        <h2 class="uk-card-title uk-text-center">Our Objetive</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                            in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin boxes-description" uk-grid>
+                <div class="uk-flex-last@s uk-card-media-right uk-cover-container" id="whyCreateSection">
+                    <canvas width="600" height="300"></canvas>
+                </div>
+                <div>
+                    <div class="uk-card-body container-box-description">
+                        <h3 class="uk-card-title uk-text-center">About Us</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                            in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+    <footer class="uk-background-secondary">
+        <h2 class="uk-text-center uk-padding-small uk-light">
+            M.U.P<small><sub>&reg;</sub></small> footer
+        </h2>
+        <div class="uk-container uk-container-expand">
+            <div class="uk-child-width-1-3@s uk-child-width-1-3@m uk-text-center container-footer" uk-grid>
+                <div class="item-content-box-footer">
+                    <div class="uk-background-secondary uk-padding uk-light">Section 1</div>
+                </div>
+                <div class="item-content-box-footer">
+                    <div class="uk-background-secondary uk-padding uk-light">Section 2</div>
+                </div>
+                <div class="item-content-box-footer">
+                    <div class="uk-background-secondary uk-padding uk-light">Section 3</div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="assets/js/uikit.min.js"></script>
+    <script src="assets/js/uikit-icons.min.js"></script>
+    <script src="assets/js/jquery-3.2.1.min.js"></script>
+    <script src="assets/js/scripts/mainScripts.js"></script>
+</body>
+
+</html>
