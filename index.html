@@ -52,7 +52,58 @@
                 </li>
             </div> -->
                 <li class="menu-right-ocult">
-                    <a href="#">
+                    <a href="#" uk-tooltip="title: User options; pos: bottom">
+                        <span uk-icon="icon: user;ratio: 1.3;" class="uk-text-primary"></span> User Options
+                    </a>
+                    <div class="uk-navbar-dropdown uk-navbar-dropdown-width-3">
+                        <div class="uk-navbar-dropdown-grid uk-child-width-1-2" uk-grid>
+                            <div>
+                                <ul class="uk-nav uk-navbar-dropdown-nav">
+                                    <li class="uk-active uk-nav-header">
+                                        <a href="#" uk-tooltip="title: User ; pos: buttom-right">
+                                            <span uk-icon="icon: user;ratio: 1.3;" class="uk-text-primary"></span>
+                                        </a>
+                                    </li>
+                                    <li class="uk-nav-divider"></li>
+                                    <li>
+                                        <a href="#">
+                                            + <span uk-icon="icon: folder;ratio: 1.3;" class="uk-text-primary"></span> 
+                                            Add new Project
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            + <span uk-icon="icon: user;ratio: 1.3;" class="uk-text-primary"></span> 
+                                            Profile
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div>
+                                <ul class="uk-nav uk-navbar-dropdown-nav">
+                                    <li class="uk-active uk-nav-header">
+                                        <a href="#" uk-tooltip="title: System ; pos: buttom-right">
+                                            <span uk-icon="icon: cog;ratio: 1.3;" class="uk-text-primary"></span>
+                                        </a>
+                                    </li>
+                                    <li class="uk-nav-divider"></li>
+                                    <li>
+                                        <a href="#">
+                                            + <span uk-icon="icon: lock;ratio: 1.3;" class="uk-text-primary"></span> Generate codes access
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            + <span uk-icon="icon: search;ratio: 1.3;" class="uk-text-primary"></span> Project search
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="menu-right-ocult">
+                    <a href="#" uk-tooltip="title: Options system; pos: bottom">
                         <span uk-icon="icon: cog;ratio: 1.3;" class="uk-text-primary"></span> Options
                     </a>
                     <div uk-dropdown="pos: top-left">
@@ -96,7 +147,7 @@
                     </div>
 
                 </li>
-                <li class="menu-device">
+                <li class="menu-device option-button-menu-device">
                     <a class="uk-navbar-toggle" uk-toggle="target: #offcanvas-push" uk-navbar-toggle-icon href="#">
                     </a>
                 </li>
@@ -105,6 +156,69 @@
         </div>
 
     </nav>
+    <!-- menu push -->
+    <div id="offcanvas-push" uk-offcanvas="mode: push; overlay: true" class="">
+        <div class="uk-offcanvas-bar menu-push">
+
+            <button class="uk-offcanvas-close" type="button" uk-close></button>
+
+            <h3 class="uk-text-left">
+                <img src="assets/image/idea_job_icon.png" width="50px"> M.U.P
+            </h3>
+            <hr class="uk-divider-small">
+            <ul uk-accordion="collapsible: true">
+                <li>
+                    <a class="uk-accordion-title" href="#">User Options</a>
+                    <div class="uk-accordion-content">
+                        <ul class="uk-list uk-list-striped">
+                            <li>
+                                <a href="#modal-login" uk-toggle>
+                                    <span uk-icon="icon: user;" class="uk-text-primary"></span> Login
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#modal-register" uk-toggle>
+                                    <span uk-icon="icon: user;" class="uk-text-primary"></span> Register
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a class="uk-accordion-title" href="#">M.U.P</a>
+                    <div class="uk-accordion-content">
+                        <ul class="uk-list uk-list-striped">
+                            <li>
+                                + <span uk-icon="icon: folder;ratio: 1.3;" class="uk-text-primary"></span>
+                                <a href="#!">
+                                Add new Project
+                                </a>
+                            </li>
+                            <li>
+                                + <span uk-icon="icon: user;ratio: 1.3;" class="uk-text-primary"></span>
+                                <a href="#!">
+                                 Profile
+                                </a>
+                            </li>
+                            <li>
+                                + <span uk-icon="icon: lock;ratio: 1.3;" class="uk-text-primary"></span>
+                                <a href="#!">
+                                 Generate code access
+                                </a>
+                            </li>
+                            <li>
+                                + <span uk-icon="icon: search;ratio: 1.3;" class="uk-text-primary"></span>
+                                <a href="#!">
+                                Project search
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+            <div class="uk-divider-icon"></div>
+        </div>
+    </div>
     <!-- end menu -->
     <div id="modal-login" uk-modal>
         <div class="uk-modal-dialog uk-modal-body modal-login">
@@ -305,48 +419,7 @@
     </div>
 
 
-    <!-- menu push -->
-    <div id="offcanvas-push" uk-offcanvas="mode: push; overlay: true" class="">
-        <div class="uk-offcanvas-bar menu-push">
 
-            <button class="uk-offcanvas-close" type="button" uk-close></button>
-
-            <h3 class="uk-text-left">
-                <img src="assets/image/idea_job_icon.png" width="50px"> M.U.P
-            </h3>
-            <hr class="uk-divider-small">
-            <ul uk-accordion="collapsible: true">
-                <li>
-                    <a class="uk-accordion-title" href="#">User Options</a>
-                    <div class="uk-accordion-content">
-                        <ul class="uk-list uk-list-striped">
-                            <li>
-                                <a href="#modal-login" uk-toggle>
-                                    <span uk-icon="icon: user;" class="uk-text-primary"></span> Login
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#modal-register" uk-toggle>
-                                    <span uk-icon="icon: user;" class="uk-text-primary"></span> Register
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
-                <li>
-                    <a class="uk-accordion-title" href="#">M.U.P</a>
-                    <div class="uk-accordion-content">
-                        <ul class="uk-list uk-list-striped">
-                            <li>List item 1</li>
-                            <li>List item 2</li>
-                            <li>List item 3</li>
-                        </ul>
-                    </div>
-                </li>
-            </ul>
-            <div class="uk-divider-icon"></div>
-        </div>
-    </div>
 
     <div class="uk-section" uk-parallax="bgy: -300" id="bck-image-presentation" style="margin: 0;">
         <h1 class="uk-text-center title-h1">
