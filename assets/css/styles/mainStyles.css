@@ -26,6 +26,10 @@
     height: 400px;
 }
 
+.option-button-menu-device {
+    display: none;
+}
+
 .menu-push {
     background-image: url("../../image/wallpper-moradoaz.jpg");
     background-repeat: no-repeat;
@@ -179,8 +183,6 @@ footer .container-footer {
     padding: 0;
     margin: 0;
 }
-
-footer .container-footer .item-content-box-footer {}
 
 footer .container-footer div {
     padding: 0;
