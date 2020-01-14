@@ -1,0 +1,45 @@
+.option-button-menu-device {
+    display: none;
+}
+
+.menu-push {
+    background-image: url("../../image/wallpper-moradoaz.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@media (max-width: 996px) {
+    .menu-device {
+        display: block;
+    }
+}
+
+@media (max-width: 800px) {
+    .menu-device {
+        display: block;
+    }
+    .menu-right-ocult {
+        display: none;
+    }
+}
+
+@media (max-width: 776px) {
+    .menu-device {
+        display: block;
+    }
+    .menu-right-ocult {
+        display: none;
+    }
+}
+
+
+/* styles for device max 576 px or less */
+
+@media (max-width: 576px) {
+    .menu-device {
+        display: block;
+    }
+    .menu-right-ocult {
+        display: none;
+    }
+}

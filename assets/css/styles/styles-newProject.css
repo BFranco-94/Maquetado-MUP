@@ -1,0 +1,46 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.box-content-init {
+    background-image: url("../../image/vct-bckround-bl-prpl.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.box-content-init h2 {
+    color: #fff;
+    font-size: 36px;
+    text-transform: uppercase;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: bold;
+}
+
+footer {
+    padding: 0;
+    margin: 0;
+}
+
+.item-content-box-footer {
+    padding: 10px;
+}
+
+.item-content-box-footer div ul {
+    columns: 1;
+    -webkit-columns: 1;
+    -moz-columns: 1;
+}
+
+
+/* Animate Background Image */
+
+@-webkit-keyframes aitf {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}

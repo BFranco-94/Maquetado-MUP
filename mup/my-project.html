@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="es, en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="Author" content="Aldo, Alejandra, Alejandro, Bryan Franco">
+    <meta name="Description" content="Create an new project on My University Project">
+    <title>MUP - My University Project</title>
+    <link rel="stylesheet" href="../assets/css/uikit.min.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/styles/styles-menu.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/styles/styles-newProject.css">
+    <link rel="shortcut icon" href="../assets/image/idea_job_icon.png">
+
+</head>
+
+<body>
+    <header>
+        <nav class="uk-navbar-container" uk-navbar>
+
+            <div class="uk-navbar-left">
+
+                <ul class="uk-navbar-nav">
+                    <li class="uk-active uk-padding-small icon-logo">
+                        <a href="../index.html">
+                            <img src="../assets/image/idea_job_icon.png" width="50px"> M.U.P
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="uk-navbar-right">
+                <ul class="uk-navbar-nav">
+                    <!-- 
+                    ==> to insert a section with images
+                    
+                    <div class="uk-navbar-nav bar-background-menu">
+                <li class="uk-active uk-padding-small icon-logo">
+                    <img src="assets/image/idea_job_icon.png" width="40px">
+                </li>
+                <li class="uk-active uk-padding-small icon-logo">
+                    <img src="assets/image/converstion_project.png" width="40px">
+                </li>
+                <li class="uk-active uk-padding-small icon-logo">
+                    <img src="assets/image/world_job_icon.png" width="40px">
+                </li>
+            </div> -->
+                    <li class="menu-right-ocult">
+                        <a href="#" uk-tooltip="title: User options; pos: bottom">
+                            <span uk-icon="icon: user;ratio: 1.3;" class="uk-text-primary"></span> User Options
+                        </a>
+                        <div class="uk-navbar-dropdown uk-navbar-dropdown-width-3">
+                            <div class="uk-navbar-dropdown-grid uk-child-width-1-2" uk-grid>
+                                <div>
+                                    <ul class="uk-nav uk-navbar-dropdown-nav">
+                                        <li class="uk-active uk-nav-header">
+                                            <a href="#" uk-tooltip="title: User ; pos: buttom-right">
+                                                <span uk-icon="icon: user;ratio: 1.3;" class="uk-text-primary"></span>
+                                            </a>
+                                        </li>
+                                        <li class="uk-nav-divider"></li>
+                                        <li>
+                                            <a href="../index.html">
+                                            + <span uk-icon="icon: home;ratio: 1.3;" class="uk-text-primary"></span> 
+                                            Home
+                                        </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                            + <span uk-icon="icon: user;ratio: 1.3;" class="uk-text-primary"></span> 
+                                            Profile
+                                        </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <ul class="uk-nav uk-navbar-dropdown-nav">
+                                        <li class="uk-active uk-nav-header">
+                                            <a href="#" uk-tooltip="title: System ; pos: buttom-right">
+                                                <span uk-icon="icon: cog;ratio: 1.3;" class="uk-text-primary"></span>
+                                            </a>
+                                        </li>
+                                        <li class="uk-nav-divider"></li>
+                                        <li>
+                                            <a href="#">
+                                            + <span uk-icon="icon: lock;ratio: 1.3;" class="uk-text-primary"></span> Generate codes access
+                                        </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                            + <span uk-icon="icon: search;ratio: 1.3;" class="uk-text-primary"></span> Project search
+                                        </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="menu-device option-button-menu-device">
+                        <a class="uk-navbar-toggle" uk-toggle="target: #offcanvas-push" uk-navbar-toggle-icon href="#">
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+
+        </nav>
+    </header>
+    <!-- menu push -->
+    <div id="offcanvas-push" uk-offcanvas="mode: push; overlay: true" class="">
+        <div class="uk-offcanvas-bar menu-push">
+
+            <button class="uk-offcanvas-close" type="button" uk-close></button>
+
+            <h3 class="uk-text-left">
+                <img src="../assets/image/idea_job_icon.png" width="50px"> M.U.P
+            </h3>
+            <hr class="uk-divider-small">
+            <ul uk-accordion="collapsible: true">
+                <li>
+                    <a class="uk-accordion-title" href="#">User Options</a>
+                    <div class="uk-accordion-content">
+                        <ul class="uk-list uk-list-striped">
+                            <li>
+                                <a href="#modal-login" uk-toggle>
+                                    <span uk-icon="icon: user;" class="uk-text-primary"></span> Login
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#modal-register" uk-toggle>
+                                    <span uk-icon="icon: user;" class="uk-text-primary"></span> Register
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a class="uk-accordion-title" href="#">M.U.P</a>
+                    <div class="uk-accordion-content">
+                        <ul class="uk-list uk-list-striped">
+                            <li>
+                                + <span uk-icon="icon: folder;ratio: 1.3;" class="uk-text-primary"></span>
+                                <a href="../">
+                                Home
+                                </a>
+                            </li>
+                            <li>
+                                + <span uk-icon="icon: user;ratio: 1.3;" class="uk-text-primary"></span>
+                                <a href="#!">
+                                 Profile
+                                </a>
+                            </li>
+                            <li>
+                                + <span uk-icon="icon: lock;ratio: 1.3;" class="uk-text-primary"></span>
+                                <a href="#!">
+                                 Generate code access
+                                </a>
+                            </li>
+                            <li>
+                                + <span uk-icon="icon: search;ratio: 1.3;" class="uk-text-primary"></span>
+                                <a href="#!">
+                                Project search
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+            <div class="uk-divider-icon"></div>
+        </div>
+    </div>
+
+    <div class="uk-container uk-container-large box-content-init" uk-parallax="bgy: -300">
+        <h2 class="text-center uk-padding-small">New Project</h2>
+
+        <div class="uk-divider-icon" style="color:black; font-size: 140px;"></div>
+
+        <div class="uk-text-center" uk-grid>
+
+            <div class="uk-width-expand@m">
+                <div class="uk-card uk-card-default uk-card-body">
+                    <h2 class="uk-text-center uk-text-secondary">Title of Project</h2>
+                    <form>
+
+                        <div class="uk-margin">
+                            <div class="uk-inline">
+                                <span class="uk-form-icon" uk-icon="icon: pencil"></span>
+                                <input class="uk-input uk-form-width-large uk-text-center" type="text" placeholder="Title of project">
+                            </div>
+                        </div>
+                    </form>
+
+
+                    <h3 class="uk-text-left uk-text-secondary">Project Members</h3>
+                    <form action="">
+                        <div class="uk-width-1-2@s  uk-margin">
+                            <input class="uk-input" type="number" placeholder="Number of project members ">
+                        </div>
+                    </form>
+                    <!-- seccion para agregar integrantes del proyecto -->
+
+                    <form action="">
+                        <div class="uk-child-width-1-2@s uk-child-width-1-2@m uk-text-center" uk-grid>
+
+                            <div>
+                                <div class="uk-card uk-card-default uk-card-body">
+                                    <h4 class="uk-align-left uk-text-secondary">Member Name</h4>
+
+                                    <div class="uk-inline uk-margin">
+                                        <span class="uk-form-icon" uk-icon="icon: user"></span>
+                                        <input class="uk-input uk-form-width-large uk-text-center" type="text" placeholder="Name of member(s)">
+                                    </div>
+                                    <div class="uk-inline uk-margin">
+                                        <span class="uk-form-icon" uk-icon="icon: user"></span>
+                                        <input class="uk-input uk-form-width-large uk-text-center" type="text" placeholder="LastNames of member">
+                                    </div>
+                                    <div class="uk-inline uk-margin">
+                                        <span class="uk-form-icon" uk-icon="icon: mail"></span>
+                                        <input class="uk-input uk-form-width-large uk-text-center" type="email" placeholder="Email">
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div>
+                                <div class="uk-card uk-card-default uk-card-body">
+                                    <h4 class="uk-align-left uk-text-secondary">Member Name</h4>
+
+                                    <div class="uk-inline uk-margin">
+                                        <span class="uk-form-icon" uk-icon="icon: user"></span>
+                                        <input class="uk-input uk-form-width-large uk-text-center" type="text" placeholder="Name of member(s)">
+                                    </div>
+                                    <div class="uk-inline uk-margin">
+                                        <span class="uk-form-icon" uk-icon="icon: user"></span>
+                                        <input class="uk-input uk-form-width-large uk-text-center" type="text" placeholder="LastNames of member">
+                                    </div>
+                                    <div class="uk-inline uk-margin">
+                                        <span class="uk-form-icon" uk-icon="icon: mail"></span>
+                                        <input class="uk-input uk-form-width-large uk-text-center" type="email" placeholder="Email">
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+
+
+
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+
+            <div class="uk-width-1-3@m">
+                <div class="uk-card uk-card-default uk-card-body">
+                    <!-- seccion para agregar logo del proyecto/foto -->
+                    <h3 class="uk-align-center uk-text-secondary">Project photo</h3>
+                    <div class="uk-divider-icon"></div>
+                    <form enctype="multipart/form-data" id="formImage">
+                        <div class="uk-child-width-expand@s uk-text-center" uk-grid>
+                            <div>
+                                <div class="uk-card uk-card-default uk-card-body">
+                                    <div class="uk-margin" uk-margin>
+                                        <div uk-form-custom="target: true">
+                                            <input type="file" name="imgUser" id="imgUser">
+                                            <input class="uk-input uk-form-width-large uk-text-center" type="text" placeholder="Select image user" disabled>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <button class="uk-button uk-button-default 
+                               uk-background-primary uk-text-secondary" type="submit" name="sveImage">
+                            Save Image
+                        </button>
+                    </form><br>
+                    <h4 class="uk-text-center uk-text-success" id="titleUpload"></h4>
+                    <section id="uploadPic"></section>
+
+
+                </div>
+            </div>
+        </div>
+
+
+        <!-- seccion para agregar fotos del proyecto -->
+        <div class="uk-grid-small uk-child-width-expand@s uk-text-center" uk-grid>
+            <div>
+                <div class="uk-card uk-card-default uk-card-body">pic #1</div>
+            </div>
+            <div>
+                <div class="uk-card uk-card-default uk-card-body">pic #2</div>
+            </div>
+            <div>
+                <div class="uk-card uk-card-default uk-card-body">pic #3</div>
+            </div>
+        </div>
+
+        <br><br><br>
+    </div>
+
+
+
+
+
+
+
+    <footer class="uk-background-secondary">
+        <h2 class="uk-text-center uk-padding-small uk-light">
+            M.U.P<small><sub>&reg;</sub></small> footer
+        </h2>
+        <div class="uk-container ">
+            <div class="uk-child-width-1-3@s uk-child-width-1-3@m uk-text-center container-footer" uk-grid>
+
+                <div class="item-content-box-footer">
+
+                    <div class="uk-background-secondary uk-padding uk-light">
+                        <h3>Section 1</h3>
+                        <ul class="uk-list ">
+                            <li>List item 2</li>
+                            <li>List item 2</li>
+                            <li>List item 2</li>
+                        </ul>
+
+                    </div>
+
+                </div>
+                <div class="item-content-box-footer">
+                    <div class="uk-background-secondary uk-padding uk-light">
+                        <h3>Social Media</h3>
+                        <ul class="uk-list ">
+                            <li>
+                                <a href="#!">
+                                    <span uk-icon="icon: facebook; ratio: 1.3;"
+                                    class="uk-icon-button uk-text-primary"></span>
+                                    Facebook
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#!">
+                                    <span uk-icon="icon: twitter; ratio: 1.3;"
+                                    class="uk-icon-button uk-text-primary"></span>
+                                    twitter
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#!">
+                                    <span uk-icon="icon: instagram; ratio: 1.3;"
+                                    class="uk-icon-button uk-text-primary"></span>
+                                    instagram
+                                </a>  
+                            </li>
+                            
+
+
+                        </ul>
+
+                    </div>
+                </div>
+                <div class="item-content-box-footer">
+                    <div class="uk-background-secondary uk-padding uk-light">
+                        <h3>Section 3</h3>
+                        <ul class="uk-list">
+                            <li>List item 2</li>
+                            <li>List item 2</li>
+                            <li>List item 2</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+    <script src="../assets/js/uikit.min.js"></script>
+    <script src="../assets/js/uikit-icons.min.js"></script>
+    <script src="../assets/js/jquery-3.2.1.min.js"></script>
+    <script src="../assets/js/scripts/script-newProject.js"></script>
+</body>
+
+</html>
