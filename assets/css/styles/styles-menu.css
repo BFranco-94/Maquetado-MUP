@@ -2,11 +2,23 @@
     display: none;
 }
 
+.menu-device {
+    display: none;
+}
+
 .menu-push {
     background-image: url("../../image/wallpper-moradoaz.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+.bar-background-menu {
+    background-image: url("../../image/bck-1.jpg");
+    background-attachment: all;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 
 @media (max-width: 996px) {
     .menu-device {

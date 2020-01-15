@@ -9,7 +9,31 @@
     background-size: cover;
     background-attachment: fixed;
 }
+.imgInput{
+    background-image: url("../../image/brain-nodes.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    color: #000;
+    font-size: 22px;
+    text-align: center;
+}
+.part-of-title-box{
+    border-radius: 100px 0px 0px 40px;
+}
+.part-of-title-box:hover{
+    -webkit-box-shadow: 0 0 40px 5px #000000;
+    box-shadow: 0 0 40px 5px #000000;
+}
 
+
+footer {
+    padding: 20px;
+    margin: 0;
+    background-image: url("../../image/vct-nodes.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 .box-content-init h2 {
     color: #fff;
     font-size: 36px;
@@ -18,9 +42,27 @@
     font-weight: bold;
 }
 
-footer {
-    padding: 0;
+.iconClose{
+    color: #fff;
+   background-color: red;
+   border-radius: 100px;
+    }.iconClose:hover{
+        -webkit-box-shadow: 0 0 10px 5px #000000;
+        box-shadow: 0 0 10px 5px #000000;
+        cursor: pointer;
+    }
+
+#saveMembers{ display: none; }
+
+/*footer div{
+    padding: 20px;
     margin: 0;
+    background-image: url("../../image/vct-nodes.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}*/
+footer div{
+    background-color: transparent;
 }
 
 .item-content-box-footer {
