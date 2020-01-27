@@ -8,14 +8,18 @@
     <meta name="Description" content="Create an account and share your projects with companies ">
     <title>MUP - My University Project</title>
     <link rel="stylesheet" href="assets/css/uikit.min.css" />
+    <script src="assets/js/uikit.min.js"></script>
+    <script src="assets/js/uikit-icons.min.js"></script>
+
+    
     <link rel="stylesheet" type="text/css" href="assets/css/styles/mainStyles.css">
     <link rel="stylesheet" type="text/css" href="assets/css/styles/styles-menu.css">
     <link rel="shortcut icon" href="assets/image/idea_job_icon.png">
 
 </head>
-
 <body>
-    <nav class="uk-navbar-container" uk-navbar>
+<div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar" id="cont-menu-f">
+    <nav class="uk-navbar-container menu-cont" uk-navbar>
 
         <div class="uk-navbar-left">
 
@@ -94,7 +98,7 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#">
+                                        <a href="companies/searchProject.html">
                                             + <span uk-icon="icon: search;ratio: 1.3;" class="uk-text-primary"></span> Project search
                                         </a>
                                     </li>
@@ -157,6 +161,7 @@
         </div>
 
     </nav>
+</div>
     <!-- end menu -->
     
     <!-- menu push -->
@@ -285,7 +290,7 @@
                             <div class="uk-margin">
                                 <div class="uk-inline">
                                     <span class="uk-form-icon uk-text-primary" uk-icon="icon: user"></span>
-                                    <input class="uk-input uk-form-width-large" type="text" id="nameUserRegister" name="nameUserRegister" placeholder="Put your name username">
+                                    <input class="uk-input uk-form-width-large" type="text" id="nameUserRegister" name="nameUserRegister" placeholder="UserName">
                                 </div>
                             </div>
 
@@ -305,7 +310,7 @@
                             <div class="uk-margin">
                                 <div class="uk-inline">
                                     <span class="uk-form-icon uk-text-primary" uk-icon="icon: lock"></span>
-                                    <input class="uk-input uk-form-width-large" type="password" id="passwordReg" placeholder="Put your password">
+                                    <input class="uk-input uk-form-width-large" type="password" id="passwordReg" placeholder="Password">
                                 </div>
                             </div>
 
@@ -353,20 +358,26 @@
                             <div class="uk-margin">
                                 <div class="uk-inline">
                                     <span class="uk-form-icon uk-text-primary" uk-icon="icon: user"></span>
-                                    <input class="uk-input uk-form-width-large" type="text" id="nameUserRegister" name="nameUserRegister" placeholder="Put your name username">
+                                    <input class="uk-input uk-form-width-large" type="text" id="nameUserRegister" name="usernameEnterprise" placeholder="User Name">
+                                </div>
+                            </div>
+                            <div class="uk-margin">
+                                <div class="uk-inline">
+                                    <span class="uk-form-icon uk-text-primary" uk-icon="icon: pencil"></span>
+                                    <input class="uk-input uk-form-width-large" type="text" id="nameUserRegister" name="nameEnterprise" placeholder="Enterprise Name">
                                 </div>
                             </div>
 
                             <div class="uk-margin uk-grid-small uk-child-width-auto uk-grid">
                                 <label>
                                 <input class="uk-radio sexoUserReg" type="radio"
-                                       name="sexoUserReg" value="Woman">
-                                 Woman
-                            </label>
+                                       name="typeEnterprise" value="Woman">
+                                        little
+                                </label>
                                 <label>
                                 <input class="uk-radio sexoUserReg" type="radio"
                                        name="sexoUserReg" value="Man">
-                                Man
+                                    Middle
                             </label>
                             </div>
 
@@ -419,15 +430,14 @@
     </div>
 
 
-    <div class="uk-section" uk-parallax="bgy: -300" id="bck-image-presentation" style="margin: 0;">
+    <div class="uk-section" uk-parallax="bgy: -350" id="bck-image-presentation" style="margin: 0;">
         <h1 class="uk-text-center title-h1">
-            <!-- Mi Proyecto Universitario -->
-            University Projects
+            My University Project
         </h1>
-        <div class="uk-container uk-container-expand">
-            <div class="uk-child-width-1-2@s uk-child-width-1-3@m uk-text-center" uk-grid>
-                <div class="card-image">
-                    <div class="uk-card uk-card- uk-card-body">
+        <div class="uk-container uk-container-expand" >
+            <div class="uk-child-width-1-2@s uk-child-width-1-3@m uk-text-center" uk-grid >
+                <div class="card-image" >
+                    <div class="uk-card uk-card- uk-card-body" >
                         <img src="assets/image/converstion_project.png" width="240px" class="main-image">
                     </div>
                 </div>
@@ -449,22 +459,22 @@
         <div class="uk-container uk-container-large planes" style="padding: 0;">
             <h1 class="uk-text-center uk-padding-small">M.U.P ?</h1>
 
-            <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin boxes-description" uk-grid>
+            <div class="uk-card  uk-grid-collapse uk-child-width-1-2@s uk-margin boxes-description" uk-grid>
                 <div class="uk-flex-last@s uk-card-media-right uk-cover-container" id="aboutUs">
                     <canvas width="600" height="300"></canvas>
                 </div>
                 <div>
                     <div class="uk-card-body container-box-description">
                         <h3 class="uk-card-title uk-text-center">Why do we create MUP?</h3>
-                        <p class="uk-text-justify"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        <p class="uk-text-justify" > 
+                            We create MUP because we want all students to have an opportunity to complete their project and companies see more for university talent
                         </p>
                     </div>
                 </div>
             </div>
 
 
-            <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid id="box-middle-description">
+            <div class="uk-card  uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid id="box-middle-description">
                 <div class="uk-card-media-left uk-cover-container" id="ourObjetives">
 
                     <canvas width="600" height="300"></canvas>
@@ -473,8 +483,7 @@
                     <div class="uk-card-body container-box-description">
                         <h2 class="uk-card-title uk-text-center">Our Objetive</h2>
                         <p class="uk-text-justify">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                            in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            At MUP, our goal is to ensure that students can finish their university projects, as well as help young people with talent and new ideas, and connect them with companies so that they can create their idea completely.
                         </p>
                     </div>
                 </div>
@@ -587,10 +596,10 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="#!">
+                                <a href="sign-up.html">
                                     <span uk-icon="icon: sign-in; ratio: 1.3;"
                                     class="uk-icon-button uk-text-primary"></span>
-                                    Sign in
+                                    Sign up
                                 </a>     
                             </li>
                         </ul>
@@ -600,8 +609,6 @@
             </div>
         </div>
     </footer>
-    <script src="assets/js/uikit.min.js"></script>
-    <script src="assets/js/uikit-icons.min.js"></script>
     <script src="assets/js/jquery-3.2.1.min.js"></script>
     <script src="assets/js/scripts/mainScripts.js"></script>
 </body>

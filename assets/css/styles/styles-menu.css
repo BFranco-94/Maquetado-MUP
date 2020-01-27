@@ -1,3 +1,9 @@
+.menu-cont{
+    height: 65px;
+}
+.menu-cont .uk-navbar-left{
+    color: #fff;
+}
 .option-button-menu-device {
     display: none;
 }
@@ -19,6 +25,20 @@
     background-size: cover;
 }
 
+footer {
+    padding: 20px;
+    margin: 0;
+    background-image: url("../../image/vctNew.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-size: 16px;
+}
+footer ul li a{ color: orange; }
+
+footer h2{
+    color: #fff;
+    font-size: 46px;
+}
 
 @media (max-width: 996px) {
     .menu-device {

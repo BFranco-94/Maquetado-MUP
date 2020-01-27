@@ -1,0 +1,27 @@
+*{ padding: 0; margin: 0; }
+#box-content-search{
+	background-image: url("../../image/nodos.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#main-title{ color: #fff; font-size: 56px; }
+
+.box-tosearch{ width: 1350px; }
+.box-result-first-style{ /* styles direct from css */
+	/*width: 1350px;*/
+	display: none;
+ 	transition: 1s all ease;
+	width: 1350px; margin-left: 0px; top: 80px;
+}
+.result-box{ /*styles on change javascript*/
+	display: block;
+ 	transition: 1s all ease;
+	width: 1350px; margin-left: 0px; top: 80px;
+}
+@media (max-width: 576px) {
+	.result-box{
+		width: 500px; margin-left: 0px; top: 20px;
+	}
+}

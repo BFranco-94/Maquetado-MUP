@@ -16,35 +16,22 @@
 
 <body>
     <header>
-        <nav class="uk-navbar-container" uk-navbar>
+    <div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar">
+        <nav class="uk-navbar-container menu-cont" uk-navbar>
 
             <div class="uk-navbar-left">
 
                 <ul class="uk-navbar-nav">
                     <li class="uk-active uk-padding-small icon-logo">
-                        <a href="../index.html">
-                            <img src="../assets/image/idea_job_icon.png" width="50px"> M.U.P
-                        </a>
+                        <img src="../assets/image/idea_job_icon.png" width="50px">
                     </li>
+                    <li class="uk-active"><a href="!#">M.U.P</a></li>
                 </ul>
             </div>
 
             <div class="uk-navbar-right">
                 <ul class="uk-navbar-nav">
-                    <!-- 
-                    ==> to insert a section with images
                     
-                    <div class="uk-navbar-nav bar-background-menu">
-                <li class="uk-active uk-padding-small icon-logo">
-                    <img src="assets/image/idea_job_icon.png" width="40px">
-                </li>
-                <li class="uk-active uk-padding-small icon-logo">
-                    <img src="assets/image/converstion_project.png" width="40px">
-                </li>
-                <li class="uk-active uk-padding-small icon-logo">
-                    <img src="assets/image/world_job_icon.png" width="40px">
-                </li>
-            </div> -->
                     <li class="menu-right-ocult">
                         <a href="#" uk-tooltip="title: User options; pos: bottom">
                             <span uk-icon="icon: user;ratio: 1.3;" class="uk-text-primary"></span> User Options
@@ -87,7 +74,7 @@
                                         </a>
                                         </li>
                                         <li>
-                                            <a href="#">
+                                            <a href="../companies/searchProject.html">
                                             + <span uk-icon="icon: search;ratio: 1.3;" class="uk-text-primary"></span> Project search
                                         </a>
                                         </li>
@@ -106,7 +93,8 @@
             </div>
 
         </nav>
-    </header>
+    </div>
+</header>
     <!-- menu push -->
     <div id="offcanvas-push" uk-offcanvas="mode: push; overlay: true" class="">
         <div class="uk-offcanvas-bar menu-push">
@@ -171,21 +159,29 @@
         </div>
     </div>
 
-    <div class="uk-container uk-container-large box-content-init " uk-parallax="bgy: -300;bgy: 650" >
-        <h2 class="uk-align-center uk-text-center uk-padding-small">New Project</h2>
+<div class="uk-container uk-container-large box-content-init "  id="box-content-init">
+    <h2 class="uk-align-center uk-text-center uk-padding-small">Add new Project</h2>
 
-        <div class="uk-divider-icon" style="color:black; font-size: 140px;"></div>
+    <div class="container py-5">
+      <div class="output" id="output">
+        <h1 class="cursor"></h1>
+        <p></p>
+      </div>
+    </div>
+
+    <div class="uk-divider-icon" style="color:black; font-size: 140px;"></div>
 
 <div class="uk-text-center" uk-grid>
 
     <div class="uk-width-expand@m " >
-        <div class="uk-card uk-card-default uk-card-body part-of-title-box">
+        <div class="uk-card uk-card-default uk-card-body part-of-title-box area-shadow">
             <h2 class="uk-text-center uk-text-secondary">Title of Project</h2>
             <form>
                 <div class="uk-margin">
                     <div class="uk-inline">
                         <span class="uk-form-icon" uk-icon="icon: pencil"></span>
-                        <input class="uk-input uk-form-width-large uk-text-center" type="text" placeholder="Title of project">
+                        <input class="uk-input uk-form-width-large uk-text-center" type="text" placeholder="Title of project" id="titleProject"
+                        pattern="[A-Za-z]{1,30}">
                     </div>
                 </div>
                 
@@ -193,12 +189,7 @@
 
 
             <h3 class="uk-text-left uk-text-secondary">Project Members</h3>
-            <!-- <h4 class="uk-text-center uk-align-left uk-text-secondary">
-                select number members
-            </h4> -->
-            <!-- <p class="uk-text-center uk-align-left uk-text-secondary">
-                select number members
-            </p><br> -->
+
             <form class="uk-grid-small uk-margin" id="formSelectNumberMember" uk-grid>
                 <div class="uk-width-1-2@s">
                     <input class="uk-input uk-form-width-large uk-text-center" 
@@ -209,61 +200,43 @@
                 </div>
             </form>
             <!-- seccion para agregar integrantes del proyecto -->
-
             <form action="prueba.html" method="GET">
                 <div class="uk-child-width-1-2@s uk-child-width-1-2@m uk-text-center"uk-grid id="addElementsMembers" >
-                    <!-- <div id="elementMember1" class="delMemberBox">
-                        <div class="uk-card uk-card-default uk-card-body">
-                            <span uk-icon="icon: close;"
-                                   class="iconClose" id="delMemberBox"></span>
-                            <h4 class="uk-align-left uk-text-secondary">Member Name</h4>
 
-                            <div class="uk-inline uk-margin">
-                                <span class="uk-form-icon" uk-icon="icon: user"></span>
-                                <input class="uk-input uk-form-width-large uk-text-center" type="text" placeholder="Name of member(s)">
-                            </div>
-                            <div class="uk-inline uk-margin">
-                                <span class="uk-form-icon" uk-icon="icon: user"></span>
-                                <input class="uk-input uk-form-width-large uk-text-center" type="text" placeholder="LastNames of member">
-                            </div>
-                            <div class="uk-inline uk-margin">
-                                <span class="uk-form-icon" uk-icon="icon: mail"></span>
-                                <input class="uk-input uk-form-width-large uk-text-center" type="email" placeholder="Email">
-                            </div>
-                            <div class="uk-inline uk-margin">
-                                <span class="uk-form-icon" uk-icon="icon: calendar"></span>
-                                <input class="uk-input uk-form-width-large uk-text-center" type="text" placeholder="Age">
-                            </div>
-                            
-                            <span class="iconClose uk-invisible" id="idMember" >1</span>
-
-                        </div>
-                    </div>
- -->
+                    <!-- en esta seccion se agregan elementos desde javascript  -->
                     
                 </div>
-                <div class="uk-width-1-4@s uk-margin" id="saveMembers">
+                <!-- <div class="uk-width-1-4@s uk-margin" id="saveMembers">
                     <input class="uk-input uk-button-primary" type="submit" 
                            value="Save">
+                </div> -->
+                <div class="uk-width-1-4@s uk-margin">
+                    <div class="uk-inline">
+                        <span class="uk-form-icon" uk-icon="icon: question"></span>
+                        <input class="uk-input uk-form-width-large uk-text-center" 
+                               type="text"  placeholder="Approximate cost $" minlength="1" maxlength="15" pattern="[0-9]{1,15}" id="costProject">
+                    </div>
+                    
                 </div>
-                <!-- <input type="submit" name="sendDate" value="Enviar"> -->
             </form>
 
         </div>
     </div>
 
-    <div class="uk-width-1-3@m">
-        <div class="uk-card uk-card-default uk-card-body">
+    <div class="uk-width-1-3@m ">
+        <div class="uk-card uk-card-default uk-card-body box-shadow-uk-photo area-shadow">
             <!-- seccion para agregar logo del proyecto/foto -->
             <h3 class="uk-align-center uk-text-secondary">Project photo</h3>
             <div class="uk-divider-icon"></div>
-            <form enctype="multipart/form-data" id="formImage">
+            <form enctype="multipart/form-data" id="formImage" >
                 <div class="uk-child-width-expand@s uk-text-center" uk-grid>
                     <div>
                         <div class="uk-card uk-card-default uk-card-body">
                             <div class="uk-margin" uk-margin>
+                                <img id="chargeLoadImage" width="200px">
                                 <div uk-form-custom="target: true">
-                                    <input type="file" name="imgUser" id="imgUser">
+                                    <input type="file" name="imgUser" id="imgUser" 
+                                           accept="image/*">
                                     <input class="uk-input uk-form-width-large uk-text-center" type="text" placeholder="Select image user" disabled>
                                 </div>
                             </div>
@@ -273,7 +246,7 @@
                 <br>
                 <button class="uk-button uk-button-default 
                        uk-background-primary uk-text-secondary" type="submit" name="sveImage">
-                    Save Image
+                    Load
                 </button>
             </form><br>
             <h4 class="uk-text-center uk-text-success" id="titleUpload"></h4>
@@ -285,40 +258,62 @@
 </div>
 
 
+        <section class="uk-card uk-card-default uk-margin uk-padding-small area-shadow area-shadow-description" >
+            <div class="uk-flex-middle" uk-grid >
+            <div class="uk-width-2-3@m">
+                <form id="formDescription">
+                    <div class="uk-margin">
+                        <textarea class="uk-textarea" rows="5" 
+                                  placeholder="Write a description project"></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="uk-width-1-3@m uk-flex-first" >
+                
+                <figure class="uk-background-secondar" >
+                    <img src="../assets/image/description-bck.png" alt="Image"
+                    uk-parallax="bgy: -150; bgx: 420;">
+                    <figcaption class="" >
+                        <h2 class="uk-text-center uk-text-secondary">Description Project</h2>
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+        </section>
+
+
         <!-- seccion para agregar fotos del proyecto -->
-        <section class="uk-card uk-card-default uk-margin uk-padding-small">
+        <!-- <section class="uk-card uk-card-default uk-margin uk-padding-small">
             <h3 class="uk-text-left uk-margin uk-text-primary">Add some pictures from project</h3>
             <div class="uk-divider-icon"></div>
+            
              <div class="uk-child-width-1-2@s uk-child-width-1-3@m uk-text-center" uk-grid>
                     <div>
                         <div class="uk-card uk-card-default uk-card-body">
-                            <form>
+                            <form id="formSendData" enctype="multipart/file">
                                 <div class="uk-margin" uk-margin>
                                     <div uk-form-custom="target: true">
-                                        <input type="file">
-                                        <input class="uk-input uk-form-width-medium uk-form-width-large imgInput" type="text" placeholder="Add a image" disabled
+                                        <input type="file" name="" id="image1" accept="image/*"
+                                           onchange="previewFiles()">
+                                        <input class="uk-input uk-form-width-medium uk-form-width-large imgInput" type="text" placeholder="Add a image" disabled 
                                         style="height: 100px;" >
                                     </div>
                                 </div>
-                            </form>
                         </div>
                     </div>
                     <div>
                         <div class="uk-card uk-card-default uk-card-body">
-                            <form>
                                 <div class="uk-margin" uk-margin>
                                     <div uk-form-custom="target: true">
-                                        <input type="file">
+                                        <input type="file" >
                                         <input class="uk-input uk-form-width-medium uk-form-width-large imgInput" type="text" placeholder="Add a image" disabled
                                         style="height: 100px;" >
                                     </div>
                                 </div>
-                            </form>
                         </div>
                     </div>
                     <div>
                         <div class="uk-card uk-card-default uk-card-body">
-                            <form>
                                 <div class="uk-margin" uk-margin>
                                     <div uk-form-custom="target: true">
                                         <input type="file">
@@ -330,15 +325,47 @@
                         </div>
                     </div>
             </div>
+
+
+        </section> -->
+
+         <section class="uk-card uk-card-default uk-margin uk-padding-small">
+            <h2 class="uk-margin uk-text-center uk-text-secondary">Contact</h2>
+            <h4 class="uk-text-center ">
+                Enter your contact information so that companies can contact you.
+            </h4>
+            <form class="uk-grid-small uk-padding-small" uk-grid>
+                <div class="uk-inline uk-width-1-4@s">
+                    <span class="uk-form-icon uk-form-icon-flip" uk-icon="icon: user;"></span>
+                    <input class="uk-input uk-form-width-large uk-text-center" 
+                        type="email" id="emailContact" placeholder="Email" minlength="1" maxlength="50">
+                </div>
+
+                <div class="uk-inline uk-width-1-4@s">
+                    <span class="uk-form-icon uk-form-icon-flip" uk-icon="icon: receiver;"></span>
+                    <input class="uk-input uk-form-width-large uk-text-center" 
+                        type="text" id="codeCountry" placeholder="codeCountry" minlength="1" maxlength="2">
+                </div>
+
+                <div class="uk-inline uk-width-1-4@s">
+                    <span class="uk-form-icon uk-form-icon-flip" uk-icon="icon: receiver;"></span>
+                    <input class="uk-input uk-form-width-large uk-text-center" 
+                           type="text" id="numCellphone" 
+                           placeholder="Cellphone number" minlength="1" maxlength="12">
+                </div>
+            </form>
+            <p class="uk-text-center uk-text-primary">
+                If are sure to save a new project, click on button save
+            </p>
+            <input class="uk-button uk-button-primary uk-form-width-medium uk-text-center 
+            uk-margin"
+                        type="submit" id="setDates" value="Save new project">
+
         </section>
         <br><br><br>
+        </div>
+        
     </div>
-
-
-
-
-
-
 
     <footer class="uk-background-secondary" uk-parallax="bgy: -150; bgx: 420;">
         <h2 class="uk-text-center uk-padding-small uk-light">
@@ -373,12 +400,13 @@
                                     Ubication
                                 </a>
                             </li>
+                            
                         </ul>
 
                     </div>
 
                 </div>
-                <div class="item-content-box-footer">
+                <div class="">
                     <div class=" uk-padding uk-light">
                         <h3>Social Media</h3>
                         <ul class="uk-list ">
@@ -446,6 +474,7 @@
     <script src="../assets/js/uikit-icons.min.js"></script>
     <script src="../assets/js/jquery-3.2.1.min.js"></script>
     <script src="../assets/js/scripts/script-newProject.js"></script>
+    <script src="../assets/js/scripts/script-cursor.js"></script>
 
     <!-- 
         que supuso hoy un desafio para ti?

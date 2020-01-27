@@ -1,0 +1,43 @@
+let numMembers = document.getElementById('numMembers').value;
+        const elementFatherMemberDiv = document.getElementById('addElementsMembers');
+        // let newListItem = document.createElement('span');
+
+
+
+        let containMembers='';
+        
+
+
+        
+
+        for(let i=1; i <= numMembers; i++){
+            containMembers+=' \
+                    <div class="uk-card uk-card-default uk-card-body" id="delMemberBox'+i+'">\
+                    <span uk-icon="icon: close;"\
+                                   class="iconClose" id="delMemberBox"></span>\
+                        <h4 class="uk-align-left uk-text-secondary">Member Name</h4>\
+\
+                        <div class="uk-inline uk-margin">\
+                            <span class="uk-form-icon" uk-icon="icon: user"></span>\
+                            <input class="uk-input uk-form-width-large uk-text-center" type="text" placeholder="Name of member(s)">\
+                        </div>\
+                        <div class="uk-inline uk-margin">\
+                            <span class="uk-form-icon" uk-icon="icon: user"></span>\
+                            <input class="uk-input uk-form-width-large uk-text-center" type="text" placeholder="LastNames of member">\
+                        </div>\
+                        <div class="uk-inline uk-margin">\
+                            <span class="uk-form-icon" uk-icon="icon: mail"></span>\
+                            <input class="uk-input uk-form-width-large uk-text-center" type="email" placeholder="Email">\
+                        </div>\
+                        <div class="uk-inline uk-margin">\
+                            <span class="uk-form-icon" uk-icon="icon: calendar"></span>\
+                            <input class="uk-input uk-form-width-large uk-text-center" type="text" placeholder="Age">\
+                        </div>\
+                        <span class="iconClose uk-invisible" id="idMember" >'+i+'</span>\
+                    </div>\
+            ';
+            let newListItem = document.createElement('div');
+            newListItem.textContent=containMembers;
+            elementFatherMemberDiv.appendChild(newListItem);
+            containMembers='';
+        }
