@@ -26,7 +26,15 @@
     height: 400px;
 }
 
+<<<<<<< HEAD
 /*.menu-push {
+=======
+.option-button-menu-device {
+    display: none;
+}
+
+.menu-push {
+>>>>>>> dev_v1
     background-image: url("../../image/wallpper-moradoaz.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -182,8 +190,6 @@ footer .container-footer {
     padding: 0;
     margin: 0;
 }
-
-footer .container-footer .item-content-box-footer {}
 
 footer .container-footer div {
     padding: 0;
