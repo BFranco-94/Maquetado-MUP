@@ -1,39 +1,42 @@
 <!DOCTYPE html>
-<html>
-<head>
-	 <meta charset="utf-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1">
-     <meta name="Author" content="Bryan Franco">
-     <meta name="Description" 
-     content="Create an account and share your projects with companies ">
-	<title>MUP - Terms & Conditions</title>
-	<link rel="stylesheet" href="assets/css/uikit.min.css"/>
-    <link rel="shortcut icon" href="assets/image/idea_job.png">
-	<link rel="stylesheet" type="text/css" href="assets/css/styles/mainStyles.css">
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.3/css/uikit.min.css"/>
+        <link href="css/styles.css" rel="stylesheet">
+    </head>
+    <body>
+        <!--Top Menu Begins-->
+<div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar" id="cont-menu-f">
+    <nav class="uk-navbar-container menu-cont" uk-navbar>
 
-</head>
-<body>
-<nav class="uk-navbar-container" uk-navbar>
+        <div class="uk-navbar-left">
 
-    <div class="uk-navbar-left">
+            <ul class="uk-navbar-nav">
+                <li class="uk-active uk-padding-small icon-logo">
+                    <img src="assets/image/idea_job_icon.png" width="50px">
+                </li>
+                <li class="uk-active"><a href="index.html">M.U.P</a></li>
+            </ul>
+        </div>
 
-        <ul class="uk-navbar-nav">
-            <li class="uk-active uk-padding-small icon-logo">
-                <img src="assets/image/idea_job_icon.png" width="50px">
-            </li>
-            <li class="uk-active"><a href="!#">M.U.P</a></li>
-        </ul>
-    </div>
+        <div class="uk-navbar-right">
+            <!-- 
+                ==> this div contain a section for search anything on the web page
 
-    <div class="uk-navbar-right">
-        <!-- <div class="uk-navbar-item" class="menu-right-ocult">
+                <div class="uk-navbar-item" class="menu-right-ocult">
             <form action="javascript:void(0)">
                 <input class="uk-input uk-form-width-medium" type="text" placeholder="Input">
                 <button class="uk-button uk-button-primary">Search</button>
             </form>
         </div> -->
-        <ul class="uk-navbar-nav">
-            <!-- <div class="uk-navbar-nav bar-background-menu">
+            <ul class="uk-navbar-nav">
+                <!-- 
+                    ==> to insert a section with images
+                    
+                    <div class="uk-navbar-nav bar-background-menu">
                 <li class="uk-active uk-padding-small icon-logo">
                     <img src="assets/image/idea_job_icon.png" width="40px">
                 </li>
@@ -44,67 +47,542 @@
                     <img src="assets/image/world_job_icon.png" width="40px">
                 </li>
             </div> -->
-            
-            <li class="menu-right-ocult">
-               <a href="#" >Options</a>
-                        <div class="uk-navbar-dropdown">
-                            <ul class="uk-nav uk-navbar-dropdown-nav">
-                                <li class="uk-active"><a href="#">Options User</a></li>
-                                <li class="uk-nav-divider"></li>
-                                <li>
-                                    <a href="#modal-login" uk-toggle>
-                                        <span uk-icon="icon: user;"
-                                              class="uk-text-primary"></span> Login 
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#modal-register" uk-toggle>
-                                        <span uk-icon="icon: user;"
-                                              class="uk-text-primary"></span> Register 
-                                    </a>
-                                </li>
-                            </ul>
+                 <li class="menu-right-ocult">
+                    <a href="#" uk-tooltip="title: User options; pos: bottom">
+                        <span uk-icon="icon: user;ratio: 1.3;" class="uk-text-primary"></span> User Options
+                    </a>
+                    <div class="uk-navbar-dropdown uk-navbar-dropdown-width-3">
+                        <div class="uk-navbar-dropdown-grid uk-child-width-1-2" uk-grid>
+                            <div>
+                                <ul class="uk-nav uk-navbar-dropdown-nav">
+                                    <li class="uk-active uk-nav-header">
+                                        <a href="#" uk-tooltip="title: User ; pos: buttom-right">
+                                            <span uk-icon="icon: user;ratio: 1.3;" class="uk-text-primary"></span>
+                                        </a>
+                                    </li>
+                                    <li class="uk-nav-divider"></li>
+                                    <li>
+                                        <a href="mup/my-project.html">
+                                            + <span uk-icon="icon: folder;ratio: 1.3;" class="uk-text-primary"></span> 
+                                            Add new Project
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="Profiles/StudentProfile.html">
+                                            + <span uk-icon="icon: user;ratio: 1.3;" class="uk-text-primary"></span> 
+                                            My Profile
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="Profiles/ProjectProfile.html">
+                                            + <span uk-icon="icon: file-text;ratio: 1.3;" class="uk-text-primary"></span> 
+                                            My Project
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div>
+                                <ul class="uk-nav uk-navbar-dropdown-nav">
+                                    <li class="uk-active uk-nav-header">
+                                        <a href="#" uk-tooltip="title: System ; pos: buttom-right">
+                                            <span uk-icon="icon: cog;ratio: 1.3;" class="uk-text-primary"></span>
+                                        </a>
+                                    </li>
+                                    <li class="uk-nav-divider"></li>
+                                    <li>
+                                        <a href="#modal-access" uk-toggle>
+                                            + <span uk-icon="icon: lock;ratio: 1.3;" class="uk-text-primary"></span> Generate access code
+                                        </a>
+                                        <!-- This is the modal -->
+                                            <div id="modal-access" uk-modal>
+                                                <div class="uk-modal-dialog uk-modal-body">
+                                                    <h2 class="uk-modal-title">Access Code Generated</h2>
+                                                    <p>An Access Code has been sent to your registered E-mail address</p>
+                                                    <p class="uk-text-right">
+                                                        <button class="uk-button uk-button-primary uk-modal-close" type="button">Ok</button>
+                                                        
+                                                    </p>
+                                                </div>
+                                            </div>
+                                    </li>
+                                    <li>
+                                        <a href="companies/searchProject.html">
+                                            + <span uk-icon="icon: search;ratio: 1.3;" class="uk-text-primary"></span> Project search
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
-           </li>
-            <li class="menu-device">
-                <a class="uk-navbar-toggle" 
-                   uk-toggle="target: #offcanvas-push"
-                   uk-navbar-toggle-icon href="#">
-                </a>
-            </li>
-        </ul>
+                    </div>
+                </li> 
+                <li class="menu-right-ocult">
+                    <a href="#">
+                        <span uk-icon="icon: cog;ratio: 1.3;" class="uk-text-primary"></span> Options
+                    </a>
+                    <div uk-dropdown="pos: top-left">
+                        <ul class="uk-nav uk-dropdown-nav">
+                            <li class="uk-active uk-nav-header"><a href="#">Log Options</a></li>
+                            <li class="uk-nav-divider"></li>
+                            <li>
+                                <a href="#modal-login" uk-toggle>
+                                    <span uk-icon="icon: user;" class="uk-text-primary"></span> Login
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#modal-register" uk-toggle>
+                                    <span uk-icon="icon: user;" class="uk-text-primary"></span> Register
+                                </a>
+                            </li>
+                            <!-- Second section menu -->
+                            <li class="uk-active uk-nav-header"><a href="#">M.U.P</a></li>
+                            <li class="uk-nav-divider"></li>
+                            <li>
+                                <a href="index.html#us">
+                                    <span uk-icon="icon: users;" class="uk-text-primary"></span> About us
+                                </a>
+                            </li>
+                            <li>
+                                <a href="index.html#what">
+                                    <span uk-icon="icon: question;" class="uk-text-primary"></span> What is MUP
+                                </a>
+                            </li>
+                            <li>
+                                <a href="GetInTouch.html">
+                                    <span uk-icon="icon: receiver;" class="uk-text-primary"></span> Contact
+                                </a>
+                            </li>
+                           <!-- <li>
+                                <a href="#">
+                                    <span uk-icon="icon: heart;" class="uk-text-primary"></span> Success case projects
+                                </a>
+                            </li> --> 
+                        </ul>
+                    </div>
 
-    </div>
-
-</nav>
-<div id="offcanvas-push" uk-offcanvas="mode: push; overlay: true"
-    class="">
-    <div class="uk-offcanvas-bar menu-push">
-
-        <button class="uk-offcanvas-close" type="button" uk-close></button>
-
-        <h3 class="uk-text-left">
-            <img src="assets/image/idea_job_icon.png" width="50px">
-            M.U.P</h3>
-        <hr class="uk-divider-small">
-
-        <a class="" href="#">M.U.P</a>
-        <span class="uk-nav-divider"></span>
-         <div class="uk-padding-small">
-         	<ul class="uk-list uk-list-striped">
-                <li><a href="">Home</a></li>
-                <li>Register</li>
-                <li>Login</li>
+                </li>
+                <li class="menu-device">
+                    <a class="uk-navbar-toggle" uk-toggle="target: #offcanvas-push" uk-navbar-toggle-icon href="#">
+                    </a>
+                </li>
             </ul>
-         </div> 
 
-        <div class="uk-divider-icon"></div>
-    </div>
+        </div>
+
+    </nav>
 </div>
+    <!-- end menu -->
+    
+    <!-- menu push -->
+    <div id="offcanvas-push" uk-offcanvas="mode: push; overlay: true" class="">
+        <div class="uk-offcanvas-bar menu-push">
+
+            <button class="uk-offcanvas-close" type="button" uk-close></button>
+
+            <h3 class="uk-text-left">
+                <img src="assets/image/idea_job_icon.png" width="50px"> M.U.P
+            </h3>
+            <hr class="uk-divider-small">
+            <ul uk-accordion="collapsible: true">
+                <li>
+                    <a class="uk-accordion-title" href="#">User Options</a>
+                    <div class="uk-accordion-content">
+                        <ul class="uk-list uk-list-striped">
+                            <li>
+                                <a href="#modal-login" uk-toggle>
+                                    <span uk-icon="icon: user;" class="uk-text-primary"></span> Login
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#modal-register" uk-toggle>
+                                    <span uk-icon="icon: user;" class="uk-text-primary"></span> Register
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a class="uk-accordion-title" href="#">M.U.P</a>
+                    <div class="uk-accordion-content">
+                        <ul class="uk-list uk-list-striped">
+                            <li>
+                                <a href="#">
+                                    <span uk-icon="icon: users;" class="uk-text-primary"></span> About us
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span uk-icon="icon: question;" class="uk-text-primary"></span> What is MUP
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span uk-icon="icon: receiver;" class="uk-text-primary"></span> Contact
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span uk-icon="icon: heart;" class="uk-text-primary"></span> Success case projects
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+            <div class="uk-divider-icon"></div>
+        </div>
+    </div>
 
 
-<script src="assets/js/uikit.min.js"></script>
-<script src="assets/js/uikit-icons.min.js"></script>
+    <div id="modal-login" uk-modal>
+        <div class="uk-modal-dialog uk-modal-body modal-login">
+            <div class="uk-card-header">
+                <div class="uk-grid-small uk-flex-middle" uk-grid>
+                    <div class="uk-width-auto">
+                        <img class="uk-border-circle" width="60px" height="40" src="assets/image/idea_job_icon.png">
+                    </div>
+                    <div class="uk-width-expand">
+                        <h3 class="uk-card-title uk-margin-remove-bottom" style="color: #000;">Log-in</h3>
+                        <p class="uk-divider-icon"></p>
+                    </div>
+                </div>
+            </div>
+            <form id="formLogin">
+                <div class="uk-margin">
+                    <div class="uk-inline">
+                        <span class="uk-form-icon uk-text-primary" uk-icon="icon: user"></span>
+                        <input class="uk-input uk-form-width-large" type="text" id="nameUserLogin" placeholder="User name">
+                    </div>
+                </div>
 
-</body>
+                <div class="uk-margin">
+                    <div class="uk-inline">
+                        <span class="uk-form-icon uk-text-primary" uk-icon="icon: lock"></span>
+                        <input class="uk-input uk-form-width-large" type="password" id="passwordLogin" placeholder="Password">
+                    </div>
+                </div>
+                <button class="uk-button uk-button-primary" type="submit" name="btnEnter">
+                Ok
+            </button>
+                <button class="uk-button uk-button-danger uk-modal-close" type="button" id="btnCancelLogin">Cancel</button>
+                <hr>
+                <p>
+                    Don't have an account? - <a href="#modal-register" uk-toggle> Sign up</a>
+                </p>
+            </form>
+            <p class="uk-text-right"></p>
+        </div>
+    </div>
+    <!-- Modal registro -->
+    <div id="modal-register" uk-modal>
+        <div class="uk-modal-dialog uk-modal-body modal-login">
+            <div class="uk-card-header">
+                <div class="uk-grid-small uk-flex-middle" uk-grid>
+                    <div class="uk-width-auto">
+                        <img class="" width="60px" height="40" src="assets/image/register-dates.png">
+                    </div>
+                    <div class="uk-width-expand">
+                        <h3 class="uk-card-title uk-margin-remove-bottom" style="color: #000;">Sign-up</h3>
+                        <p class="uk-divider-icon"></p>
+                    </div>
+                </div>
+            </div>
+            <ul class="uk-subnav uk-subnav-pill" uk-switcher="animation: uk-animation-slide-left-medium, uk-animation-slide-right-medium">
+                <li><a href="#">Register as  Student</a></li>
+                <li><a href="#">Register as Bussiness</a></li>
+            </ul>
+
+            <ul class="uk-switcher uk-margin">
+                <li>
+                    <div>
+                        <form method="POST" id="registerUserForm">
+                            <div class="uk-margin">
+                                <div class="uk-inline">
+                                    <span class="uk-form-icon uk-text-primary" uk-icon="icon: user"></span>
+                                    <input class="uk-input uk-form-width-large" type="text" id="nameUserRegister" name="nameUserRegister" placeholder="UserName">
+                                </div>
+                            </div>
+
+                            <div class="uk-margin uk-grid-small uk-child-width-auto uk-grid">
+                                <label>
+                                <input class="uk-radio sexoUserReg" type="radio"
+                                       name="sexoUserReg" value="Woman">
+                                 Female
+                            </label>
+                                <label>
+                                <input class="uk-radio sexoUserReg" type="radio"
+                                       name="sexoUserReg" value="Man">
+                                Male
+                            </label>
+                            </div>
+
+                            <div class="uk-margin">
+                                <div class="uk-inline">
+                                    <span class="uk-form-icon uk-text-primary" uk-icon="icon: lock"></span>
+                                    <input class="uk-input uk-form-width-large" type="password" id="passwordReg" placeholder="Password">
+                                </div>
+                            </div>
+
+                            <div class="uk-margin">
+                                <div class="uk-inline">
+                                    <span class="uk-form-icon uk-text-primary" uk-icon="icon: lock"></span>
+                                    <input class="uk-input uk-form-width-large" type="password" id="passwordConfirm" placeholder="Confirm your password">
+                                </div>
+                            </div>
+                            <div class="uk-margin uk-grid-small uk-child-width-auto uk-grid">
+                                <label>Selected as Student</label>
+
+                                <label>
+                                <input class="uk-radio enterpriseStudent" type="radio" 
+                                       name="enterpriseStudent" value="Student"
+                                       disabled="" checked="">
+                                Student
+                            </label>
+                            </div>
+                            <div class="uk-margin uk-grid-small uk-child-width-auto uk-grid">
+                                <label><input class="uk-checkbox" type="checkbox" name="termsCodition"
+                                    value="true" >
+                                <a href="termsconditions-myprojectuniversity.html">
+                                    I accept terms and conditions
+                                </a>
+                            </label>
+                            </div>
+
+
+                            <button class="uk-button uk-button-primary" type="submit" name="btnEnter">
+                            Register
+                        </button>
+                            <button class="uk-button uk-button-danger uk-modal-close" id="btnCancelRegister" type="reset">Cancel</button>
+
+                        </form>
+                        <p class="uk-text-right">
+                            Already have an account? - <a href="#modal-login" uk-toggle> Log in</a>
+                        </p>
+                    </div>
+                </li>
+                <!--  selection who enterprise  -->
+                <li>
+                    <div>
+                        <form method="POST" id="registerUserForm">
+                            <div class="uk-margin">
+                                <div class="uk-inline">
+                                    <span class="uk-form-icon uk-text-primary" uk-icon="icon: user"></span>
+                                    <input class="uk-input uk-form-width-large" type="text" id="nameUserRegister" name="usernameEnterprise" placeholder="User Name">
+                                </div>
+                            </div>
+                            <div class="uk-margin">
+                                <div class="uk-inline">
+                                    <span class="uk-form-icon uk-text-primary" uk-icon="icon: pencil"></span>
+                                    <input class="uk-input uk-form-width-large" type="text" id="nameUserRegister" name="nameEnterprise" placeholder="Bussiness Name">
+                                </div>
+                            </div>
+
+                            <div class="uk-margin uk-grid-small uk-child-width-auto uk-grid">
+                                <label>
+                                <input class="uk-radio sexoUserReg" type="radio"
+                                       name="typeEnterprise" value="Woman">
+                                        small
+                                </label>
+                                <label>
+                                <input class="uk-radio sexoUserReg" type="radio"
+                                       name="sexoUserReg" value="Man">
+                                    medium
+                            </label>
+                            </div>
+
+                            <div class="uk-margin">
+                                <div class="uk-inline">
+                                    <span class="uk-form-icon uk-text-primary" uk-icon="icon: lock"></span>
+                                    <input class="uk-input uk-form-width-large" type="password" id="passwordReg" placeholder="Put your password">
+                                </div>
+                            </div>
+
+                            <div class="uk-margin">
+                                <div class="uk-inline">
+                                    <span class="uk-form-icon uk-text-primary" uk-icon="icon: lock"></span>
+                                    <input class="uk-input uk-form-width-large" type="password" id="passwordConfirm" placeholder="Confirm your password">
+                                </div>
+                            </div>
+                            <div class="uk-margin uk-grid-small uk-child-width-auto uk-grid">
+                                <label>Selected as Bussiness</label>
+                                <label>
+                                <input class="uk-radio enterpriseStudent" type="radio" 
+                                       name="enterpriseStudent" value="Enterprise"
+                                       disabled="" checked="">
+                                 Bussiness
+                            </label>
+                            </div>
+                            <div class="uk-margin uk-grid-small uk-child-width-auto uk-grid">
+                                <label><input class="uk-checkbox" type="checkbox" name="termsCodition"
+                                    value="true" >
+                                <a href="termsconditions-myprojectuniversity.html">
+                                    I accept terms and conditions
+                                </a>
+                            </label>
+                            </div>
+
+
+                            <button class="uk-button uk-button-primary" type="submit" name="btnEnter">
+                            Register
+                        </button>
+                            <button class="uk-button uk-button-danger uk-modal-close" id="btnCancelRegister" type="reset">Cancel</button>
+
+                        </form>
+                        <p class="uk-text-right">
+                            Already have an account? - <a href="#modal-login" uk-toggle> Log in</a>
+                        </p>
+                    </div>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+    <!--Top Menu Ends-->
+        
+    <div class="uk-container uk-container-expand">
+
+        <div class="uk-card uk-card-default uk-card-body uk-width-1-1@m">
+            <div class="uk-card-badge uk-label">legal</div>
+            <h1> <span class="uk-align-center">Terms and Conditions</span></h1>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vel turpis sollicitudin, suscipit metus vitae, mollis diam. Nullam ut velit nec velit luctus euismod quis pretium arcu. Etiam dictum non leo vel pharetra. Duis egestas feugiat lectus. Pellentesque felis purus, tristique quis nulla ut, lobortis maximus libero. Sed placerat purus nec nunc mattis, in tincidunt tellus porta. Pellentesque semper leo tincidunt, pellentesque leo vitae, vestibulum nunc. Curabitur at quam massa. Praesent tempus tortor nec ipsum sodales consectetur id eu turpis. Integer sit amet ligula eget enim mattis dapibus. Nulla eu turpis quis velit hendrerit volutpat. In malesuada molestie nisi nec rhoncus.
+            </p>
+            
+            <p>Sed volutpat ante sed gravida interdum. Morbi risus diam, faucibus quis dolor in, placerat vehicula ante. Vestibulum porta pulvinar nisl dignissim tempor. Cras nec imperdiet est. Nulla dignissim in erat sed aliquam. Sed ipsum est, sollicitudin non velit quis, rutrum lobortis lacus. Aliquam erat volutpat.
+
+            </p>
+            
+            <p>Nullam id iaculis augue. Suspendisse convallis nisi in enim tempus, lobortis volutpat arcu cursus. Maecenas bibendum justo velit. Curabitur et purus magna. Curabitur vel leo purus. Maecenas nulla ex, porta sit amet fringilla at, porta quis quam. In vel augue urna. Nulla facilisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+            </p>
+
+            <p>
+                Sed sed purus in enim ornare accumsan eu ut velit. Mauris vehicula in massa eu laoreet. Sed metus mauris, dignissim nec risus sed, tempus fermentum nisl. Nam consequat at felis id malesuada. Praesent nec enim lacus. Quisque tincidunt a risus non ultrices. Nulla nulla risus, interdum a turpis sit amet, fringilla dapibus nisi. Praesent efficitur id sem in finibus. Suspendisse potenti. Vivamus vitae nisl velit. Nullam sit amet quam eleifend, tempus mi id, tempus enim. Quisque lectus elit, lobortis sit amet velit ut, aliquet ultrices arcu. Sed sollicitudin in ipsum nec imperdiet. Donec gravida, quam semper maximus sagittis, lacus purus ornare metus, eu consectetur neque sapien nec quam.
+            </p>
+                
+                
+            <p>Quisque feugiat tellus quis est pharetra, sed scelerisque orci vestibulum. Phasellus mollis odio a velit laoreet suscipit. Nullam pretium urna nec odio congue, gravida vehicula dui condimentum. Sed condimentum risus at elit congue, bibendum lacinia orci interdum. Praesent a placerat justo. Vivamus convallis metus mi, ut euismod metus luctus convallis. Nunc id dignissim erat. Duis sit amet urna sit amet eros consectetur finibus. In tempor vestibulum ante a tristique. Suspendisse volutpat est eu purus aliquam convallis. Donec vitae mauris eu massa dictum ultrices. Pellentesque quis nunc et ex molestie tristique. Phasellus convallis eu magna sodales mollis. Integer pulvinar lacus odio, eget imperdiet dui vestibulum eget. Sed non nisl semper ante ultricies gravida.
+                
+            </p>
+                
+                
+        </div>
+
+
+
+    </div>
+
+
+
+
+
+
+    <!--Footer Begins-->
+    <footer class="uk-background-secondary" uk-parallax="bgy: -150; bgx: 420;">
+        <h2 class="uk-text-center uk-padding-small uk-light">
+            My University Project<small><sub>&reg;</sub></small>
+        </h2>
+        <div class="uk-container ">
+            <div class="uk-child-width-1-3@s uk-child-width-1-3@m uk-text-center container-footer" uk-grid>
+
+                <div class="item-content-box-footer">
+
+                    <div class="uk-padding uk-light">
+                        <h3>M.U.P</h3>
+                        <ul class="uk-list ">
+                            <li>
+                                <a href="index.html#us">
+                                <span uk-icon="icon: users; ratio: 1.3;"
+                                    class="uk-icon-button uk-text-primary"></span>
+                                    About us
+                                </a>
+                            </li>
+                             <li>
+                                <a href="GetInTouch.html">
+                                <span uk-icon="icon: receiver; ratio: 1.3;"
+                                    class="uk-icon-button uk-text-primary"></span>
+                                    Contact
+                                </a>
+                            </li>
+                             <li>
+                                <a href="GetInTouch.html">
+                                <span uk-icon="icon: location; ratio: 1.3;"
+                                    class="uk-icon-button uk-text-primary"></span>
+                                    Location
+                                </a>
+                            </li>
+                        </ul>
+
+                    </div>
+
+                </div>
+                <div class="item-content-box-footer">
+                    <div class=" uk-padding uk-light">
+                        <h3>Social Media</h3>
+                        <ul class="uk-list ">
+                            <li>
+                                <a href="https://www.facebook.com/">
+                                    <span uk-icon="icon: facebook; ratio: 1.3;"
+                                    class="uk-icon-button uk-text-primary"></span>
+                                    Facebook
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://twitter.com/home">
+                                    <span uk-icon="icon: twitter; ratio: 1.3;"
+                                    class="uk-icon-button uk-text-primary"></span>
+                                    twitter
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.instagram.com/">
+                                    <span uk-icon="icon: instagram; ratio: 1.3;"
+                                    class="uk-icon-button uk-text-primary"></span>
+                                    instagram
+                                </a>  
+                            </li>
+                            
+
+
+                        </ul>
+
+                    </div>
+                </div>
+                <div class="item-content-box-footer">
+                    <div class=" uk-padding uk-light">
+                        <h3>Options</h3>
+                        <ul class="uk-list">
+                            <li>
+                               <a href="#!" uk-totop uk-scroll>
+                                    <span uk-icon="icon: home; ratio: 1.3;"
+                                    class="uk-icon-button uk-text-primary"></span>
+                                    Up 
+                                </a> 
+                            </li>
+                            <li>
+                                <a href="mup/my-project.html">
+                                    <span uk-icon="icon: pencil; ratio: 1.3;"
+                                    class="uk-icon-button uk-text-primary"></span>
+                                    New Project
+                                </a>
+                            </li>
+                            <li>
+                                <a href="sign-up.html">
+                                    <span uk-icon="icon: sign-in; ratio: 1.3;"
+                                    class="uk-icon-button uk-text-primary"></span>
+                                    Sign up
+                                </a>     
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+    <!--Footer Ends-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.6/js/uikit.min.js" 
+                integrity="sha256-v789mr/zBbgR53mfydCI78CSAF+9+nRqu+JRfs1UPg0=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.6/js/uikit-icons.min.js" 
+                integrity="sha256-l+AmZGiFz41J+gms80qC7faslJDberZDhjEsmDmQy8s=" crossorigin="anonymous"></script>
+    </body>
 </html>

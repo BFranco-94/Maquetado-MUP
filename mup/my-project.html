@@ -25,7 +25,7 @@
                     <li class="uk-active uk-padding-small icon-logo">
                         <img src="../assets/image/idea_job_icon.png" width="50px">
                     </li>
-                    <li class="uk-active"><a href="!#">M.U.P</a></li>
+                    <li class="uk-active"><a href="../index.html">M.U.P</a></li>
                 </ul>
             </div>
 
@@ -53,7 +53,7 @@
                                         </a>
                                         </li>
                                         <li>
-                                            <a href="#">
+                                            <a href="../Profiles/StudentProfile.html">
                                             + <span uk-icon="icon: user;ratio: 1.3;" class="uk-text-primary"></span> 
                                             Profile
                                         </a>
@@ -69,9 +69,20 @@
                                         </li>
                                         <li class="uk-nav-divider"></li>
                                         <li>
-                                            <a href="#">
-                                            + <span uk-icon="icon: lock;ratio: 1.3;" class="uk-text-primary"></span> Generate codes access
-                                        </a>
+                                            <a href="#modal-access" uk-toggle>
+                                                + <span uk-icon="icon: lock;ratio: 1.3;" class="uk-text-primary"></span> Generate access code
+                                            </a>
+                                            <!-- This is the modal -->
+                                                <div id="modal-access" uk-modal>
+                                                    <div class="uk-modal-dialog uk-modal-body">
+                                                        <h2 class="uk-modal-title">Access Code Generated</h2>
+                                                        <p>An Access Code has been sent to your registered E-mail address</p>
+                                                        <p class="uk-text-right">
+                                                            <button class="uk-button uk-button-primary uk-modal-close" type="button">Ok</button>
+                                                            
+                                                        </p>
+                                                    </div>
+                                                </div>
                                         </li>
                                         <li>
                                             <a href="../companies/searchProject.html">
@@ -175,12 +186,12 @@
 
     <div class="uk-width-expand@m " >
         <div class="uk-card uk-card-default uk-card-body part-of-title-box area-shadow">
-            <h2 class="uk-text-center uk-text-secondary">Title of Project</h2>
+            <h2 class="uk-text-center uk-text-secondary">Project Title</h2>
             <form>
                 <div class="uk-margin">
                     <div class="uk-inline">
                         <span class="uk-form-icon" uk-icon="icon: pencil"></span>
-                        <input class="uk-input uk-form-width-large uk-text-center" type="text" placeholder="Title of project" id="titleProject"
+                        <input class="uk-input uk-form-width-large uk-text-center" type="text" placeholder="Project title" id="titleProject"
                         pattern="[A-Za-z]{1,30}">
                     </div>
                 </div>
@@ -188,7 +199,7 @@
             </form >
 
 
-            <h3 class="uk-text-left uk-text-secondary">Project Members</h3>
+            <h3 class="uk-text-left uk-text-secondary">Team Members</h3>
 
             <form class="uk-grid-small uk-margin" id="formSelectNumberMember" uk-grid>
                 <div class="uk-width-1-2@s">
@@ -214,7 +225,7 @@
                     <div class="uk-inline">
                         <span class="uk-form-icon" uk-icon="icon: question"></span>
                         <input class="uk-input uk-form-width-large uk-text-center" 
-                               type="text"  placeholder="Approximate cost $" minlength="1" maxlength="15" pattern="[0-9]{1,15}" id="costProject">
+                               type="text"  placeholder="estimated investment $" minlength="1" maxlength="15" pattern="[0-9]{1,15}" id="costProject">
                     </div>
                     
                 </div>
@@ -226,7 +237,7 @@
     <div class="uk-width-1-3@m ">
         <div class="uk-card uk-card-default uk-card-body box-shadow-uk-photo area-shadow">
             <!-- seccion para agregar logo del proyecto/foto -->
-            <h3 class="uk-align-center uk-text-secondary">Project photo</h3>
+            <h3 class="uk-align-center uk-text-secondary">Project pictures</h3>
             <div class="uk-divider-icon"></div>
             <form enctype="multipart/form-data" id="formImage" >
                 <div class="uk-child-width-expand@s uk-text-center" uk-grid>
@@ -237,7 +248,7 @@
                                 <div uk-form-custom="target: true">
                                     <input type="file" name="imgUser" id="imgUser" 
                                            accept="image/*">
-                                    <input class="uk-input uk-form-width-large uk-text-center" type="text" placeholder="Select image user" disabled>
+                                    <input class="uk-input uk-form-width-large uk-text-center" type="text" placeholder="Pictures selection" disabled>
                                 </div>
                             </div>
                         </div>
@@ -264,7 +275,7 @@
                 <form id="formDescription">
                     <div class="uk-margin">
                         <textarea class="uk-textarea" rows="5" 
-                                  placeholder="Write a description project"></textarea>
+                                  placeholder="Type a brief description of your project"></textarea>
                     </div>
                 </form>
             </div>
@@ -274,7 +285,7 @@
                     <img src="../assets/image/description-bck.png" alt="Image"
                     uk-parallax="bgy: -150; bgx: 420;">
                     <figcaption class="" >
-                        <h2 class="uk-text-center uk-text-secondary">Description Project</h2>
+                        <h2 class="uk-text-center uk-text-secondary">Project Description</h2>
                     </figcaption>
                 </figure>
             </div>
@@ -330,32 +341,32 @@
         </section> -->
 
          <section class="uk-card uk-card-default uk-margin uk-padding-small">
-            <h2 class="uk-margin uk-text-center uk-text-secondary">Contact</h2>
+            <h2 class="uk-margin uk-text-center uk-text-secondary">Contact Info</h2>
             <h4 class="uk-text-center ">
-                Enter your contact information so that companies can contact you.
+                Type your contact info for interested bussiness be able to get in touch with you
             </h4>
             <form class="uk-grid-small uk-padding-small" uk-grid>
                 <div class="uk-inline uk-width-1-4@s">
                     <span class="uk-form-icon uk-form-icon-flip" uk-icon="icon: user;"></span>
                     <input class="uk-input uk-form-width-large uk-text-center" 
-                        type="email" id="emailContact" placeholder="Email" minlength="1" maxlength="50">
+                        type="email" id="emailContact" placeholder="E-mail" minlength="1" maxlength="50">
                 </div>
 
                 <div class="uk-inline uk-width-1-4@s">
                     <span class="uk-form-icon uk-form-icon-flip" uk-icon="icon: receiver;"></span>
                     <input class="uk-input uk-form-width-large uk-text-center" 
-                        type="text" id="codeCountry" placeholder="codeCountry" minlength="1" maxlength="2">
+                        type="text" id="codeCountry" placeholder="Area code" minlength="1" maxlength="2">
                 </div>
 
                 <div class="uk-inline uk-width-1-4@s">
                     <span class="uk-form-icon uk-form-icon-flip" uk-icon="icon: receiver;"></span>
                     <input class="uk-input uk-form-width-large uk-text-center" 
                            type="text" id="numCellphone" 
-                           placeholder="Cellphone number" minlength="1" maxlength="12">
+                           placeholder="Phone number" minlength="1" maxlength="12">
                 </div>
             </form>
             <p class="uk-text-center uk-text-primary">
-                If are sure to save a new project, click on button save
+               when finish click on save
             </p>
             <input class="uk-button uk-button-primary uk-form-width-medium uk-text-center 
             uk-margin"
@@ -367,6 +378,7 @@
         
     </div>
 
+    <!--Footer Begins-->
     <footer class="uk-background-secondary" uk-parallax="bgy: -150; bgx: 420;">
         <h2 class="uk-text-center uk-padding-small uk-light">
             My University Project<small><sub>&reg;</sub></small>
@@ -380,52 +392,51 @@
                         <h3>M.U.P</h3>
                         <ul class="uk-list ">
                             <li>
-                                <a href="#!">
+                                <a href="../index.html#us">
                                 <span uk-icon="icon: users; ratio: 1.3;"
                                     class="uk-icon-button uk-text-primary"></span>
                                     About us
                                 </a>
                             </li>
                              <li>
-                                <a href="#!">
+                                <a href="../GetInTouch.html">
                                 <span uk-icon="icon: receiver; ratio: 1.3;"
                                     class="uk-icon-button uk-text-primary"></span>
                                     Contact
                                 </a>
                             </li>
                              <li>
-                                <a href="#!">
+                                <a href="../GetInTouch.html">
                                 <span uk-icon="icon: location; ratio: 1.3;"
                                     class="uk-icon-button uk-text-primary"></span>
-                                    Ubication
+                                    Location
                                 </a>
                             </li>
-                            
                         </ul>
 
                     </div>
 
                 </div>
-                <div class="">
+                <div class="item-content-box-footer">
                     <div class=" uk-padding uk-light">
                         <h3>Social Media</h3>
                         <ul class="uk-list ">
                             <li>
-                                <a href="#!">
+                                <a href="https://www.facebook.com/">
                                     <span uk-icon="icon: facebook; ratio: 1.3;"
                                     class="uk-icon-button uk-text-primary"></span>
                                     Facebook
                                 </a>
                             </li>
                             <li>
-                                <a href="#!">
+                                <a href="https://twitter.com/home">
                                     <span uk-icon="icon: twitter; ratio: 1.3;"
                                     class="uk-icon-button uk-text-primary"></span>
                                     twitter
                                 </a>
                             </li>
                             <li>
-                                <a href="#!">
+                                <a href="https://www.instagram.com/">
                                     <span uk-icon="icon: instagram; ratio: 1.3;"
                                     class="uk-icon-button uk-text-primary"></span>
                                     instagram
@@ -450,17 +461,17 @@
                                 </a> 
                             </li>
                             <li>
-                                <a href="#!" >
+                                <a href="../mup/my-project.html">
                                     <span uk-icon="icon: pencil; ratio: 1.3;"
                                     class="uk-icon-button uk-text-primary"></span>
-                                    Register
+                                    New Project
                                 </a>
                             </li>
                             <li>
-                                <a href="#!">
+                                <a href="../sign-up.html">
                                     <span uk-icon="icon: sign-in; ratio: 1.3;"
                                     class="uk-icon-button uk-text-primary"></span>
-                                    Sign in
+                                    Sign up
                                 </a>     
                             </li>
                         </ul>
@@ -470,17 +481,15 @@
             </div>
         </div>
     </footer>
+    <!--Footer Ends-->
+
     <script src="../assets/js/uikit.min.js"></script>
     <script src="../assets/js/uikit-icons.min.js"></script>
     <script src="../assets/js/jquery-3.2.1.min.js"></script>
     <script src="../assets/js/scripts/script-newProject.js"></script>
     <script src="../assets/js/scripts/script-cursor.js"></script>
 
-    <!-- 
-        que supuso hoy un desafio para ti?
-            R= La configuracion de tomcat
-
-     -->
+   
 </body>
 
 </html>

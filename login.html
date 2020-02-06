@@ -35,16 +35,13 @@
         </div>
 
 
+
         <div class="uk-navbar-right">
             
             <ul class="uk-navbar-nav">
+                
                 <li class="menu-right-ocult">
-                    <a href="#" id="toSignin">
-                        <span uk-icon="icon: sign-in;ratio: 1.3;" class="uk-text-primary"></span> Sign-in
-                    </a>
-                </li>
-                <li class="menu-right-ocult">
-                   <a href="#sign-up" id="toSignup">
+                   <a href="#sign-up" id="toSigup">
                         <span uk-icon="icon: sign-in;ratio: 1.3;" class="uk-text-primary"></span> Sign-up
                     </a> 
                 </li>
@@ -183,146 +180,69 @@
 
 
                 <div class="uk-card-body uk-background-muted form-body">
-                    <div class="uk-grid-small uk-flex-middle" uk-grid>
+                    <div class="uk-grid-small uk-flex-middle uk-margin" uk-grid>
                         <div class="uk-width-auto">
-                            <!-- <img class="uk-border-circle" id="imageSign" width="40px" 
+                            <!-- <img class="uk-border-circle" id="imageSignin" width="40px" 
                                 height="40" 
                                  src="assets/image/idea_job_icon.png" > -->
                         </div>
                             <div class="uk-width-expand">
                             <h3 class="uk-card-title uk-margin-remove-bottom">
-                                Sign up to start
+                                Sign In
                             </h3>
                             <p class="uk-text-meta uk-margin-remove-top">
                                 
                             </p>
                         </div>
                     </div>
-                    <ul uk-tab>
-                        <li><a href="#" id="AsStudentLink">As Estudent</a></li>
-                        <li><a href="#" id="AsCompanyLink">As Company</a></li>
-                    </ul>
-                
-                    <ul class="uk-switcher uk-margin">
-                    <!-- first section to sign up -->
-                        <div>
-                            
-                            <div class="uk-card-body " style="padding: 0;">
-                                <h6 class="uk-text-primary uk-text-center@l uk-text-uppercase uk-text-danger uk-text-bold" id="messageTerms">
-                                    Please accept terms and conditions !
-                                </h6>
-                                <!-- <h6 class="uk-text-primary uk-text-center@l uk-text-uppercase uk-text-danger uk-text-bold" id="messageEmail">
-                                    Introduce a email correct !
-                                </h6> -->
-                                <form id="formAsStud">
-                                    <div class="uk-width-1-1@s uk-margin-top">
-                                        <div class="uk-inline">
-                                            <span class="uk-form-icon" uk-icon="icon: user"></span>
-                                            <input class="uk-input uk-form-width-large" id="userNameStudent" 
-                                                   type="text" placeholder="User name as student" >    
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="uk-width-1-1@s uk-margin-top">
-                                        <div class="uk-inline">
-                                            <span class="uk-form-icon" uk-icon="icon: mail"></span>
-                                            <input class="uk-input uk-form-width-large" type="text" 
-                                                   placeholder="email"  id="emailStudent" name="emailStudent">
-                                                     <!-- pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 4}" -->
-                                        </div>
-                                    </div>
-                                    <div class="uk-width-1-1@s uk-margin-top">
-                                         <div class="uk-inline">
-                                            <span class="uk-form-icon" uk-icon="icon: lock"></span>
-                                            <input class="uk-input uk-form-width-large" type="password" 
-                                                    id="password"  placeholder="password" >    
-                                        </div>
-                                    </div>
-                                    <div class="uk-width-1-1@s uk-margin-top">
-                                         <div class="uk-inline">
-                                            <span class="uk-form-icon" uk-icon="icon: lock"></span>
-                                            <input class="uk-input uk-form-width-large" type="password" 
-                                                   placeholder="Confirm password" id="conPassword">
-                                        </div>
-                                        
-                                    </div>
-                                    <div class="uk-width-1-1@s uk-margin-top">
-                                        <input class="uk-input uk-form-width-large uk-button 
-                                                uk-button-primary " 
-                                                type="submit" value="Register">
-                                    </div>
-                                    <div class="uk-width-1-1@s uk-margin-top">
-                                        <label>
-                                            <input class="uk-checkbox" type="checkbox" name="termsCodition"
-                                                   id="checkTerms"  value="true" >
-                                            <a href="termsconditions-myprojectuniversity.html">
-                                                I accept terms and conditions
-                                            </a>
-                                        </label>
-                                    </div>
-                                </form>
 
+                    <div class="uk-container-large">
+                         <h6 class="uk-text-primary uk-margin uk-text-center@l  
+                            uk-text-uppercase uk-text-danger uk-text-bold" 
+                            id="messageSelectUser">
+                                    Please chose one kind of user
+                        </h6>
+                        <form id="formAsStud">
+
+                            <div class="uk-width-1-1@s uk-margin-top">
+                                <div class="uk-inline">
+                                    <span class="uk-form-icon" uk-icon="icon: user"></span>
+                                    <input class="uk-input uk-form-width-large" id="userNameStudent" 
+                                           type="text" placeholder="UserName/Email" >    
+                                </div>
                             </div>
-                            <p class="uk-text-center">
-                                Do you have account? 
-                                <a href="login.html">Log-in</a>
-                            </p>
-                             
-                        </div>
-                        <!-- second form enterprise -->
-                        <div class="content-box-form">
-                            <div class="uk-card-body " style="padding: 0;">
-                                <form id="formAsCompany">
-                                    <div class="uk-width-1-1@s uk-margin-top">
-                                        <div class="uk-inline">
-                                            <span class="uk-form-icon" uk-icon="icon: user"></span>
-                                            <input class="uk-input uk-form-width-large" 
-                                                   type="text" id="usernameAsCompany" 
-                                                   placeholder="User name as Company">    
-                                        </div>
-                                    </div>
-                                    <div class="uk-width-1-1@s uk-margin-top">
-                                        <div class="uk-inline">
-                                            <span class="uk-form-icon" uk-icon="icon: mail"></span>
-                                            <input class="uk-input uk-form-width-large" 
-                                                   type="email" id="emailCompany" 
-                                                   placeholder="email">
-                                        </div>
-                                    </div>
-                                    <div class="uk-width-1-1@s uk-margin-top">
-                                        <div class="uk-inline">
-                                            <span class="uk-form-icon" uk-icon="icon: lock"></span>
-                                            <input class="uk-input uk-form-width-large" 
-                                                   type="text" id="passCompany" placeholder="password">    
-                                        </div>
-                                    </div>
-                                    <div class="uk-width-1-1@s uk-margin-top">
-                                        <div class="uk-inline">
-                                            <span class="uk-form-icon" uk-icon="icon: lock"></span>
-                                            <input class="uk-input uk-form-width-large" 
-                                                   type="text" id="confPassCompany"  placeholder="Confirm password">    
-                                        </div>
-                                    </div>
-                                    <div class="uk-width-1-1@s uk-margin-top">
-                                        <input class="uk-input uk-form-width-large uk-button 
-                                                uk-button-primary " 
-                                                type="submit" value="Register">
-                                    </div>
-                                    <div class="uk-width-1-1@s uk-margin-top">
-                                        <label>
-                                            <input class="uk-checkbox" type="checkbox" name="termsCodition"
-                                                   id="checkTermsCompany"  value="true" >
-                                            <a href="termsconditions-myprojectuniversity.html">
-                                                I accept terms and conditions
-                                            </a>
-                                        </label>
-                                    </div>
-                                </form>
+                            <div class="uk-width-1-1@s uk-margin-top">
+                                 <div class="uk-inline">
+                                    <span class="uk-form-icon" uk-icon="icon: lock"></span>
+                                    <input class="uk-input uk-form-width-large" 
+                                           type="password" id="passwordLogin"  
+                                           placeholder="password" >    
+                                </div>
+                            </div>
+                            <div class="uk-margin uk-grid-small uk-child-width-auto uk-grid">
+                                <label class="uk-margin">Loing as...?</label>
+
+                                <label>
+                                <input class="uk-radio enterpriseStudent" type="radio" 
+                                       name="enterpriseStudent" value="Student" >
+                                Student
+                                <input class="uk-radio enterpriseStudent" type="radio" 
+                                       name="enterpriseStudent" value="Company">
+                                Company
+                            </label>
                             </div>
 
-                        </div>
-
-                    </ul>    
+                            <div class="uk-width-1-1@s uk-margin-top">
+                                <input class="uk-input uk-form-width-large uk-button 
+                                        uk-button-primary " 
+                                        type="submit" value="Sign-in">
+                            </div>
+                        </form>
+                    </div>
+                    <p class="uk-text-center">
+                        You dont have account? 
+                        <a href="sign-up.html">Sign-up</a>
+                    </p>
                 </div>
 
             </div>
@@ -475,7 +395,7 @@
         </div>
     </footer>
 
-    <script src="assets/js/scripts/script-reg.js"></script>
+    <script src="assets/js/scripts/script-log.js"></script>
        <script src="assets/js/jquery-3.2.1.min.js"></script>
 </body>
 
