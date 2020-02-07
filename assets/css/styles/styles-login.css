@@ -1,0 +1,73 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+
+#section-sigin{
+	background-image: url("../../image/sky-sign.png");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 680px;
+}
+#messageForMistakes{ display: none; }
+
+.content-formulary{
+	opacity: .95; margin-top: 0px;
+}
+.content-card-boy-form{
+	padding: 0;
+}
+
+.form-body{
+	width: 300px;
+}
+
+
+@media (max-width: 996px) {
+    .content-formulary{
+		margin-top: 10px;
+	}
+}
+
+@media (max-width: 800px) {
+    .content-formulary{
+		margin-top: 80px;
+	}
+}
+
+@media (max-width: 768px) {
+   .content-formulary{
+		margin-top: -280px;
+	}
+
+}
+
+@media (max-width: 696px) {
+    #cont-image-left{
+		display: none;
+	}
+	.form-body{
+		width: 500px;
+	}
+}
+
+@media (min-width: 578px) {
+    .content-formulary{
+		margin-top: 80px;
+	}
+}
+
+	
+
+@media (max-width: 576px) {
+    #cont-image-left{
+		display: none;
+	}
+	.form-body{
+		width: 250px;
+	}
+	.content-formulary{
+		margin-top: 80px;
+	}
+}
