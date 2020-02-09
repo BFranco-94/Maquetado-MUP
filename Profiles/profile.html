@@ -9,8 +9,7 @@
     <title>MUP - My University Project</title>
     <link rel="stylesheet" href="../assets/css/uikit.min.css" />
     <link rel="stylesheet" type="text/css" href="../assets/css/styles/styles-menu.css">
-    <link rel="stylesheet" type="text/css" href="../assets/css/styles/mainStyles.css">
-    <link rel="stylesheet" type="text/css" href="../assets/css/styles/styles-newProject.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/styles/styles-profile.css">
     <link rel="shortcut icon" href="../assets/image/idea_job_icon.png">
 
 </head>
@@ -47,19 +46,13 @@
                                     </li>
                                     <li class="uk-nav-divider"></li>
                                     <li>
-                                        <a href="mup/my-project.html">
+                                        <a href="../mup/my-project.html">
                                             + <span uk-icon="icon: folder;ratio: 1.3;" class="uk-text-primary"></span> 
                                             Add new Project
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="Profiles/StudentProfile.html">
-                                            + <span uk-icon="icon: user;ratio: 1.3;" class="uk-text-primary"></span> 
-                                            My Profile
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="Profiles/ProjectProfile.html">
+                                        <a href="ProjectProfile.html">
                                             + <span uk-icon="icon: file-text;ratio: 1.3;" class="uk-text-primary"></span> 
                                             My Project
                                         </a>
@@ -91,7 +84,7 @@
                                             </div>
                                     </li>
                                     <li>
-                                        <a href="companies/searchProject.html">
+                                        <a href="../companies/searchProject.html">
                                             + <span uk-icon="icon: search;ratio: 1.3;" class="uk-text-primary"></span> Project search
                                         </a>
                                     </li>
@@ -114,8 +107,8 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="#modal-register" uk-toggle>
-                                    <span uk-icon="icon: user;" class="uk-text-primary"></span> Register
+                                <a href="#!">
+                                    <span uk-icon="icon: sign-out;" class="uk-text-primary"></span> Logout
                                 </a>
                             </li>
                             <!-- Second section menu -->
@@ -221,115 +214,106 @@
         <div class="uk-divider-icon"></div>
     </div>
 </div>
-<!--Top bar, icon and menu ends-->
-   
-
-<div class="uk-container uk-container-expand" id="profilePage">
-    <div class="uk-container uk-container-expand" id="profilePage">
-        <h1 class="uk-padding-small"  style="background-color: white;">Student
-            Profile
-        </h1>
 
 
-        <div class="uk-grid-small uk-child-width-expand@s uk-text-center" uk-grid>
-            <div class="uk-card uk-card-default uk-card-body">
-                <img src="../assets/image/UserProfile.jpg" width="250" height="250"> 
+
+
+
+
+
+<section class=" uk-section w-padding">
+    <div class="uk-container uk-container-expand w-padding">
+        <div class="uk-grid-match uk-grid-small uk-text-center" uk-grid>
+            <div class="uk-width-1-3@m box-grid-options">
+
+                <div class="uk-card uk-card-default uk-card-body " id="options-profile-box">
+                    <div class="uk-width-expand@m">
+                        <div class="uk-card uk-card-body box-to-select-option" id="Profile">
+                            <span uk-icon="icon: user; ratio: 2.0;"></span>
+                            User Profile
+                        </div>
+                    </div>
+                    <div class="uk-width-expand@m">
+                        <div class="uk-card uk-card-body box-to-select-option" id="Contact">
+                            <span uk-icon="icon: file-edit; ratio: 2.0;"></span>
+                            Contact
+                        </div>
+                    </div>
+                    <div class="uk-width-expand@m">
+                        <div class="uk-card uk-card-body box-to-select-option" id="TMates">
+                            <span uk-icon="icon: users; ratio: 2.0;"></span>
+                            TeamMates
+                        </div>
+                    </div>
+                    <div class="uk-width-expand@m">
+                        <div class="uk-card uk-card-body box-to-select-option" id="SMedia">
+                            <span uk-icon="icon: world; ratio: 2.0;"></span>
+                            Social Media
+                        </div>
+                    </div>
+                </div>
             </div>
-            
-            <div class="uk-card uk-card-default uk-card-body">
-                <p class="uk-text-left"><span class="uk-text-bolder">Name: </span>John Doe</p>
-                <p class="uk-text-left"><span class="uk-text-bolder">Carreer: </span> Lorem ipsum </p>
-                <p class="uk-text-left"><span class="uk-text-bolder"> College </span>dolor sit</p>
-                <p class="uk-text-left"><span class="uk-text-bolder">Location: </span>dolor sit</p>
-            </div>
-        </div>
-
-        <div class="uk-grid-small uk-child-width-expand@s uk-text-center" uk-grid>
-            <div class="uk-card uk-card-default uk-card-body" >
-                <header class="uk-text-bolder, uk-text-large">Personal Information & Professional Achievements</header>
-                <p class="uk-text-justify">
-
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ligula ligula, ultrices ac nibh in, dictum hendrerit felis. Aenean et enim ut leo viverra elementum sed dictum leo. Integer at turpis ligula. Proin sapien sapien, tincidunt tristique aliquam bibendum, congue semper sapien. Etiam venenatis, nisi nec congue tincidunt, velit nisi ultricies massa, sit amet ultricies lectus nibh sed dui. Fusce congue ante sit amet congue egestas. Nulla vulputate sed tortor in blandit.
-                </p>
-                
-                <p class="uk-text-justify">
-                    Duis rhoncus in lacus volutpat mattis. Proin dapibus vulputate est. In pretium mi finibus hendrerit placerat. Donec orci ex, volutpat non imperdiet in, vestibulum at libero. Quisque lacus est, euismod id euismod ac, mollis eget quam. Curabitur eu purus augue. Ut quis mattis est. Curabitur accumsan nibh metus. Nulla facilisi.
-                </p>
+            <div class="uk-width-expand@m box-grid-options">
+                <div class="uk-card uk-card-default uk-card-body box-info-options">
                     
-                <p class="uk-text-justify">
-                    Donec molestie eget leo at viverra. In suscipit est commodo, commodo ex quis, aliquam ipsum. Suspendisse viverra eu turpis eget semper. Curabitur mattis lacus purus, at suscipit nisi euismod vel. Phasellus egestas pellentesque leo vitae efficitur. Proin quis est a eros vehicula accumsan. Pellentesque elementum tincidunt mollis.
-                 </p>
+
+                    <div id="box-Profile">
+                        <h1 class="uk-text-center">Profile</h1>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+                    </div>
+
+                     <div id="box-Contact">
+                        <h1 class="uk-text-center">Contact</h1>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+                    </div>
+
+
+                     <div id="box-TMates">
+                        <h1 class="uk-text-center">TeamMates</h1>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+                    </div>
+
+
+                     <div id="box-SMedia">
+                        <h1 class="uk-text-center">Social Media</h1>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+                    </div>
+
+                </div>
             </div>
         </div>
-
-        <div class="uk-text-center" uk-grid uk-height-match="target: > div > .uk-card">
-            <div class="uk-width-2-3">
-                <div class="uk-card uk-card-default uk-card-body" id="Tech" uk-scrollspy="cls: uk-animation-slide-left; repeat: true"> 
-                    <h3 class="uk-card-title"  style="text-align: center;"> Team Mates </h3> 
-                    <ul>
-                        <li>John Doe</li>
-                        <li>Jane Doe</li>
-                    </ul>
-                    
-                </div>
-    
-            </div>
-    
-            <div class="uk-width-1-3@m">
-                <div class="uk-card uk-card-default uk-card-body"  uk-scrollspy="cls: uk-animation-slide-right; repeat: true">
-                    <h3 class="uk-card-title"  style="text-align: center;"> Contact Info </h3>
-                    <div class="uk-align-left"><span uk-icon="receiver"></span> <span class="uk-text-bolder">Phone:</span> (52) 111-111-1111 </div>
-                    <div class="uk-align-left"><span uk-icon="mail"></span> <span class="uk-text-bolder"> E-mail:</span> john.doe@domain.com</div>                    
-                    
-                </div>
-            </div>
-        </div>
-
-
-        <!--This is the Modal-->
-        <a class="uk-button uk-button-primary uk-width-1-1 uk-margin" href="#modal-overflow" uk-toggle>My Projects</a>
-
-        <div id="modal-overflow" uk-modal>
-            <div class="uk-modal-dialog">
-
-                <button class="uk-modal-close-default" type="button" uk-close></button>
-
-                <div class="uk-modal-header">
-                    <h2 class="uk-modal-title">Active Projects</h2>
-                </div>
-
-                <div class="uk-modal-body" uk-overflow-auto>
-
-                    <div class="uk-margin"><a href="../Profiles/ProjectProfile.html">Project One</a><a class="uk-button uk-button-default uk-button-small uk-align-right uk-margin-small-bottom" href="#">Edit</a></div>
-
-                    <div class="uk-margin"><a href="../Profiles/ProjectProfile.html">Project Two</a><a class="uk-button uk-button-default uk-button-small uk-align-right uk-margin-small-bottom" href="#">Edit</a></div>
-
-                    <div class="uk-margin"><a href="../Profiles/ProjectProfile.html">Project Three</a><a class="uk-button uk-button-default uk-button-small  uk-align-right uk-margin-small-bottom" href="#">Edit</a></div>
-
-                    <div class="uk-margin"><a href="../Profiles/ProjectProfile.html">Project Four</a><a class="uk-button uk-button-default uk-button-small uk-align-right uk-margin-small-bottom" href="#">Edit</a></div>
-
-                </div>
-
-                <div class="uk-modal-footer uk-text-right">
-                  <div><button class="uk-button uk-button-primary uk-modal-close" type="button">Close</button></div>
-                </div>
-
-            </div>
-        </div>
-        <!--Modal ens here-->
-
-            
     </div>
-
-
-
-    </div>
-</div>
+</section>
 
 
 
 
- <!--Footer Begins-->
+
+<!--Footer Begins-->
  <footer class="uk-background-secondary" uk-parallax="bgy: -150; bgx: 420;">
     <h2 class="uk-text-center uk-padding-small uk-light">
         My University Project<small><sub>&reg;</sub></small>
@@ -437,8 +421,6 @@
     <script src="../assets/js/uikit.min.js"></script>
     <script src="../assets/js/uikit-icons.min.js"></script>
     <script src="../assets/js/jquery-3.2.1.min.js"></script>
-
- 
+    <script src="../assets/js/scripts/script-profile.js"></script>
 </body>
-
 </html>
