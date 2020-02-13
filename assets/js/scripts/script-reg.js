@@ -4,23 +4,11 @@ window.addEventListener('load', function(){
 	var URLhash = window.location.hash;
 	if (URLhash=="#sign-in") {
 		$("#section-sigup").hide("slow");
-		$("#section-sigup").css("display", "none");
-		$("#section-sig-in").css("display", "block");
-		$("#section-sig-in").show("slow");
-	}else if(URLhash=="#sign-up"){
-		$("#section-sigup").show("slow");
-		$("#section-sigup").css("display", "block");
-		$("#section-sig-in").css("display", "none");
-		$("#section-sig-in").hide("slow");
 	}
 
 
 	$("#toSignin").click(function(){
 		
-	});
-	
-	$("#toSignup").click(function(){
-
 	});
 
 	document.getElementById('password').addEventListener('input', function() {
@@ -60,13 +48,8 @@ window.addEventListener('load', function(){
 	});
 
 
-	$("#AsStudentLink").click(function(){
-		cleanFieldsAsCompany();
-	});
-
-	$("#AsCompanyLink").click(function(){
-		cleanFieldsAsStudent();
-	});
+	$("#AsStudentLink").click(function(){ cleanFieldsAsCompany(); });
+	$("#AsCompanyLink").click(function(){ cleanFieldsAsStudent(); });
 
 	$('#formAsStud').submit(function(e){
 		e.preventDefault();
@@ -81,14 +64,40 @@ window.addEventListener('load', function(){
 		//validation form
 		if(isCheckedTerms && resMail && fUser){
 			if(resPass){
-				alert("success!");
+				//alert("success!");
+				//let urlPost="/register-user";
+				//let dates="userN="+userNStudent+"&mail="+myEmail+"&pass="+password+"&isChecked="+isCheckedTerms;
+				
+				$.post('ServletRegisterUsers', {
+					userName : userNStudent,
+					email: myEmail,
+					password: password,
+					checkTterms: isCheckedTerms
+				}, function(response) {
+					let datos=JSON.parse(response);
+					if(datos.dataRegisterSuccess.status==true){
+						alert("\n "+
+							  "\t Hola : "+datos.dataRegisterSuccess.NameUser+
+							  "\n \t"+datos.dataRegisterSuccess.Message);
+
+						console.log(
+								"datos JSON \n "+
+								  "Hola : "+datos.dataRegisterSuccess.NameUser+
+								  "\n : "+datos.dataRegisterSuccess.Message
+						);
+					}else{
+						alert("\n\t "+datos.dataRegisterSuccess.Message);
+						console.log("fallo -> "+datos.dataRegisterSuccess.status);
+					}
+					
+					
+				}); 
+				return false; 
 			}
 		}else{
 			//put information about errors on the form
 			validateDates(userNStudent, myEmail, isCheckedTerms, resMail);
 		}
-		
-
 	});
 
 
@@ -97,7 +106,7 @@ window.addEventListener('load', function(){
 
 
 
-//function for validate checkbox and email
+//function for validate username, email, checkbox and format email
 function validateDates(userNameS, email, terms , formatMail){
 	if(userNameS===""){
 		$("#userNameStudent").css("border","1px solid red");
@@ -122,7 +131,7 @@ function validateDates(userNameS, email, terms , formatMail){
 		// document.getElementById('emailStudent').value="please introduce a correct email";
 		setTimeout(function() {
 		    $("#emailStudent").css("color","gray");
-		    document.getElementById('emailStudent').value=email;
+		    // document.getElementById('emailStudent').value=email;
 	    },3000);
 	    return false;
 	}
