@@ -64,10 +64,6 @@ window.addEventListener('load', function(){
 		//validation form
 		if(isCheckedTerms && resMail && fUser){
 			if(resPass){
-				//alert("success!");
-				//let urlPost="/register-user";
-				//let dates="userN="+userNStudent+"&mail="+myEmail+"&pass="+password+"&isChecked="+isCheckedTerms;
-				
 				$.post('ServletRegisterUsers', {
 					userName : userNStudent,
 					email: myEmail,
@@ -89,8 +85,6 @@ window.addEventListener('load', function(){
 						alert("\n\t "+datos.dataRegisterSuccess.Message);
 						console.log("fallo -> "+datos.dataRegisterSuccess.status);
 					}
-					
-					
 				}); 
 				return false; 
 			}
