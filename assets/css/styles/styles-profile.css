@@ -8,7 +8,7 @@
 
 /* section para opciones de perfil */
 #options-profile-box{  height: 700px; background-color: #273746; padding: 0;}
-	/* opcion #1, #2, #3 */
+	/* opcion #1, #2, #3, #4 */
 	.box-to-select-option{
 		background-color:  #273746;
 		text-align: left;
@@ -20,7 +20,25 @@
 /* estilos para las cajas donde se mostrar los detalles*/
 .box-info-options:hover{
 }
-#box-Contact, #box-TMates,#box-SMedia{ display: none; }
+#box-Contact, #box-TMates,#box-SMedia,#box-Projects,#btnUpdateImageToSend{ display: none; }
+.inputsToProfileAcces:hover{ cursor: hand; }
+
+
+/*image user profile to load */
+#uploadPic{ margin: auto; width: 200px; height: 180px; }
+
+/* for image profile */
+#imageProfile{ 
+	border: 2px solid #000; 
+	transition: 1.3s all ease;
+	}#imageProfile:hover{ 
+		border: 2px solid #000; transition: .8s all ease;
+		opacity: 0.6; 
+		cursor: pointer;
+	}#imageProfile:focus{ 
+		border: 2px solid #000; transition: 1s all ease; 
+	}
+
 
 @media (max-width: 960px) {
 	#options-profile-box{ display: none; }
@@ -31,4 +49,6 @@
 }
 @media (max-width: 576px) {
 	#options-profile-box{ display: none; }
+	#imageForProfile{ display: none; }
+	/*.boxUsrName{ width: 100%; margin: 0; }*/
 }

@@ -25,7 +25,7 @@
                 <li class="uk-active uk-padding-small icon-logo">
                     <img src="../assets/image/idea_job_icon.png" width="50px">
                 </li>
-                <li class="uk-active"><a href="#!">M.U.P</a></li>
+                <li class="uk-active"><a href="../index.html">M.U.P</a></li>
             </ul>
         </div>
 
@@ -224,7 +224,7 @@
 <section class=" uk-section w-padding">
     <div class="uk-container uk-container-expand w-padding">
         <div class="uk-grid-match uk-grid-small uk-text-center" uk-grid>
-            <div class="uk-width-1-3@m box-grid-options">
+            <div class="uk-width-1-4@m box-grid-options">
 
                 <div class="uk-card uk-card-default uk-card-body " id="options-profile-box">
                     <div class="uk-width-expand@m">
@@ -251,22 +251,91 @@
                             Social Media
                         </div>
                     </div>
+                    <div class="uk-width-expand@m">
+                        <div class="uk-card uk-card-body box-to-select-option" id="projects">
+                            <span uk-icon="icon: folder; ratio: 2.0;"></span>
+                            Projects
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="uk-width-expand@m box-grid-options">
                 <div class="uk-card uk-card-default uk-card-body box-info-options">
                     
+                    <!-- section for user profile -->
 
                     <div id="box-Profile">
-                        <h1 class="uk-text-center">Profile</h1>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                         <div class="uk-grid-small uk-flex-middle" uk-grid>
+                            <div class="uk-width-auto">
+                                <img class="uk-border-circle" width="80" height="40" src="../assets/image/Default_Profilepic.jpg"
+                                id="imageProfile">
+                            </div>
+                            <div class="uk-width-expand">
+                                <h1 class="uk-text-center">Bryan Franco Velez</h1>
+                                <p class="uk-text-meta uk-margin-remove-top uk-text-right"><time datetime="2016-04-01T19:00">April 01, 2016</time></p>
+                            </div>
+                        </div>
+                        
+                        <ul uk-tab>
+                            <li><a href="#">User Access</a></li>
+                            <li><a href="#">Data User</a></li>
+                            <li><a href="#">Password</a></li>
+                        </ul>
 
+<ul class="uk-switcher uk-margin">
+    <div>
+        <form class="uk-form-horizontal uk-margin-large" uk-grid>
+            <div class="uk-width-1-2@s boxUsrName">
+                <label class="uk-form-label uk-text-left uk-margin" for="usrName">User Name</label>
+                <input class="uk-input inputsToProfileAcces" id="usrName" 
+                       name="usrName" type="text" disabled="" 
+                       placeholder="User Name" >
+            </div>
+            <div class="uk-width-1-2@s">
+                <div class="uk-width-auto">
+                    <img class="uk-border-squad" width="170" height="40" 
+                         src="../assets/image/information.png"
+                         id="imageForProfile">
+                </div>
+            </div>
+            <div class="uk-width-1-2@s">
+                <label class="uk-form-label uk-text-left uk-margin" for="email">
+                    Email
+                </label>
+                <input class="uk-input inputsToProfileAcces" id="email" 
+                       name="emailUser" type="text" disabled="" 
+                       placeholder="Email account for login">
+            </div>
+            <div class="uk-width-1-2@s">
+                <label class="uk-form-label uk-text-left uk-margin uk-text-dangerous" 
+                       for="passwordToUpdate">
+                    Introduce your password
+                </label>
+                <input class="uk-input inputsToProfileAcces" id="passwordToUpdate" 
+                       name="passwordToUpdate" type="text" disabled="" 
+                       placeholder="Introduce your password for upadte">
+            </div>
+            <div class="uk-width-1-2@s">
+                <input class="uk-button uk-button-primary" type="submit" 
+                       id="btnUpdateUserAccess" value="Update">
+            </div>
+            <div class="uk-width-1-2@s">
+                <input class="uk-button uk-button-primary" type="button" 
+                       id="btnShowUpdateUserAccess" value="Enable boxes">
+            </div>
+
+        </form>
+    </div>
+    <div>
+        <p>data user</p>
+    </div>
+    <div>
+        <p>password</p>
+    </div>
+</ul>
                     </div>
+
+                    <!-- section for the contact -->
 
                      <div id="box-Contact">
                         <h1 class="uk-text-center">Contact</h1>
@@ -292,8 +361,20 @@
                     </div>
 
 
-                     <div id="box-SMedia">
+                    <div id="box-SMedia">
                         <h1 class="uk-text-center">Social Media</h1>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+                    </div>
+
+
+                    <div id="box-Projects">
+                        <h1 class="uk-text-center">My Projects</h1>
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                     tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                     quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -310,6 +391,58 @@
 </section>
 
 
+
+
+
+
+<!-- section for modals -->
+
+<div id="modal-to-updatePicUser" uk-modal>
+    <div class="uk-modal-dialog uk-modal-body">
+        <button class="uk-modal-close-outside" type="button" uk-close></button>
+        <div class="uk-modal-header">
+            <h3 class="uk-modal-title uk-text-center uk-text-primary">
+                PHOTO USER
+            </h3>
+        </div>
+        <div class="uk-modal-body">
+            <section id="uk-align-center">
+                <center>
+                    <img id="uploadPic" class="uk-border-circle" >
+                </center>
+            </section>
+            <!-- <h4 class="uk-text-center uk-text-success" id="titleUpload"></h4> -->
+            <!-- <div class="uk-divider-icon"></div> -->
+            <form id="formLoadImageUserProfile" enctype="multipart/form-data">
+                <div class="uk-child-width-expand@s uk-text-center" uk-grid>
+                    <div>
+                        <div class="uk-card uk-card-body">
+                            <div class="uk-margin" uk-margin>
+                                <div uk-form-custom="target: true">
+                                    <input type="file" name="imgUser" id="imgUser">
+                                    <input class="uk-input uk-form-width-large uk-text-center" 
+                                            type="text" 
+                                            placeholder="Select image user" disabled>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <input class="uk-button uk-button-primary uk-margin" 
+                       type="button" value="Update Image" id="btnUpdateImageToSend">
+                <input class="uk-button uk-button-primary uk-margin" 
+                       type="submit" name="picUserProfile" value="Load Image">
+            </form>
+            <p class="uk-text-center uk-text-success" id="textFinished"></p>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<!-- end section for modals -->
 
 
 
