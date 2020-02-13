@@ -46,17 +46,18 @@
                                     </li>
                                     <li class="uk-nav-divider"></li>
                                     <li>
+                                        <a href="index.html">
+                                            + <span uk-icon="icon: home;ratio: 1.3;" class="uk-text-primary"></span> 
+                                            Home
+                                        </a>
+                                    </li>
+                                    <li>
                                         <a href="../mup/my-project.html">
                                             + <span uk-icon="icon: folder;ratio: 1.3;" class="uk-text-primary"></span> 
                                             Add new Project
                                         </a>
                                     </li>
-                                    <li>
-                                        <a href="ProjectProfile.html">
-                                            + <span uk-icon="icon: file-text;ratio: 1.3;" class="uk-text-primary"></span> 
-                                            My Project
-                                        </a>
-                                    </li>
+                                    
                                 </ul>
                             </div>
                             <div>
@@ -67,22 +68,7 @@
                                         </a>
                                     </li>
                                     <li class="uk-nav-divider"></li>
-                                    <li>
-                                        <a href="#modal-access" uk-toggle>
-                                            + <span uk-icon="icon: lock;ratio: 1.3;" class="uk-text-primary"></span> Generate access code
-                                        </a>
-                                        <!-- This is the modal -->
-                                            <div id="modal-access" uk-modal>
-                                                <div class="uk-modal-dialog uk-modal-body">
-                                                    <h2 class="uk-modal-title">Access Code Generated</h2>
-                                                    <p>An Access Code has been sent to your registered E-mail address</p>
-                                                    <p class="uk-text-right">
-                                                        <button class="uk-button uk-button-primary uk-modal-close" type="button">Ok</button>
-                                                        
-                                                    </p>
-                                                </div>
-                                            </div>
-                                    </li>
+                                    
                                     <li>
                                         <a href="../companies/searchProject.html">
                                             + <span uk-icon="icon: search;ratio: 1.3;" class="uk-text-primary"></span> Project search
@@ -103,7 +89,7 @@
                             <li class="uk-nav-divider"></li>
                             <li>
                                 <a href="#modal-login" uk-toggle>
-                                    <span uk-icon="icon: user;" class="uk-text-primary"></span> Login
+                                    <span uk-icon="icon: home;" class="uk-text-primary"></span> Home
                                 </a>
                             </li>
                             <li>
@@ -280,6 +266,7 @@
                             <li><a href="#">User Access</a></li>
                             <li><a href="#">Data User</a></li>
                             <li><a href="#">Password</a></li>
+                            <li><a href="#">Generate Code Access</a></li>
                         </ul>
 
 <ul class="uk-switcher uk-margin">
@@ -315,22 +302,133 @@
                        name="passwordToUpdate" type="text" disabled="" 
                        placeholder="Introduce your password for upadte">
             </div>
-            <div class="uk-width-1-2@s">
+            <div class="uk-width-1-2@s uk-width-1-2@m uk-width-1-6@l ">
                 <input class="uk-button uk-button-primary" type="submit" 
                        id="btnUpdateUserAccess" value="Update">
             </div>
-            <div class="uk-width-1-2@s">
+            <div class="uk-width-1-2@s uk-width-1-2@m uk-width-1-6@l">
                 <input class="uk-button uk-button-primary" type="button" 
                        id="btnShowUpdateUserAccess" value="Enable boxes">
             </div>
 
         </form>
     </div>
+
+    <!-- data user section on user profile -->
     <div>
-        <p>data user</p>
+        <form class="uk-form-horizontal uk-margin-large" uk-grid>
+            <div class="uk-width-1-2@s boxUsrName">
+                <label class="uk-form-label uk-text-left uk-margin" for="names">
+                    Name(s)
+                </label>
+                <input class="uk-input" id="names" 
+                       name="names" type="text"  
+                       placeholder="Enter your name(s)" >
+            </div>
+            <div class="uk-width-1-2@s">
+                <label class="uk-form-label uk-text-left uk-margin" for="lastName">
+                    Last Name
+                </label>
+                <input class="uk-input " id="lastName" 
+                       name="lastName" type="text"  
+                       placeholder="Enter your last Name">
+            </div>
+            <div class="uk-width-1-2@s">
+                <label class="uk-form-label uk-text-left uk-margin uk-text-dangerous" 
+                       for="nameOfUniversity">
+                    University Name
+                </label>
+                <input class="uk-input " id="nameOfUniversity" 
+                       name="nameOfUniversity" type="text" 
+                       placeholder="Introduce your name of university">
+            </div>
+            <div class="uk-width-1-2@s">
+                <label class="uk-form-label uk-text-left uk-margin uk-text-dangerous" 
+                       for="federalEntity">
+                    Federal Entity
+                </label>
+                <input class="uk-input " id="federalEntity" 
+                       name="federalEntity" type="text"  
+                       placeholder="Introduce your federal entity">
+            </div>
+            <div class="uk-width-1-2@s">
+                <label class="uk-form-label uk-text-left uk-margin uk-text-dangerous" 
+                       for="country">
+                    Country
+                </label>
+                <input class="uk-input " id="country" 
+                       name="country" type="text"  
+                       placeholder="Introduce your federal entity">
+            </div>
+            <div class="uk-width-1-2@s">
+                <label class="uk-form-label uk-text-left uk-margin" for="academicAreaSelect">Academic Area</label>
+                    <select class="uk-select" id="academicAreaSelect" name="academicAreaSelect">
+                        <option value="" selected="" disabled="">Select Academic Area</option>
+                        <option value="Ingenieria en computacion">
+                            Ingenieria en computacion
+                        </option>
+                        <option value="Licenciatura en derecho">
+                            Licenciatura en derecho
+                        </option>
+                        <option value="Administracion">Administracion</option>
+                        <option value="Contaduria">Contaduria</option>
+                    </select>
+            </div>
+
+
+            <div class="uk-width-1-6@s">
+                <input class="uk-button uk-button-primary" type="button" 
+                       id="" value="Update Data">
+            </div>
+
+        </form>
+    </div>
+
+    <!-- password section on user profile -->
+    <div>
+        <h2 class="uk-text-center">Change your Password</h2>
+        <form class="uk-form-horizontal uk-margin-large" uk-grid>
+            <div class="uk-width-1-2@s boxUsrName">
+                <label class="uk-form-label uk-text-left uk-margin" for="currentPassword">
+                    Enter your current password
+                </label>
+                <input class="uk-input" id="currentPassword" 
+                       name="currentPassword" type="password"  
+                       placeholder="Current Password" >
+            </div>
+            <div class="uk-width-1-2@s">
+                <label class="uk-form-label uk-text-left uk-margin" for="newPassword">
+                    New Password
+                </label>
+                <input class="uk-input " id="newPassword" 
+                       name="newPassword" type="password"  
+                       placeholder="Enter your new password">
+            </div>
+            <div class="uk-width-1-1@s">
+                <label class="uk-form-label uk-text-left uk-margin uk-text-dangerous" 
+                       for="confPassword">
+                   Confirm your new password
+                </label>
+                <input class="uk-input " id="confPassword" 
+                       name="confPassword" type="password" 
+                       placeholder="Confirm your new password ">
+            </div>
+            <div class="uk-width-1-1@s uk-align-left">
+                <input class="uk-button uk-button-primary" type="button" 
+                       id="" value="Update password">
+            </div>
+
+        </form>
     </div>
     <div>
-        <p>password</p>
+        <h4 class="uk-text-center">Click on the button for generate codes access</h4>
+        <!-- <div class="uk-divider-icon"></div> -->
+        <form action="#!" class="uk-form-horizontal uk-margin-large" uk-grid>
+            <div class="uk-width-1-1@s uk-align-left">
+                <input class="uk-button uk-button-primary" type="button" 
+                       id="" value="Generate">
+            </div>
+        </form>
     </div>
 </ul>
                     </div>
