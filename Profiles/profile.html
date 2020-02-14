@@ -245,6 +245,7 @@
                     </div>
                 </div>
             </div>
+
             <div class="uk-width-expand@m box-grid-options">
                 <div class="uk-card uk-card-default uk-card-body box-info-options">
                     
@@ -257,7 +258,7 @@
                                 id="imageProfile">
                             </div>
                             <div class="uk-width-expand">
-                                <h1 class="uk-text-center">Bryan Franco Velez</h1>
+                                <h1 class="uk-text-center" id="userNameTag">Bryan Franco Velez</h1>
                                 <p class="uk-text-meta uk-margin-remove-top uk-text-right"><time datetime="2016-04-01T19:00">April 01, 2016</time></p>
                             </div>
                         </div>
@@ -275,7 +276,7 @@
             <div class="uk-width-1-2@s boxUsrName">
                 <label class="uk-form-label uk-text-left uk-margin" for="usrName">User Name</label>
                 <input class="uk-input inputsToProfileAcces" id="usrName" 
-                       name="usrName" type="text" disabled="" 
+                       name="usrName" type="text" disabled=""  
                        placeholder="User Name" >
             </div>
             <div class="uk-width-1-2@s">
@@ -421,66 +422,431 @@
         </form>
     </div>
     <div>
-        <h4 class="uk-text-center">Click on the button for generate codes access</h4>
+        <div class="uk-width-1-1@s" id="box-to-generateCode">
+            <h4 class="uk-text-center">Click on the button for generate codes access</h4>
+                <div class="uk-width-1-1@s uk-align-left" >
+                    <input class="uk-button uk-button-primary" type="button" 
+                           id="generateCode" value="Generate">
+                </div>
+        </div>
+        <div class="uk-width-1-1@s" id="box-with-codes-generated">
+            <h4 class="uk-text-center">
+               <span class="uk-text-danger">Note: </span>
+               This codes are valid only one time for access at your account 
+           </h4>
+            <table class="uk-table uk-table-hover uk-text-bolder uk-table-striped">
+                <thead>
+                    <tr>
+                        <th class="uk-text-center">User</th>
+                        <th class="uk-text-center">Code Access</th>
+                        <th class="uk-text-center">Expiration</th>
+                    </tr>
+                </thead>
+                <tbody class="uk-text-center uk-text-primary">
+                    <tr>
+                        <td class="userCode"></td>
+                        <td class="codesUser"></td>
+                        <td class="date_expiration_code"></td>
+                    </tr>
+                    <tr>
+                        <td class="userCode"></td>
+                        <td class="codesUser"></td>
+                        <td class="date_expiration_code"></td>
+                    </tr>
+                    <tr>
+                        <td class="userCode"></td>
+                        <td class="codesUser"></td>
+                        <td class="date_expiration_code"></td>
+                    </tr>
+                    <tr>
+                        <td class="userCode"></td>
+                        <td class="codesUser"></td>
+                        <td class="date_expiration_code"></td>
+                    </tr>
+                    <tr>
+                        <td class="userCode"></td>
+                        <td class="codesUser"></td>
+                        <td class="date_expiration_code"></td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
         <!-- <div class="uk-divider-icon"></div> -->
-        <form action="#!" class="uk-form-horizontal uk-margin-large" uk-grid>
-            <div class="uk-width-1-1@s uk-align-left">
-                <input class="uk-button uk-button-primary" type="button" 
-                       id="" value="Generate">
-            </div>
-        </form>
+        
     </div>
+
 </ul>
                     </div>
 
-                    <!-- section for the contact -->
+<!-- section for the contact -->
 
-                     <div id="box-Contact">
-                        <h1 class="uk-text-center">Contact</h1>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+ <div id="box-Contact" class="uk-container">
+    <h1 class="uk-text-center">
+        <span uk-icon="icon: receiver; ratio: 2;"></span>
+        Contact Information
+    </h1>
+    <div class="uk-grid-match uk-grid-small uk-text-center" uk-grid>
+         
+        <div class="uk-width-expand@l">
+            <div class="uk-card uk-card-default uk-card-body">
+                <table class="uk-table uk-table-justify uk-table-divider">
+                    <thead>
+                        <tr>
+                            <th class="uk-text-center">Icon Data</th>
+                            <th class="uk-text-center">Data</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <form>
+                        <tr>
+                            <td class="uk-text-center">
+                                <span uk-icon="icon: mail; ratio: 2;"></span>
+                            </td>
+                            <td class="uk-text-center">
+                                <input class="uk-input uk-form-width-large" type="text" 
+                                       name="" placeholder="Enter a email for contact">
+                            </td>
+                        </tr>
 
+                        <tr>
+                            <td class="uk-text-center">
+                                <span uk-icon="icon: world; ratio: 2;"></span>
+                            </td>
+                            <td class="uk-text-center">
+                                <input class="uk-input uk-form-width-large" type="text" 
+                                       name="" placeholder="Enter country code">
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="uk-text-center">
+                                <span uk-icon="icon: receiver; ratio: 2;"></span>
+                            </td>
+                            <td class="uk-text-center">
+                                <input class="uk-input uk-form-width-large" type="text" 
+                                       name="" placeholder="Enter your number Cellphone">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="uk-text-center">
+                                <span uk-icon="icon: facebook; ratio: 2;"></span>
+                            </td>
+                            <td class="uk-text-center">
+                                <input class="uk-input uk-form-width-large" type="url" 
+                                       name="" placeholder="Enter your link facebook">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td class="uk-text-center">
+                                <input class="uk-button uk-button-primary uk-form-width-medium" type="submit" name="btnContactInformation" value="Update" >
+                            </td>
+                        </tr>
+                        </form>
+                    </tbody>
+                </table>
+
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<div class="uk-container" id="box-TMates" >
+    <h1 class="uk-text-center">TeamMates</h1>
+        <table class="uk-table uk-table-justify uk-table-divider">
+                    <thead>
+                        <tr>
+                            <th class="uk-text-center">User</th>
+                            <th class="uk-text-center">Name</th>
+                            <th class="uk-text-center">See</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="uk-text-center">
+                                <div class="uk-width-auto">
+                                    <img class="uk-border-circle" width="50" height="40" src="../assets/image/Default_Profilepic.jpg">
+                                </div>
+                            </td>
+                            <td class="uk-text-center">
+                                <p>Bryan Franco velez</p>
+                            </td>
+                            <td class="uk-text-center">
+                                <a href="#!" class="uk-button uk-button-primary">Enter</a>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="uk-text-center">
+                                <div class="uk-width-auto">
+                                    <img class="uk-border-circle" width="50" height="40" src="../assets/image/Default_Profilepic.jpg">
+                                </div>
+                            </td>
+                            <td class="uk-text-center">
+                                <p>Bryan Franco velez</p>
+                            </td>
+                            <td class="uk-text-center">
+                                <a href="#!" class="uk-button uk-button-primary">Enter</a>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="uk-text-center">
+                                <div class="uk-width-auto">
+                                    <img class="uk-border-circle" width="50" height="40" src="../assets/image/Default_Profilepic.jpg">
+                                </div>
+                            </td>
+                            <td class="uk-text-center">
+                                <p>Bryan Franco velez</p>
+                            </td>
+                            <td class="uk-text-center">
+                                <a href="#!" class="uk-button uk-button-primary">Enter</a>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="uk-text-center">
+                                <div class="uk-width-auto">
+                                    <img class="uk-border-circle" width="50" height="40" src="../assets/image/Default_Profilepic.jpg">
+                                </div>
+                            </td>
+                            <td class="uk-text-center">
+                                <p>Bryan Franco velez</p>
+                            </td>
+                            <td class="uk-text-center">
+                                <a href="#!" class="uk-button uk-button-primary">Enter</a>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="uk-text-center">
+                                <div class="uk-width-auto">
+                                    <img class="uk-border-circle" width="50" height="40" src="../assets/image/Default_Profilepic.jpg">
+                                </div>
+                            </td>
+                            <td class="uk-text-center">
+                                <p>Bryan Franco velez</p>
+                            </td>
+                            <td class="uk-text-center">
+                                <a href="#!" class="uk-button uk-button-primary">Enter</a>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="uk-text-center">
+                                <div class="uk-width-auto">
+                                    <img class="uk-border-circle" width="50" height="40" src="../assets/image/Default_Profilepic.jpg">
+                                </div>
+                            </td>
+                            <td class="uk-text-center">
+                                <p>Bryan Franco velez</p>
+                            </td>
+                            <td class="uk-text-center">
+                                <a href="#!" class="uk-button uk-button-primary">Enter</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+</div>
+
+
+<div class="uk-container" id="box-SMedia">
+    <h1 class="uk-text-center">Social Media</h1>
+    <ul uk-tab>
+        <li><a href="#">Social Section</a></li>
+        <li><a href="#">Update Links</a></li>
+    </ul>
+
+    <ul class="uk-switcher uk-margin">
+        <div class="uk-container">
+            <ul uk-accordion="multiple: true" class="uk-margin uk-padding-large" 
+                id="accordionSocial">
+                <li class=" uk-text-left">
+                    <a class="uk-accordion-title" href="#">
+                        <span uk-icon="icon: facebook; ratio:3;" class="uk-text-bolder"
+                        style="color: #3b5999;"></span>
+                        Facebook
+                    </a>
+                    <div class="uk-accordion-content">
+                        <p class="uk-text-center">
+                            <a href="#!">Facebook</a>
+                        </p>
                     </div>
+                </li>
 
-
-                     <div id="box-TMates">
-                        <h1 class="uk-text-center">TeamMates</h1>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
+                <li class="uk-text-left">
+                    <a class="uk-accordion-title" href="#">
+                        <span uk-icon="icon: instagram; ratio:3;" class="uk-text-bolder"
+                        style="color: #e4405f ;"></span>
+                        instagram
+                    </a>
+                    <div class="uk-accordion-content">
+                        <p class="uk-text-center">
+                            <a href="#!">instagram</a>
+                        </p>
                     </div>
+                </li>
 
-
-                    <div id="box-SMedia">
-                        <h1 class="uk-text-center">Social Media</h1>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
+                <li class="uk-text-left">
+                    <a class="uk-accordion-title" href="#">
+                        <span uk-icon="icon: twitter; ratio:3;" class="uk-text-bolder"
+                        style="color: #55acee;"></span>
+                        twitter
+                    </a>
+                    <div class="uk-accordion-content">
+                        <p class="uk-text-center">
+                            <a href="#!">twitter</a>
+                        </p>
                     </div>
+                </li>
+                
+            </ul>
+        </div>
+        <div class="uk-container">
+            <table class="uk-table uk-table-justify uk-table-divider">
+                <thead>
+                    <tr>
+                        <th class="uk-text-center">Social Icon</th>
+                        <th class="uk-text-center">Link</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <form>
+                    
+                    <tr>
+                        <td class="uk-text-center">
+                            <span uk-icon="icon: facebook; ratio: 2;"></span>
+                        </td>
+                        <td class="uk-text-center">
+                            <input class="uk-input uk-form-width-large" type="url" 
+                                   name="" placeholder="Enter your link facebook">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="uk-text-center">
+                            <span uk-icon="icon: instagram; ratio: 2;"></span>
+                        </td>
+                        <td class="uk-text-center">
+                            <input class="uk-input uk-form-width-large" type="url" 
+                                   name="" placeholder="Enter your link instagram">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="uk-text-center">
+                            <span uk-icon="icon: twitter; ratio: 2;"></span>
+                        </td>
+                        <td class="uk-text-center">
+                            <input class="uk-input uk-form-width-large" type="url" 
+                                   name="" placeholder="Enter your link twitter">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="uk-text-center">
+                            <input class="uk-button uk-button-primary uk-form-width-medium" type="submit" name="btnUpdateLinksSocial" value="Update" >
+                        </td>
+                    </tr>
+                    </form>
+                </tbody>
+            </table>
+        </div>
+
+</div>
 
 
-                    <div id="box-Projects">
-                        <h1 class="uk-text-center">My Projects</h1>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+<div class="uk-container" id="box-Projects">
+    <h1 class="uk-text-center uk-margin">My Projects</h1>
+    <!-- <h2 class="uk-text-center uk-text-danger" id="textMessageProject">
+        You need fill data user on section user profile before create one project
+    </h2>
+    <p class="uk-text-center uk-text-primary">
+        If you don't have any projects, create one now
+    </p>
+    <button class="uk-button uk-button-primary uk-text-center uk-margin" 
+            id="btnVerifyCreateProject">
+        Create new project
+    </button> -->
+    <div class="uk-child-width-1-2@s uk-child-width-1-2@m uk-text-center" 
+         id="sectionToSeeProjects" uk-grid>
+        
 
+        <div class="uk-card uk-card-body">
+            <div class="uk-card-secondary  uk-text-center">
+                    <div class="uk-inline-clip uk-transition-toggle uk-light" tabindex="0">
+                        <img src="../assets/image/colorHd.jpg">
+                        <div class="uk-position-center">
+                            <span class="uk-transition-fade editProject" uk-icon="icon: file-text; ratio: 4" 
+                            uk-tooltip="title: Edit project; pos: top-left"></span>
+                        </div>
                     </div>
+                    <h3 class="uk-margin-small-top uk-padding-small
+                               title-name-project">
+                        My University Project
+                    </h3>
+            </div>
+        </div>
+        <div class="uk-card uk-card-body">
+            <div class="uk-card-secondary  uk-text-center">
+                    <div class="uk-inline-clip uk-transition-toggle uk-light" tabindex="0">
+                        <img src="../assets/image/colorHd.jpg">
+                        <div class="uk-position-center">
+                            <span class="uk-transition-fade editProject" uk-icon="icon: file-text; ratio: 4" 
+                            uk-tooltip="title: Edit project; pos: top-left"></span>
+                        </div>
+                    </div>
+                    <h3 class="uk-margin-small-top uk-padding-small
+                               title-name-project">
+                        Name Project
+                    </h3>
+            </div>
+        </div>
+
+        <div class="uk-card uk-card-body">
+            <div class="uk-card-secondary  uk-text-center">
+                    <div class="uk-inline-clip uk-transition-toggle uk-light" tabindex="0">
+                        <img src="../assets/image/colorHd.jpg">
+                        <div class="uk-position-center">
+                            <span class="uk-transition-fade editProject" uk-icon="icon: file-text; ratio: 4" 
+                            uk-tooltip="title: Edit project; pos: top-left"></span>
+                        </div>
+                    </div>
+                    <h3 class="uk-margin-small-top uk-padding-small
+                               title-name-project">
+                        Name Project
+                    </h3>
+            </div>
+        </div>
+
+        <div class="uk-card uk-card-body">
+            <div class="uk-card-secondary  uk-text-center">
+                    <div class="uk-inline-clip uk-transition-toggle uk-light" tabindex="0">
+                        <img src="../assets/image/colorHd.jpg">
+                        <div class="uk-position-center">
+                            <span class="uk-transition-fade editProject" uk-icon="icon: file-text; ratio: 4" 
+                            uk-tooltip="title: Edit project; pos: top-left"></span>
+                        </div>
+                    </div>
+                    <h3 class="uk-margin-small-top uk-padding-small
+                               title-name-project">
+                        Name Project
+                    </h3>
+            </div>
+        </div>
+
+
+
+
+
+
+        
+
+    </div>    
+</div>
 
                 </div>
             </div>

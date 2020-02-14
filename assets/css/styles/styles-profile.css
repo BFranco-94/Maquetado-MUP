@@ -7,7 +7,7 @@
 .box-grid-options div{ box-shadow: 0px 0px 0px 0px ;  }
 
 /* section para opciones de perfil */
-#options-profile-box{  height: 700px; background-color: #273746; padding: 0;}
+#options-profile-box{  height: 750px; background-color: #273746; padding: 0;}
 	/* opcion #1, #2, #3, #4 */
 	.box-to-select-option{
 		background-color:  #273746;
@@ -20,7 +20,8 @@
 /* estilos para las cajas donde se mostrar los detalles*/
 .box-info-options:hover{
 }
-#box-Contact, #box-TMates,#box-SMedia,#box-Projects,#btnUpdateImageToSend{ display: none; }
+#box-Contact, #box-TMates,#box-SMedia,#box-Projects,#btnUpdateImageToSend,
+#box-with-codes-generated, #tableLinks,#textMessageProject{ display: none; }
 .inputsToProfileAcces:hover{ cursor: hand; }
 
 
@@ -39,7 +40,14 @@
 		border: 2px solid #000; transition: 1s all ease; 
 	}
 
+#box-SMedia{
+	 /*background-image: url("../../image/vct-nodes.png");
+    background-repeat: no-repeat;
+    background-size: cover;*/
+}
 
+.editProject:hover{ cursor: pointer; }
+.title-name-project{ color: #fff; }
 @media (max-width: 960px) {
 	#options-profile-box{ display: none; }
 }

@@ -5,8 +5,10 @@ window.addEventListener('load', function(){
 	let btnTMates=document.getElementById('TMates');
 	let btnSocialMedia=document.getElementById('SMedia');
 	let btnProjects=document.getElementById('projects');
+	let btnGenerateCode=document.getElementById('generateCode');
+	let btnCreateNewProject=document.getElementById('btnVerifyCreateProject');
 
-	// variables to actions on section profile
+	// variables for actions on section profile
 	let btnImageProfile=document.getElementById('imageProfile');
 	let btnToSendImageDB=document.getElementById('btnUpdateImageToSend');
 	
@@ -26,23 +28,37 @@ window.addEventListener('load', function(){
 
 		
 	// Acciones/eventos to change of section
-	btnProfile.addEventListener('click',function(){
-		showProfile();
-	});
-	btnContact.addEventListener('click',function(event){
-		showContact();
-	});
-	btnTMates.addEventListener('click',function(){
-		showTMates();
-	});
-	btnSocialMedia.addEventListener('click',function(){
-		showSMedia();
-	});
-	btnProjects.addEventListener('click', function(){
-		showProjects();
-	});
+	btnProfile.addEventListener('click',function(){ showProfile(); });
+	btnContact.addEventListener('click',function(event){ showContact(); });
+	btnTMates.addEventListener('click',function(){ showTMates(); });
+	btnSocialMedia.addEventListener('click',function(){ showSMedia(); });
+	btnProjects.addEventListener('click', function(){ showProjects(); });
 
 
+
+
+
+
+
+	btnGenerateCode.addEventListener('click', function(){
+		$("#box-to-generateCode").hide("slow");
+		let sameNameUserCode=document.getElementsByClassName('userCode');
+		let codesUser=document.getElementsByClassName('codesUser');
+		let datesExpiration=document.getElementsByClassName('date_expiration_code');
+
+		let user="Bryan Franco"
+		let name="BFranco";
+		let date="04/12/2020";
+		let codesJson=["1k4dd3jJ92","2k4dd3jJ92","3k4dd3jJ92","4k4dd3jJ92","5k4dd3jJ92"];
+		fillTableCodes(
+			sameNameUserCode, 
+			datesExpiration,
+			codesUser, 
+			user, 
+			date, 
+			codesJson);
+		$("#box-with-codes-generated").show("slow");
+	});
 
 // events section profile image{
 
@@ -114,20 +130,62 @@ window.addEventListener('load', function(){
 
 
 
+	btnCreateNewProject.addEventListener('click', function(){
+		$("#sectionToSeeProjects").show('slow'); 
+
+		$.post('servletName', {
+			userName : userNStudent
+		}, function(response) {
+			let booleanAnswer=response;
+			if (booleanAnswer){
+				window.location.href="http://localhost/myuniversityproject/my-project.jsp";
+			}else{
+				$("#textMessageProject").show('slow'); 
+			}
+		}); 
+		return false;
+	});
+
+
+
+
+
 });
 
-/*
-var inputs = document.getElementsByClassName('my-input-class');
-for(var i = 0; i < inputs.length; i++) {
-    inputs[i].disabled = false;
-}
-*/ 
 
+
+//functions specific for user profile{
 function disableInputs(btnInputsPAccess){
 	for(var i = 0; i < btnInputsPAccess.length; i++) {
     	btnInputsPAccess[i].disabled = true;
 	}
 }
+
+/**
+*@param sameNameUserCode type=selector.class: get at array kind of selector class
+*@param datesExpiration type=selector.class: get at array kind of selector class
+*@param codesUser type=selector.class: get at array kind of selector class
+*@param user type=JSON: get JSON type data to assign to sameNameUserCode selector
+*@param date type=JSON: get JSON type data to assign to datesExpiration selector
+*@param codesJson type=JSON: get JSON type data to assign to codesUser selector
+*/
+function fillTableCodes(sameNameUserCode, datesExpiration, codesUser,user, date, codesJson){
+	for(let i=0; i < codesJson.length; i++){
+		sameNameUserCode[i].textContent=user;
+		codesUser[i].textContent=codesJson[i];
+		datesExpiration[i].textContent=date;
+		console.log("code["+i+"] : ["+codesJson[i]+"]");
+	}
+}
+
+
+
+
+
+
+
+
+
 
 // funciones para mostrar y quitar, box-Contact, #box-TMates,#box-SMedia
 function showProfile(){
@@ -136,6 +194,7 @@ function showProfile(){
 		$("#box-TMates").hide('slow');
 		$("#box-SMedia").hide('slow');
 		$("#box-Projects").hide('slow');
+		$("#options-profile-box").css("height","700");
 }
 function showContact(){
 	$("#box-Contact").show('slow'); 
@@ -143,6 +202,7 @@ function showContact(){
 		$("#box-TMates").hide('slow');
 		$("#box-SMedia").hide('slow');
 		$("#box-Projects").hide('slow');
+		$("#options-profile-box").css("height","700");
 }
 function showTMates(){
 	$("#box-TMates").show('slow');
@@ -150,6 +210,7 @@ function showTMates(){
 		$("#box-Contact").hide('slow');
 		$("#box-SMedia").hide('slow');
 		$("#box-Projects").hide('slow');
+		$("#options-profile-box").css("height","750");
 }
 function showSMedia(){
 	$("#box-SMedia").show('slow');
@@ -157,6 +218,7 @@ function showSMedia(){
 		$("#box-Contact").hide('slow');
 		$("#box-TMates").hide('slow');
 		$("#box-Projects").hide('slow');
+		$("#options-profile-box").css("height","700");
 }
 function showProjects(){
 	
@@ -165,6 +227,7 @@ function showProjects(){
 		$("#box-Contact").hide('slow');
 		$("#box-TMates").hide('slow');
 		$("#box-SMedia").hide('slow');
+	$("#options-profile-box").css("height","1100");
 }
 /*
 	$("#box-Contact").show(1000, function() {
@@ -219,10 +282,22 @@ function mostrar(archivo) {
     $("#cajadatos").css("font-size", "150%");
     $("#cajadatos").css("transition", "2s all ease");
     $("#cajadatos").show();
-    // cajadatos.innerHTML='Nombre: '+archivo.name+'<br>';
-    // cajadatos.innerHTML+='Tipo: '+archivo.type+'<br>';
-    // cajadatos.innerHTML+='Tamaño: '+archivo.size+' bytes<br>';
 }
 
 
 
+
+
+/*
+	// JSON con distintos valores para utilizar
+	var json = {'valor1': 1, 'valor2': [1, 2, 3, 4], 'valor3': '3'};
+	     
+	// Obteniendo todas las claves del JSON
+	for (var clave in json){
+	  // Controlando que json realmente tenga esa propiedad
+	  if (json.hasOwnProperty(clave)) {
+	    // Mostrando en pantalla la clave junto a su valor
+	    alert("La clave es " + clave+ " y el valor es " + json[clave]);
+	  }
+	}
+*/
