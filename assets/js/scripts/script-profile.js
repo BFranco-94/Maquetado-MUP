@@ -39,7 +39,7 @@ window.addEventListener('load', function(){
 
 
 
-
+	// button to generate codes througth data base
 	btnGenerateCode.addEventListener('click', function(){
 		$("#box-to-generateCode").hide("slow");
 		let sameNameUserCode=document.getElementsByClassName('userCode');
