@@ -182,7 +182,7 @@
                 <div>
 
 
-                <div class="uk-card-body uk-background-muted form-body">
+                <div class="uk-card-body form-body" id="formBox">
                     <div class="uk-grid-small uk-flex-middle" uk-grid>
                         <div class="uk-width-auto">
                             <!-- <img class="uk-border-circle" id="imageSign" width="40px" 
@@ -199,18 +199,16 @@
                         </div>
                     </div>
                     <ul uk-tab>
-                        <li><a href="#" id="AsStudentLink">As Estudent</a></li>
-                        <li><a href="#" id="AsCompanyLink">As Company</a></li>
+                        <li><a href="#" id="AsStudentLink" >As Estudent</a></li>
+                        <!-- <li><a href="#" id="AsCompanyLink">As Company</a></li> -->
                     </ul>
                 
-                    <ul class="uk-switcher uk-margin">
+                    <ul class="uk-switcher uk-margin" >
                     <!-- first section to sign up -->
                         <div>
                             
-                            <div class="uk-card-body " style="padding: 0;">
-                                <h6 class="uk-text-primary uk-text-center@l uk-text-uppercase uk-text-danger uk-text-bold" id="messageTerms">
-                                    Please accept terms and conditions !
-                                </h6>
+                            <div class="uk-card-body " style="padding: 0;  ">
+                                
                                 <!-- <h6 class="uk-text-primary uk-text-center@l uk-text-uppercase uk-text-danger uk-text-bold" id="messageEmail">
                                     Introduce a email correct !
                                 </h6> -->
@@ -228,7 +226,6 @@
                                             <span class="uk-form-icon" uk-icon="icon: mail"></span>
                                             <input class="uk-input uk-form-width-large" type="text" 
                                                    placeholder="email"  id="emailStudent" name="emailStudent">
-                                                     <!-- pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 4}" -->
                                         </div>
                                     </div>
                                     <div class="uk-width-1-1@s uk-margin-top">
@@ -246,19 +243,11 @@
                                         </div>
                                         
                                     </div>
+                                   
                                     <div class="uk-width-1-1@s uk-margin-top">
                                         <input class="uk-input uk-form-width-large uk-button 
                                                 uk-button-primary " 
-                                                type="submit" value="Register">
-                                    </div>
-                                    <div class="uk-width-1-1@s uk-margin-top">
-                                        <label>
-                                            <input class="uk-checkbox" type="checkbox" name="termsCodition"
-                                                   id="checkTerms"  value="true" >
-                                            <a href="termsconditions-myprojectuniversity.html">
-                                                I accept terms and conditions
-                                            </a>
-                                        </label>
+                                                type="submit" value="Continue register">
                                     </div>
                                 </form>
 
@@ -269,59 +258,216 @@
                             </p>
                              
                         </div>
-                        <!-- second form enterprise -->
-                        <div class="content-box-form">
-                            <div class="uk-card-body " style="padding: 0;">
-                                <form id="formAsCompany">
-                                    <div class="uk-width-1-1@s uk-margin-top">
-                                        <div class="uk-inline">
-                                            <span class="uk-form-icon" uk-icon="icon: user"></span>
-                                            <input class="uk-input uk-form-width-large" 
-                                                   type="text" id="usernameAsCompany" 
-                                                   placeholder="User name as Company">    
-                                        </div>
-                                    </div>
-                                    <div class="uk-width-1-1@s uk-margin-top">
-                                        <div class="uk-inline">
-                                            <span class="uk-form-icon" uk-icon="icon: mail"></span>
-                                            <input class="uk-input uk-form-width-large" 
-                                                   type="email" id="emailCompany" 
-                                                   placeholder="email">
-                                        </div>
-                                    </div>
-                                    <div class="uk-width-1-1@s uk-margin-top">
-                                        <div class="uk-inline">
-                                            <span class="uk-form-icon" uk-icon="icon: lock"></span>
-                                            <input class="uk-input uk-form-width-large" 
-                                                   type="text" id="passCompany" placeholder="password">    
-                                        </div>
-                                    </div>
-                                    <div class="uk-width-1-1@s uk-margin-top">
-                                        <div class="uk-inline">
-                                            <span class="uk-form-icon" uk-icon="icon: lock"></span>
-                                            <input class="uk-input uk-form-width-large" 
-                                                   type="text" id="confPassCompany"  placeholder="Confirm password">    
-                                        </div>
-                                    </div>
-                                    <div class="uk-width-1-1@s uk-margin-top">
-                                        <input class="uk-input uk-form-width-large uk-button 
-                                                uk-button-primary " 
-                                                type="submit" value="Register">
-                                    </div>
-                                    <div class="uk-width-1-1@s uk-margin-top">
-                                        <label>
-                                            <input class="uk-checkbox" type="checkbox" name="termsCodition"
-                                                   id="checkTermsCompany"  value="true" >
-                                            <a href="termsconditions-myprojectuniversity.html">
-                                                I accept terms and conditions
-                                            </a>
-                                        </label>
-                                    </div>
-                                </form>
-                            </div>
 
+
+
+<div id="mdal-dataComplete" class="uk-modal-full" uk-modal>
+    <div class="uk-modal-dialog" id="form">
+
+        <div class="uk-grid-collapse uk-child-width-1-2@s uk-flex-middle" uk-grid>
+            <div class="uk-background-cover" uk-height-viewport id="img-to-complete"></div>
+            <div class="uk-padding-large " id="formulary">
+                <button class="uk-modal-close-full uk-close-large" type="button" uk-close style="background-color: transparent;"></button>
+                <!-- 11111111 -->
+                <h3 class="uk-text-center uk-align-center uk-text-success">
+                    Enter your data for complete the register
+                </h3>
+                <h6 class="uk-text-primary uk-text-center@l uk-text-uppercase uk-text-danger uk-text-bold" id="messageTerms">
+                    Please accept terms and conditions !
+                </h6>
+                <form id="selectTypeForm">
+                    <div class="uk-margin uk-grid-large uk-child-width-auto uk-grid">
+                        <label class="uk-margin">Sign-up as...?</label>
+
+                        <label>
+                            <input class="uk-radio enterpriseStudent" 
+                                   type="radio" 
+                                   name="enterpriseStudent" 
+                                   value="Student">
+                                Student
+                            <input class="uk-radio enterpriseStudent" 
+                                   type="radio" 
+                                   name="enterpriseStudent" 
+                                   value="Company">
+                                Company
+                        </label>
+                    </div>
+                    <div id="divTmp">
+                       <br><br><br><br><br><br><br><br>
+                       <br><br><br><br><br><br><br><br>
+                       <br><br><br><br><br><br><br><br> 
+                    </div>
+                    
+                </form>
+                <!-- register for students -->
+                <div id="formStudent">
+                    
+                    <form class="uk-grid-small" uk-grid id="formDataStudent">
+                        <div class="uk-width-1-1@s ">
+                            <label class="uk-form-label uk-text-left uk-margin" 
+                                    for="nameStudent">Name(s)</label>
+                            <input class="uk-input" type="text" id="nameStudent"
+                                   name="nameStudent" >
                         </div>
+                        <div class="uk-width-1-1@s ">
+                            <label class="uk-form-label uk-text-left uk-margin" 
+                                    for="lastNameStudent">Last Name</label>
+                            <input class="uk-input" type="text" id="lastNameStudent" 
+                                   name="lastNameStudent" >
+                        </div>
+                        <div class="uk-width-1-1@s ">
+                            <label class="uk-form-label uk-text-left uk-margin" 
+                                    for="universityName">University Name</label>
+                            <input class="uk-input" type="text" id="universityName" 
+                                   name="universityName" >
+                        </div>
+                        <div class="uk-width-1-1@s ">
+                            <label class="uk-form-label uk-text-left uk-margin" 
+                                    for="federalEntity">Federal Entity</label>
+                            <input class="uk-input" type="text" id="federalEntity" 
+                                   name="federalEntity" >
+                        </div>
+                        <div class="uk-width-1-1@s ">
+                            <label class="uk-form-label uk-text-left uk-margin" 
+                                    for="country">Country</label>
+                            <input class="uk-input" type="text" id="country" 
+                                   name="country" >
+                        </div>
+                        <div class="uk-width-1-2@s">
+                            <label class="uk-form-label uk-text-left uk-margin" 
+                                   for="academicArea">Academic Area</label>
+                                <select class="uk-select" id="academicArea" name="academicArea">
+                                    <option value="" selected="" disabled="">Select Academic Area</option>
+                                    <option value="Ingenieria en computacion">
+                                        Ingenieria en computacion
+                                    </option>
+                                    <option value="Licenciatura en derecho">
+                                        Licenciatura en derecho
+                                    </option>
+                                    <option value="Administracion">Administracion</option>
+                                    <option value="Contaduria">Contaduria</option>
+                                </select>
+                        </div>
+                        <div class="uk-width-1-2@s">
+                            <label class="uk-form-label uk-text-left uk-margin" 
+                                   for="status_student">Status of the student</label>
+                                <select class="uk-select" id="status_student" 
+                                        name="status_student">
+                                    <option value="" selected="" disabled="">Select status</option>
+                                    <option value="Graduate">
+                                        graduate
+                                    </option>
+                                    <option value="Active">
+                                        Active
+                                    </option>
+                                    <option value="Truncate">Truncate</option>
+                                </select>
+                        </div>
+                        <div class="uk-width-1-1@s uk-margin-top">
+                            <input class="uk-input uk-form-width-large uk-button 
+                                    uk-button-primary " 
+                                    type="submit" value="Signup">
+                        </div>
+                        <div class="uk-width-1-1@s uk-margin-top">
+                            <label>
+                                <input class="uk-checkbox" type="checkbox" name="termsCodition"
+                                       id="checkTerms"  value="true" >
+                                <a href="termsconditions-myprojectuniversity.html">
+                                    I accept terms and conditions
+                                </a>
+                            </label>
+                        </div>
+                    </form>
+                </div>
+                
+                <!-- register for companies -->
+                <div id="formCompany">
+                    <form class="uk-grid-small" uk-grid id="formDataCompany">
+                        <div class="uk-width-1-1@s ">
+                            <label class="uk-form-label uk-text-left uk-margin" 
+                                    for="Name">Name Employe</label>
+                            <input class="uk-input" type="text" id="Name"
+                                   name="nameComplete" >
+                        </div>
+                        <div class="uk-width-1-1@s ">
+                            <label class="uk-form-label uk-text-left uk-margin" 
+                                    for="LastNameEmploye">Last Name Employe</label>
+                            <input class="uk-input" type="text" id="LastNameEmploye" 
+                                   name="LastNameEmploye" >
+                        </div>
+                        <div class="uk-width-1-1@s ">
+                            <label class="uk-form-label uk-text-left uk-margin" 
+                                    for="NameCompany">Name Company</label>
+                            <input class="uk-input" type="text" id="NameCompany" 
+                                   name="NameCompany" >
+                        </div>
+                        <div class="uk-width-1-1@s ">
+                            <label class="uk-form-label uk-text-left uk-margin" 
+                                    for="entityFDCompany">federative entity of the company</label>
+                            <input class="uk-input" type="text" id="entityFDCompany" 
+                                   name="entityFDCompany" >
+                        </div>
+                        <div class="uk-width-1-1@s ">
+                            <label class="uk-form-label uk-text-left uk-margin" 
+                                    for="emailCompany">Email Company</label>
+                            <input class="uk-input" type="text" id="emailCompany" 
+                                   name="emailCompany" >
+                        </div>
+                        <div class="uk-width-1-1@s ">
+                            <label class="uk-form-label uk-text-left uk-margin" 
+                                    for="LastName">Federal Entity</label>
+                            <input class="uk-input" type="text" id="LastName" 
+                                   name="LastName" >
+                        </div>
+                        <div class="uk-width-1-1@s ">
+                            <label class="uk-form-label uk-text-left uk-margin" 
+                                    for="turnOfCompany">Turn Of Company</label>
+                            <input class="uk-input" type="text" id="turnOfCompany" 
+                                   name="turnOfCompany" >
+                        </div>
+                        
+                        <div class="uk-width-1-2@s">
+                            <label class="uk-form-label uk-text-left uk-margin" for="academicAreaSelect">Kind of Company</label>
+                                <select class="uk-select" id="academicAreaSelect" name="academicAreaSelect">
+                                    <option value="" selected="" disabled="">
+                                        Company
+                                    </option>
+                                    <option value="Small">
+                                        Small
+                                    </option>
+                                    <option value="Medium">
+                                        Medium
+                                    </option>
+                                    <option value="Large">
+                                        large
+                                    </option>
+                                </select>
+                        </div>
+                        <div class="uk-width-1-1@s uk-margin-top">
+                            <input class="uk-input uk-form-width-large uk-button 
+                                    uk-button-primary " 
+                                    type="submit" value="Signup">
+                        </div>
+                        <div class="uk-width-1-1@s uk-margin-top">
+                            <label>
+                                <input class="uk-checkbox" type="checkbox" 
+                                       name="termsCoditionCompany"
+                                       id="checkTermsCompany"  value="true" >
+                                <a href="termsconditions-myprojectuniversity.html">
+                                    I accept terms and conditions
+                                </a>
+                            </label>
+                        </div>
+                    </form>
+                </div>
 
+
+
+            </div>
+        </div>
+    </div>
+</div>
+                        
                     </ul>    
                 </div>
 
@@ -330,43 +476,6 @@
         <!-- ======================== -->
     </div>	
 </section>
-
-
-
-
-
-
-<!-- 
-<div class="uk-card  uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid
-             style="width: 50%; margin-top: 20px; margin-left: 350px;opacity: .9;">
-    <div class="uk-card-media-left uk-cover-container">
-        <img src="assets/image/description-bck.png" alt="" uk-cover>
-        <canvas width="100" height="400"></canvas>
-    </div>
-    <div>
-        <div class="uk-card-body">
-            <div class="uk-grid-small uk-flex-middle" uk-grid>
-                <div class="uk-width-auto">
-                    <img class="uk-border-circle" width="40" height="40" src="images/avatar.jpg">
-                </div>
-                <div class="uk-width-expand">
-                    <h3 class="uk-card-title uk-margin-remove-bottom">Title</h3>
-                    <p class="uk-text-meta uk-margin-remove-top"><time datetime="2016-04-01T19:00">April 01, 2016</time></p>
-                </div>
-            </div>
-
-
-            <div class="uk-card-body">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
-            </div>
-            <div class="uk-card-footer">
-                <a href="#" class="uk-button uk-button-text">Read more</a>
-            </div>
-
-        </div>
-    </div>
-</div>  
- -->
 
 
 <footer class="uk-background-secondary" uk-parallax="bgy: -150; bgx: 420;">
@@ -473,7 +582,7 @@
     </footer>
 
     <script src="assets/js/scripts/script-reg.js"></script>
-       <script src="assets/js/jquery-3.2.1.min.js"></script>
+    <script src="assets/js/jquery-3.2.1.min.js"></script>
 </body>
 
 </html>

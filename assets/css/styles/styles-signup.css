@@ -1,14 +1,33 @@
 *{ padding: 0; margin: 0; }
+body{
+	/* The new syntax needed by standard-compliant browsers (IE 10 and Firefox 10 onwards), without prefix */  
+	background: linear-gradient(
+		to right, rgba( 28, 40, 51 ,0), 
+		rgba( 28, 40, 51 ,1)
+		), 
+	url("../../image/Anime_Classroom.jpg");
+	background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
 
 #section-sigup{
-	background-image: url("../../image/sky-sign.png");
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
     height: 680px;
 }
 
+#formBox{
+	background-color: rgb(234, 237, 237);
+	background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.9;
+}
 
+/*#formBox {}*/
 
 #section-sig-in, #toSignup{ display: none; }
 
@@ -23,28 +42,40 @@
 .form-body{
 	width: 300px;
 }
-
 #imageSign{ display: none; }
-
 #messageTerms , #messageEmail{ display: none; }
+#img-to-complete{
+	background-image: url("../../image/background_projects.jpg");
+	background-attachment: fixed;
+	background-size: cover;
+	width: 650px;
+	height: 1000px;
+}
+#form{ background-color:  #f8f9f9; height: 1000px; color: #000; }
+#formulary h3{ color: #000; }
+#formStudent, #formCompany{ display: none; }
 
 @media (max-width: 996px) {
     .content-formulary{
 		margin-top: 10px;
 	}
+	#img-to-complete{ display: none; }
+	#formulary{ height: 900px; }
 }
 
 @media (max-width: 800px) {
     .content-formulary{
 		margin-top: 80px;
 	}
+
 }
 
 @media (max-width: 768px) {
    .content-formulary{
-		margin-top: -280px;
+		margin-top: -220px;
 	}
-
+	#img-to-complete{ display: none; }
+	#formulary{ height: 900px; }
 }
 
 @media (max-width: 696px) {
@@ -54,6 +85,7 @@
 	.form-body{
 		width: 500px;
 	}
+
 }
 
 @media (min-width: 578px) {
@@ -74,4 +106,6 @@
 	.content-formulary{
 		margin-top: 80px;
 	}
+	#img-to-complete{ display: none; }
+	#formulary{ height: 900px; }
 }
