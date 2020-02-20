@@ -2,7 +2,7 @@ var valueOfRdio="";
 var itemSelectedForAcademicArea="";
 var itemSelectedForStatus="";
 var valueRadio="";
-
+var kOfCompany="";
 window.addEventListener('load', function(){
 	var URLhash = window.location.hash;
 	if (URLhash=="#sign-in") {
@@ -60,6 +60,11 @@ window.addEventListener('load', function(){
 		itemSelectedForStatus=itemSelectedStatus.value;
 		alert(itemSelectedForStatus); 
 	});
+	document.querySelector('#kindOfCompany').addEventListener('change', (event) =>{
+		kOfCompany=event.target.value;
+		alert(kOfCompany);
+	});
+
 
 	document.querySelectorAll('input[type=radio]').forEach(item => item.addEventListener('click', e => {
 		if (e.target.value=="Student" && e.target.checked==true){
@@ -102,7 +107,7 @@ window.addEventListener('load', function(){
 						let universityName=document.getElementById("universityName").value;
 						let federalEntity=document.getElementById("federalEntity").value;
 						let country=document.getElementById("country").value;
-						insertActionToRegister(
+						insertActionToRegisterStudent(
 							userNStudent, //value -> user name
 							myEmail, //value -> email for login
 							password, //value -> password for login
@@ -112,7 +117,8 @@ window.addEventListener('load', function(){
 							federalEntity, //value -> state or entity
 							country, //value -> country of the student
 							itemSelectedForStatus, //value -> status ( graduate | active | truncated )
-							itemSelectedForAcademicArea //value -> area that the student are studying
+							itemSelectedForAcademicArea, //value -> area that the student are studying
+							valueOfRdio //value -> kind of user ( as student or as company )
 						);
 						console.log(valueOfRdio);
 					}else{
@@ -123,6 +129,7 @@ window.addEventListener('load', function(){
 					e.preventDefault();
 					let checkTermsCompany=document.getElementById('checkTermsCompany').checked;
 					if(checkTermsCompany){
+						let nameEmploye=document.querySelector('#').value;
 						console.log(valueOfRdio);
 					}else{
 						validateDates(userNStudent, myEmail, checkTermsCompany, resMail);
@@ -132,7 +139,7 @@ window.addEventListener('load', function(){
 			
 			}
 		}else{
-			//put information about errors on the form
+			//put information about mistakes on the form
 			validateDates(userNStudent, myEmail, isCheckedTerms, resMail);
 		}
 	});
@@ -271,22 +278,54 @@ function removeImage(){
 *@param value -> status ( graduate | active | truncated )
 *@param value -> area that the student are studying
 */
-function insertActionToRegister( userNStudent,email,password,nameStudent,lastNameStudent,
-	universityName, federalEntity, country, itemSelectedForStatus, itemSelectedForAcademicArea ){
+function insertActionToRegisterStudent( 
+	userNameAccount ,email,password,nameStudent,
+	lastNameStudent, universityName, federalEntity, 
+	country, itemSelectedForStatus, itemSelectedForAcademicArea,itemSelectKindOfUser ){
 	let arrData=[
-		userNStudent,email,password,nameStudent,lastNameStudent,universityName, 
+		userNameAccount,email,password,nameStudent,lastNameStudent,universityName, 
 		federalEntity, country, itemSelectedForStatus, itemSelectedForAcademicArea 
 	];
+	// $.post('ServletRegisterUsers', {
+	// 	UserName : userNameAccount,
+	// 	Email : email,
+	// 	Password : password,
+	// 	// personal user data 
+	// 	Names : name,
+	// 	LastName : lastNameStudent, 
+	// 	UniversityName : universityName,
+	// 	FederalEntity : federalEntity,
+	// 	Country : country,
+	// 	ItemSelectedForStatus : itemSelectedForStatus,
+	// 	ItemSelectedForAcademicArea : itemSelectedForAcademicArea,
+	// 	ItemSelectKindOfUser : itemSelectKindOfUser 
+	// }, function(response) {
+	// 	let datos=JSON.parse(response);
+	// 	if(datos.dataRegisterSuccess.status==true){
+	// 		alert("\n "+
+	// 			  "\t Hola : "+datos.dataRegisterSuccess.NameUser+
+	// 			  "\n \t"+datos.dataRegisterSuccess.Message);
 
+	// 		console.log(
+	// 				"datos JSON \n "+
+	// 				  "Hola : "+datos.dataRegisterSuccess.NameUser+
+	// 				  "\n : "+datos.dataRegisterSuccess.Message
+	// 		);
+	// 	}else{
+	// 		alert("\n\t "+datos.dataRegisterSuccess.Message);
+	// 		console.log("fallo -> "+datos.dataRegisterSuccess.status);
+	// 	}
+	// }); 
+	// return false; 
 
 	console.log(arrData);
-
-	alert("no exite");
-
-
 }
 
+function insertActionToRegisterCompany(
+	     userNameAccount, email, password, nameEmploye, lastNameEmploye, nameCompany,
+	     entityFDCompany, emailCompany, federalEntity, turnOfCompany, academicAreaSelect ){
 
+}
 
 /*
 	Hi Dear customer,  I'm Franco, the programer of your MobileAplication, 

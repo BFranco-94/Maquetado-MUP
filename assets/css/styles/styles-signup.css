@@ -45,16 +45,22 @@ body{
 #imageSign{ display: none; }
 #messageTerms , #messageEmail{ display: none; }
 #img-to-complete{
-	background-image: url("../../image/background_projects.jpg");
+	background-image: url("../../image/Anime_Classroom.jpg");
 	background-attachment: fixed;
 	background-size: cover;
 	width: 650px;
 	height: 1000px;
 }
-#form{ background-color:  #f8f9f9; height: 1000px; color: #000; }
+#form{ background-color:   #fff ; height: 1000px; color: #000; }
 #formulary h3{ color: #000; }
 #formStudent, #formCompany{ display: none; }
+#formDataStudent label, #formCompany label, #selectTypeForm label{ 
+	color: #000; font-size: 18px; 
+}
 
+#formDataStudent a, #selectTypeForm a{ color: #ec7063 ; font-size: 14px; }
+#btnSendDtaStudent{ background-color:  #ec7063 ;  color: #fff; font-size: 18px; }
+#titleSecondPartForm{ color: #fff; }
 @media (max-width: 996px) {
     .content-formulary{
 		margin-top: 10px;

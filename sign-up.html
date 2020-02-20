@@ -199,7 +199,7 @@
                         </div>
                     </div>
                     <ul uk-tab>
-                        <li><a href="#" id="AsStudentLink" >As Estudent</a></li>
+                        <li><a href="#" id="AsStudentLink" >User account</a></li>
                         <!-- <li><a href="#" id="AsCompanyLink">As Company</a></li> -->
                     </ul>
                 
@@ -216,8 +216,10 @@
                                     <div class="uk-width-1-1@s uk-margin-top">
                                         <div class="uk-inline">
                                             <span class="uk-form-icon" uk-icon="icon: user"></span>
-                                            <input class="uk-input uk-form-width-large" id="userNameStudent" 
-                                                   type="text" placeholder="User name as student" >    
+                                            <input class="uk-input uk-form-width-large" 
+                                                   id="userNameStudent" type="text" 
+                                                   placeholder="User name as student"
+                                                   required="" >    
                                         </div>
                                     </div>
                                     
@@ -225,21 +227,24 @@
                                         <div class="uk-inline">
                                             <span class="uk-form-icon" uk-icon="icon: mail"></span>
                                             <input class="uk-input uk-form-width-large" type="text" 
-                                                   placeholder="email"  id="emailStudent" name="emailStudent">
+                                                   placeholder="email"  id="emailStudent" 
+                                                   name="emailStudent" required="">
                                         </div>
                                     </div>
                                     <div class="uk-width-1-1@s uk-margin-top">
                                          <div class="uk-inline">
                                             <span class="uk-form-icon" uk-icon="icon: lock"></span>
-                                            <input class="uk-input uk-form-width-large" type="password" 
-                                                    id="password"  placeholder="password" >    
+                                            <input class="uk-input uk-form-width-large" 
+                                                   type="password" id="password"  
+                                                   placeholder="password" required="">    
                                         </div>
                                     </div>
                                     <div class="uk-width-1-1@s uk-margin-top">
                                          <div class="uk-inline">
                                             <span class="uk-form-icon" uk-icon="icon: lock"></span>
-                                            <input class="uk-input uk-form-width-large" type="password" 
-                                                   placeholder="Confirm password" id="conPassword">
+                                            <input class="uk-input uk-form-width-large" 
+                                                   type="password" placeholder="Confirm password" 
+                                                   id="conPassword" required="">
                                         </div>
                                         
                                     </div>
@@ -266,10 +271,10 @@
 
         <div class="uk-grid-collapse uk-child-width-1-2@s uk-flex-middle" uk-grid>
             <div class="uk-background-cover" uk-height-viewport id="img-to-complete"></div>
-            <div class="uk-padding-large " id="formulary">
+            <div class="uk-padding-small " id="formulary">
                 <button class="uk-modal-close-full uk-close-large" type="button" uk-close style="background-color: transparent;"></button>
                 <!-- 11111111 -->
-                <h3 class="uk-text-center uk-align-center uk-text-success">
+                <h3 class="uk-text-center uk-align-center" id="titleSecondPartForm">
                     Enter your data for complete the register
                 </h3>
                 <h6 class="uk-text-primary uk-text-center@l uk-text-uppercase uk-text-danger uk-text-bold" id="messageTerms">
@@ -283,19 +288,19 @@
                             <input class="uk-radio enterpriseStudent" 
                                    type="radio" 
                                    name="enterpriseStudent" 
-                                   value="Student">
+                                   value="Student" >
                                 Student
                             <input class="uk-radio enterpriseStudent" 
                                    type="radio" 
                                    name="enterpriseStudent" 
-                                   value="Company">
+                                   value="Company" >
                                 Company
                         </label>
                     </div>
                     <div id="divTmp">
+                       <!-- <br><br><br><br><br><br><br><br>
                        <br><br><br><br><br><br><br><br>
-                       <br><br><br><br><br><br><br><br>
-                       <br><br><br><br><br><br><br><br> 
+                       <br><br><br><br><br><br><br><br> --> 
                     </div>
                     
                 </form>
@@ -307,36 +312,37 @@
                             <label class="uk-form-label uk-text-left uk-margin" 
                                     for="nameStudent">Name(s)</label>
                             <input class="uk-input" type="text" id="nameStudent"
-                                   name="nameStudent" >
+                                   name="nameStudent" required="">
                         </div>
                         <div class="uk-width-1-1@s ">
                             <label class="uk-form-label uk-text-left uk-margin" 
                                     for="lastNameStudent">Last Name</label>
                             <input class="uk-input" type="text" id="lastNameStudent" 
-                                   name="lastNameStudent" >
+                                   name="lastNameStudent" required="">
                         </div>
                         <div class="uk-width-1-1@s ">
                             <label class="uk-form-label uk-text-left uk-margin" 
                                     for="universityName">University Name</label>
                             <input class="uk-input" type="text" id="universityName" 
-                                   name="universityName" >
+                                   name="universityName" required="">
                         </div>
                         <div class="uk-width-1-1@s ">
                             <label class="uk-form-label uk-text-left uk-margin" 
                                     for="federalEntity">Federal Entity</label>
                             <input class="uk-input" type="text" id="federalEntity" 
-                                   name="federalEntity" >
+                                   name="federalEntity" required="">
                         </div>
                         <div class="uk-width-1-1@s ">
                             <label class="uk-form-label uk-text-left uk-margin" 
                                     for="country">Country</label>
                             <input class="uk-input" type="text" id="country" 
-                                   name="country" >
+                                   name="country" required="">
                         </div>
                         <div class="uk-width-1-2@s">
                             <label class="uk-form-label uk-text-left uk-margin" 
                                    for="academicArea">Academic Area</label>
-                                <select class="uk-select" id="academicArea" name="academicArea">
+                                <select class="uk-select" id="academicArea" name="academicArea"
+                                        required="">
                                     <option value="" selected="" disabled="">Select Academic Area</option>
                                     <option value="Ingenieria en computacion">
                                         Ingenieria en computacion
@@ -352,7 +358,7 @@
                             <label class="uk-form-label uk-text-left uk-margin" 
                                    for="status_student">Status of the student</label>
                                 <select class="uk-select" id="status_student" 
-                                        name="status_student">
+                                        name="status_student" required="">
                                     <option value="" selected="" disabled="">Select status</option>
                                     <option value="Graduate">
                                         graduate
@@ -364,14 +370,13 @@
                                 </select>
                         </div>
                         <div class="uk-width-1-1@s uk-margin-top">
-                            <input class="uk-input uk-form-width-large uk-button 
-                                    uk-button-primary " 
-                                    type="submit" value="Signup">
+                            <input class="uk-input uk-form-width-small uk-button" 
+                                    type="submit" value="Signup" id="btnSendDtaStudent">
                         </div>
                         <div class="uk-width-1-1@s uk-margin-top">
                             <label>
                                 <input class="uk-checkbox" type="checkbox" name="termsCodition"
-                                       id="checkTerms"  value="true" >
+                                       id="checkTerms"  value="true" required="">
                                 <a href="termsconditions-myprojectuniversity.html">
                                     I accept terms and conditions
                                 </a>
@@ -385,50 +390,52 @@
                     <form class="uk-grid-small" uk-grid id="formDataCompany">
                         <div class="uk-width-1-1@s ">
                             <label class="uk-form-label uk-text-left uk-margin" 
-                                    for="Name">Name Employe</label>
-                            <input class="uk-input" type="text" id="Name"
-                                   name="nameComplete" >
+                                    for="NameEmploye">Name Employe</label>
+                            <input class="uk-input" type="text" id="NameEmploye"
+                                   name="NameEmploye" required="">
                         </div>
                         <div class="uk-width-1-1@s ">
                             <label class="uk-form-label uk-text-left uk-margin" 
                                     for="LastNameEmploye">Last Name Employe</label>
                             <input class="uk-input" type="text" id="LastNameEmploye" 
-                                   name="LastNameEmploye" >
+                                   name="LastNameEmploye" required="" >
                         </div>
                         <div class="uk-width-1-1@s ">
                             <label class="uk-form-label uk-text-left uk-margin" 
                                     for="NameCompany">Name Company</label>
                             <input class="uk-input" type="text" id="NameCompany" 
-                                   name="NameCompany" >
+                                   name="NameCompany" required="">
                         </div>
                         <div class="uk-width-1-1@s ">
                             <label class="uk-form-label uk-text-left uk-margin" 
                                     for="entityFDCompany">federative entity of the company</label>
                             <input class="uk-input" type="text" id="entityFDCompany" 
-                                   name="entityFDCompany" >
+                                   name="entityFDCompany" required="" >
                         </div>
                         <div class="uk-width-1-1@s ">
                             <label class="uk-form-label uk-text-left uk-margin" 
                                     for="emailCompany">Email Company</label>
                             <input class="uk-input" type="text" id="emailCompany" 
-                                   name="emailCompany" >
+                                   name="emailCompany" required="">
                         </div>
                         <div class="uk-width-1-1@s ">
                             <label class="uk-form-label uk-text-left uk-margin" 
-                                    for="LastName">Federal Entity</label>
-                            <input class="uk-input" type="text" id="LastName" 
-                                   name="LastName" >
+                                    for="FederalEntity">Federal Entity</label>
+                            <input class="uk-input" type="text" id="FederalEntity" 
+                                   name="FederalEntity" required="">
                         </div>
                         <div class="uk-width-1-1@s ">
                             <label class="uk-form-label uk-text-left uk-margin" 
                                     for="turnOfCompany">Turn Of Company</label>
                             <input class="uk-input" type="text" id="turnOfCompany" 
-                                   name="turnOfCompany" >
+                                   name="turnOfCompany" required="">
                         </div>
                         
                         <div class="uk-width-1-2@s">
-                            <label class="uk-form-label uk-text-left uk-margin" for="academicAreaSelect">Kind of Company</label>
-                                <select class="uk-select" id="academicAreaSelect" name="academicAreaSelect">
+                            <label class="uk-form-label uk-text-left uk-margin" for="kindOfCompany">
+                                Kind of Company
+                            </label>
+                                <select class="uk-select" id="kindOfCompany" name="kindOfCompany" required="">
                                     <option value="" selected="" disabled="">
                                         Company
                                     </option>
@@ -438,21 +445,21 @@
                                     <option value="Medium">
                                         Medium
                                     </option>
-                                    <option value="Large">
-                                        large
+                                    <option value="Big">
+                                        Big
                                     </option>
                                 </select>
                         </div>
                         <div class="uk-width-1-1@s uk-margin-top">
-                            <input class="uk-input uk-form-width-large uk-button 
+                            <input class="uk-input uk-form-width-small uk-button 
                                     uk-button-primary " 
                                     type="submit" value="Signup">
                         </div>
                         <div class="uk-width-1-1@s uk-margin-top">
                             <label>
                                 <input class="uk-checkbox" type="checkbox" 
-                                       name="termsCoditionCompany"
-                                       id="checkTermsCompany"  value="true" >
+                                       name="termsCoditionCompany" id="checkTermsCompany"  
+                                       value="true" required="">
                                 <a href="termsconditions-myprojectuniversity.html">
                                     I accept terms and conditions
                                 </a>
