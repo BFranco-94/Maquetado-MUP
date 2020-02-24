@@ -300,4 +300,38 @@ function mostrar(archivo) {
 	    alert("La clave es " + clave+ " y el valor es " + json[clave]);
 	  }
 	}
+
+
+
+
+
+
+
+
+
+
+
+	$.post('ServletRegisterUsers', {
+					userName : userNStudent,
+					email: myEmail,
+					password: password,
+					checkTterms: isCheckedTerms
+				}, function(response) {
+					let datos=JSON.parse(response);
+					if(datos.dataRegisterSuccess.status==true){
+						alert("\n "+
+							  "\t Hola : "+datos.dataRegisterSuccess.NameUser+
+							  "\n \t"+datos.dataRegisterSuccess.Message);
+
+						console.log(
+								"datos JSON \n "+
+								  "Hola : "+datos.dataRegisterSuccess.NameUser+
+								  "\n : "+datos.dataRegisterSuccess.Message
+						);
+					}else{
+						alert("\n\t "+datos.dataRegisterSuccess.Message);
+						console.log("fallo -> "+datos.dataRegisterSuccess.status);
+					}
+				}); 
+				return false; 
 */

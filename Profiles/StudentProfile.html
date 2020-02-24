@@ -233,14 +233,26 @@
 
         <div class="uk-grid-small uk-child-width-expand@s uk-text-center" uk-grid>
             <div class="uk-card uk-card-default uk-card-body">
-                <img src="../assets/image/UserProfile.jpg" width="250" height="250"> 
+                <img id="userProfile" src="../assets/image/UserProfile.jpg" width="250" height="250"> 
             </div>
             
             <div class="uk-card uk-card-default uk-card-body">
-                <p class="uk-text-left"><span class="uk-text-bolder">Name: </span>John Doe</p>
-                <p class="uk-text-left"><span class="uk-text-bolder">Carreer: </span> Lorem ipsum </p>
-                <p class="uk-text-left"><span class="uk-text-bolder"> College </span>dolor sit</p>
-                <p class="uk-text-left"><span class="uk-text-bolder">Location: </span>dolor sit</p>
+                <p class="uk-text-left">
+                    <span class="uk-text-bolder">Name: </span>
+                    <span id="name">John Doe</span>
+                </p>
+                <p class="uk-text-left">
+                    <span class="uk-text-bolder">Carreer: </span>
+                    <span id="carreer"></span>
+                </p>
+                <p class="uk-text-left">
+                    <span class="uk-text-bolder">College: </span>
+                    <span id="college"></span>
+                </p>
+                <p class="uk-text-left">
+                    <span class="uk-text-bolder">Location: </span>
+                    <span id="location"></span>
+                </p>
             </div>
         </div>
 
@@ -437,6 +449,8 @@
     <script src="../assets/js/uikit.min.js"></script>
     <script src="../assets/js/uikit-icons.min.js"></script>
     <script src="../assets/js/jquery-3.2.1.min.js"></script>
+    <script src="../assets/js/scripts/script-studentProfile.js"></script>
+
 
  
 </body>

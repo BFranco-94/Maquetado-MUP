@@ -216,7 +216,7 @@
                     <div class="uk-width-expand@m">
                         <div class="uk-card uk-card-body box-to-select-option" id="Profile">
                             <span uk-icon="icon: user; ratio: 2.0;"></span>
-                            Student User Profile
+                            Company User Profile
                         </div>
                     </div>
                     <div class="uk-width-expand@m">
@@ -225,12 +225,12 @@
                             Contact
                         </div>
                     </div>
-                    <div class="uk-width-expand@m">
+                    <!--<div class="uk-width-expand@m">
                         <div class="uk-card uk-card-body box-to-select-option" id="TMates">
                             <span uk-icon="icon: users; ratio: 2.0;"></span>
                             TeamMates
                         </div>
-                    </div>
+                    </div>-->
                     <div class="uk-width-expand@m">
                         <div class="uk-card uk-card-body box-to-select-option" id="SMedia">
                             <span uk-icon="icon: world; ratio: 2.0;"></span>
@@ -265,7 +265,7 @@
                         
                         <ul uk-tab>
                             <li><a href="#">User Access</a></li>
-                            <li><a href="#">User Data</a></li>
+                            <li><a href="#">Contact Data</a></li>
                             <li><a href="#">Password</a></li>
                             <li><a href="#">Generate Access Code</a></li>
                         </ul>
@@ -277,12 +277,12 @@
                 <label class="uk-form-label uk-text-left uk-margin" for="usrName">User Name</label>
                 <input class="uk-input inputsToProfileAcces" id="usrName" 
                        name="usrName" type="text" disabled=""  
-                       placeholder="User Name" >
+                       placeholder="Company Name" >
             </div>
             <div class="uk-width-1-2@s">
                 <div class="uk-width-auto">
                     <img class="uk-border-squad" width="170" height="40" 
-                         src="../assets/image/information.png"
+                         src="../assets/image/company_icon.png"
                          id="imageForProfile">
                 </div>
             </div>
@@ -324,7 +324,7 @@
                 </label>
                 <input class="uk-input" id="names" 
                        name="names" type="text"  
-                       placeholder="Enter your name" >
+                       placeholder="Enter your contact name" >
             </div>
             <div class="uk-width-1-2@s">
                 <label class="uk-form-label uk-text-left uk-margin" for="lastName">
@@ -332,9 +332,9 @@
                 </label>
                 <input class="uk-input " id="lastName" 
                        name="lastName" type="text"  
-                       placeholder="Enter your last Name">
+                       placeholder="Enter your contact last Name">
             </div>
-            <div class="uk-width-1-2@s">
+            <!--<div class="uk-width-1-2@s">
                 <label class="uk-form-label uk-text-left uk-margin uk-text-dangerous" 
                        for="nameOfUniversity">
                     University Name
@@ -342,15 +342,15 @@
                 <input class="uk-input " id="nameOfUniversity" 
                        name="nameOfUniversity" type="text" 
                        placeholder="Introduce your university's name">
-            </div>
+            </div>-->
             <div class="uk-width-1-2@s">
                 <label class="uk-form-label uk-text-left uk-margin uk-text-dangerous" 
                        for="federalEntity">
-                    State of residence
+                    State
                 </label>
                 <input class="uk-input " id="federalEntity" 
                        name="federalEntity" type="text"  
-                       placeholder="Introduce your State of residence">
+                       placeholder="Introduce the state where your company is located">
             </div>
             <!--<div class="uk-width-1-2@s">
                 <label class="uk-form-label uk-text-left uk-margin uk-text-dangerous" 
@@ -362,9 +362,9 @@
                        placeholder="Introduce your federal entity">
             </div>-->
             <div class="uk-width-1-2@s">
-                <label class="uk-form-label uk-text-left uk-margin" for="academicAreaSelect">Carreer Field</label>
+                <label class="uk-form-label uk-text-left uk-margin" for="academicAreaSelect">Line of Bussiness</label>
                     <select class="uk-select" id="academicAreaSelect" name="academicAreaSelect">
-                        <option value="" selected="" disabled="">Select Your Carreer Field</option>
+                        <option value="" selected="" disabled="">Select Your Line of Bussiness</option>
                         <option value="Computers and Technology">
                                         Computers and Technolgoy
                                     </option>
@@ -559,7 +559,7 @@
     </div>
 </div>
 
-
+<!--
 <div class="uk-container" id="box-TMates" >
     <h1 class="uk-text-center">TeamMates</h1>
         <table class="uk-table uk-table-justify uk-table-divider">
@@ -657,7 +657,7 @@
                     </tbody>
                 </table>
 
-</div>
+</div>-->
 
 
 <div class="uk-container" id="box-SMedia">
@@ -765,7 +765,7 @@
 
 
 <div class="uk-container" id="box-Projects">
-    <h1 class="uk-text-center uk-margin">My Projects</h1>
+    <h1 class="uk-text-center uk-margin">Favorite Projects</h1>
     <!-- 
         if(usuarioNoTieneProyecto){}
      -->

@@ -61,19 +61,15 @@ window.addEventListener('load', function() {
                     \
                         <div class="uk-inline uk-margin">\
                             <span class="uk-form-icon" uk-icon="icon: user"></span>\
-                            <input class="uk-input uk-form-width-large uk-text-center" name="nameMember_'+i+'" type="text" placeholder="Name of member(s)">\
+                            <input class="uk-input uk-form-width-large uk-text-center" name="nameMember_'+i+'" type="text" placeholder="Team member name">\
                         </div>\
                         <div class="uk-inline uk-margin">\
                             <span class="uk-form-icon" uk-icon="icon: user"></span>\
-                            <input class="uk-input uk-form-width-large uk-text-center" name="lastNameMember_'+i+'" type="text" placeholder="LastNames of member">\
+                            <input class="uk-input uk-form-width-large uk-text-center" name="lastNameMember_'+i+'" type="text" placeholder="team member last name">\
                         </div>\
                         <div class="uk-inline uk-margin">\
                             <span class="uk-form-icon" uk-icon="icon: mail"></span>\
                             <input class="uk-input uk-form-width-large uk-text-center" name="emailMember_'+i+'" type="email" placeholder="Email">\
-                        </div>\
-                        <div class="uk-inline uk-margin">\
-                            <span class="uk-form-icon" uk-icon="icon: calendar"></span>\
-                            <input class="uk-input uk-form-width-large uk-text-center" name="ageMember_'+i+'" type="text" placeholder="Age">\
                         </div>\
                         <span class="iconClose uk-invisible" id="idMember" >'+i+'</span>\
                     </div>\

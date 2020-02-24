@@ -1,6 +1,9 @@
+var valueOfRdio="";
+var itemSelectedForAcademicArea="";
+var itemSelectedForStatus="";
+var valueRadio="";
+var kOfCompany="";
 window.addEventListener('load', function(){
-
-	//get answer in real time
 	var URLhash = window.location.hash;
 	if (URLhash=="#sign-in") {
 		$("#section-sigup").hide("slow");
@@ -47,7 +50,38 @@ window.addEventListener('load', function(){
 
 	});
 
+	document.querySelector('#academicArea').addEventListener('change', (event) => {
+		itemSelectedAcademicA=event.target;
+		itemSelectedForAcademicArea=itemSelectedAcademicA.value;
+		alert(itemSelectedForAcademicArea);
+	});
+	document.querySelector('#status_student').addEventListener('change',(event) => { 
+		itemSelectedStatus=event.target; 
+		itemSelectedForStatus=itemSelectedStatus.value;
+		alert(itemSelectedForStatus); 
+	});
+	document.querySelector('#kindOfCompany').addEventListener('change', (event) =>{
+		kOfCompany=event.target.value;
+		alert(kOfCompany);
+	});
 
+
+	document.querySelectorAll('input[type=radio]').forEach(item => item.addEventListener('click', e => {
+		if (e.target.value=="Student" && e.target.checked==true){
+			valueOfRdio=e.target.value;
+			$("#divTmp").hide("slow");
+			$("#formCompany").hide("slow");
+			$("#formStudent").show("slow");
+		}else if(e.target.value=="Company" && e.target.checked==true){
+			valueOfRdio=e.target.value;
+			$("#divTmp").hide("slow");
+			$("#formStudent").hide("slow");
+			$("#formCompany").show("slow");
+		}
+	}));
+
+
+	
 	$("#AsStudentLink").click(function(){ cleanFieldsAsCompany(); });
 	$("#AsCompanyLink").click(function(){ cleanFieldsAsStudent(); });
 
@@ -55,41 +89,57 @@ window.addEventListener('load', function(){
 		e.preventDefault();
 		let userNStudent = document.getElementById('userNameStudent').value;
 		let myEmail=document.getElementById('emailStudent').value;
-		let isCheckedTerms=document.getElementById('checkTerms').checked;
 		let password= document.getElementById('password').value;
 		let passwordConfirm= document.getElementById('conPassword').value;
 		let resMail=valEmail(myEmail); //return value boolean
 		let resPass = ValPass(password,passwordConfirm); //return value boolean
 		let fUser=(userNStudent==="")? false : true;
-		//validation form
-		if(isCheckedTerms && resMail && fUser){
+		if(resMail && fUser){
 			if(resPass){
-				$.post('ServletRegisterUsers', {
-					userName : userNStudent,
-					email: myEmail,
-					password: password,
-					checkTterms: isCheckedTerms
-				}, function(response) {
-					let datos=JSON.parse(response);
-					if(datos.dataRegisterSuccess.status==true){
-						alert("\n "+
-							  "\t Hola : "+datos.dataRegisterSuccess.NameUser+
-							  "\n \t"+datos.dataRegisterSuccess.Message);
-
-						console.log(
-								"datos JSON \n "+
-								  "Hola : "+datos.dataRegisterSuccess.NameUser+
-								  "\n : "+datos.dataRegisterSuccess.Message
+				UIkit.modal("#mdal-dataComplete").show();
+				
+				$('#formDataStudent').submit(function(e){
+					e.preventDefault();
+					let isCheckedTerms=document.getElementById('checkTerms').checked;
+					if(isCheckedTerms){
+						let nameStudent=document.getElementById("nameStudent").value;
+						let lastNameStudent=document.getElementById("lastNameStudent").value;
+						let universityName=document.getElementById("universityName").value;
+						let federalEntity=document.getElementById("federalEntity").value;
+						let country=document.getElementById("country").value;
+						insertActionToRegisterStudent(
+							userNStudent, //value -> user name
+							myEmail, //value -> email for login
+							password, //value -> password for login
+							nameStudent, //value -> complete name of student
+							lastNameStudent, //value -> last name of student
+							universityName, //value -> name of the university
+							federalEntity, //value -> state or entity
+							country, //value -> country of the student
+							itemSelectedForStatus, //value -> status ( graduate | active | truncated )
+							itemSelectedForAcademicArea, //value -> area that the student are studying
+							valueOfRdio //value -> kind of user ( as student or as company )
 						);
+						console.log(valueOfRdio);
 					}else{
-						alert("\n\t "+datos.dataRegisterSuccess.Message);
-						console.log("fallo -> "+datos.dataRegisterSuccess.status);
+						validateDates(userNStudent, myEmail, isCheckedTerms, resMail);
 					}
-				}); 
-				return false; 
+				});
+				$('#formDataCompany').submit(function(e){
+					e.preventDefault();
+					let checkTermsCompany=document.getElementById('checkTermsCompany').checked;
+					if(checkTermsCompany){
+						let nameEmploye=document.querySelector('#').value;
+						console.log(valueOfRdio);
+					}else{
+						validateDates(userNStudent, myEmail, checkTermsCompany, resMail);
+					}
+				});
+
+			
 			}
 		}else{
-			//put information about errors on the form
+			//put information about mistakes on the form
 			validateDates(userNStudent, myEmail, isCheckedTerms, resMail);
 		}
 	});
@@ -97,6 +147,11 @@ window.addEventListener('load', function(){
 
 
 });
+
+
+
+
+
 
 
 
@@ -202,10 +257,6 @@ function cleanFieldsAsStudent(){
 		$("#confPassCompany").css("color","gray");
 	}
 
-
-
-
-
 function removeImage(){
 	$("#cont-image-left").hide("slow");
 	// $(".form-body").css("width","250px");
@@ -215,6 +266,111 @@ function removeImage(){
 	$("#imageSign").css("display","block");
 }
 
+/*
+*@param value -> user name
+*@param value -> email for login
+*@param value -> password for login
+*@param value -> complete name of student
+*@param value -> last name of student
+*@param value -> name of the university
+*@param value -> state or entity
+*@param value -> country of the student
+*@param value -> status ( graduate | active | truncated )
+*@param value -> area that the student are studying
+*/
+function insertActionToRegisterStudent( 
+	userNameAccount ,email,password,nameStudent,
+	lastNameStudent, universityName, federalEntity, 
+	country, itemSelectedForStatus, itemSelectedForAcademicArea,itemSelectKindOfUser ){
+	let arrData=[
+		userNameAccount,email,password,nameStudent,lastNameStudent,universityName, 
+		federalEntity, country, itemSelectedForStatus, itemSelectedForAcademicArea 
+	];
+	// $.post('ServletRegisterUsers', {
+	// 	UserName : userNameAccount,
+	// 	Email : email,
+	// 	Password : password,
+	// 	// personal user data 
+	// 	Names : name,
+	// 	LastName : lastNameStudent, 
+	// 	UniversityName : universityName,
+	// 	FederalEntity : federalEntity,
+	// 	Country : country,
+	// 	ItemSelectedForStatus : itemSelectedForStatus,
+	// 	ItemSelectedForAcademicArea : itemSelectedForAcademicArea,
+	// 	ItemSelectKindOfUser : itemSelectKindOfUser 
+	// }, function(response) {
+	// 	let datos=JSON.parse(response);
+	// 	if(datos.dataRegisterSuccess.status==true){
+	// 		alert("\n "+
+	// 			  "\t Hola : "+datos.dataRegisterSuccess.NameUser+
+	// 			  "\n \t"+datos.dataRegisterSuccess.Message);
+
+	// 		console.log(
+	// 				"datos JSON \n "+
+	// 				  "Hola : "+datos.dataRegisterSuccess.NameUser+
+	// 				  "\n : "+datos.dataRegisterSuccess.Message
+	// 		);
+	// 	}else{
+	// 		alert("\n\t "+datos.dataRegisterSuccess.Message);
+	// 		console.log("fallo -> "+datos.dataRegisterSuccess.status);
+	// 	}
+	// }); 
+	// return false; 
+
+	console.log(arrData);
+}
+
+function insertActionToRegisterCompany(
+	     userNameAccount, email, password, nameEmploye, lastNameEmploye, nameCompany,
+	     entityFDCompany, emailCompany, federalEntity, turnOfCompany, academicAreaSelect ){
+
+}
+
+/*
+	Hi Dear customer,  I'm Franco, the programer of your MobileAplication, 
+
+	I would be clarify with the requirements, and I have some questions:
+	
+	I want to know how would you like implement the routes from the desktop version 
+	from web site, but on the mobile version? 
+	changing a little the question, I would like to know about  the elements from the 
+	webapp that are not with Technologies HTML,CSS and Javascript, and need to be replaced
+
+	Regards! 
+
+
+	español 
+	
+	traducir
+	traduje
+	traduzco
+
+
+	$.post('ServletRegisterUsers', {
+					name : userNStudent,
+					email: myEmail,
+					password: password,
+					checkTterms: isCheckedTerms
+				}, function(response) {
+					let datos=JSON.parse(response);
+					if(datos.dataRegisterSuccess.status==true){
+						alert("\n "+
+							  "\t Hola : "+datos.dataRegisterSuccess.NameUser+
+							  "\n \t"+datos.dataRegisterSuccess.Message);
+
+						console.log(
+								"datos JSON \n "+
+								  "Hola : "+datos.dataRegisterSuccess.NameUser+
+								  "\n : "+datos.dataRegisterSuccess.Message
+						);
+					}else{
+						alert("\n\t "+datos.dataRegisterSuccess.Message);
+						console.log("fallo -> "+datos.dataRegisterSuccess.status);
+					}
+				}); 
+				return false; 
+*/
 
 /*
 		=======================================================

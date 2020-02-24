@@ -184,34 +184,35 @@
 </div>
 <!--Top bar, icon and menu ends-->
 
+
+
+
 <div class="uk-container uk-container-expand" id="profilePage">
-    <h1 class="uk-heading-bullet" uk-sticky style="background-color: white;">Project Name</h1>
+    <h1 id="projectName" name="projectName" class="uk-heading-bullet" uk-sticky style="background-color: white;">Project Name</h1>
 <h1 class="uk"></h1>
     <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
         <div class="uk-flex-last@s uk-card-media-right uk-cover-container" uk-scrollspy="cls: uk-animation-slide-left; repeat: true">
-            <img src="../assets/image/University_logo.jpg"  uk-cover>
+            <img id="universityLogo" name="universityLogo" src="../assets/image/University_logo.jpg"  uk-cover>
             <canvas width="600" height="400"></canvas>
         </div>
         <div>
             <div class="uk-card-body" uk-scrollspy="cls: uk-animation-slide-right; repeat: true">
                 <h3 class="uk-card-title">Team Members</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                <p id="teamMembers" >Team members</p>
             </div>
         </div>
     </div>
 
     <div class="uk-card uk-card-default uk-card-large uk-card-body" uk-scrollspy="cls: uk-animation-slide-bottom; repeat: true">
         <h3 class="uk-card-title"  style="text-align: center;">Summary</h3>
-        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ullamcorper congue mi quis tempor. Suspendisse feugiat molestie egestas. Curabitur scelerisque augue vitae turpis facilisis, eu sagittis leo elementum. 
-        <p>Aliquam erat volutpat. Nam convallis massa vel ligula mattis, sit amet fringilla est fermentum. Sed lacus nisl, pretium non mollis convallis, vestibulum id purus. Vestibulum eu lectus hendrerit, malesuada lectus et, dictum dui. Vivamus vehicula velit ac eleifend rutrum. Ut faucibus est ac sodales sodales.</p> 
-        <p>  Praesent fermentum tempus tincidunt. Sed pellentesque, purus id ultrices ultrices, quam lectus fringilla mi, id suscipit ligula metus et risus. In facilisis nisl sit amet sem faucibus, ac luctus augue feugiat. Aliquam et tristique sapien. Suspendisse ultrices vehicula euismod. Pellentesque at ultricies orci. Donec congue eget odio id elementum. Fusce auctor fringilla dictum. Donec cursus eu ex quis eleifend. Praesent enim risus, egestas quis tellus nec, laoreet auctor lacus.</p>
-
-         </p>
+       <div id="summary">
+           Summary info
+       </div>
     </div>
 
     <div uk-slider>
 
-        <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-scrollspy="cls: uk-animation-slide-top; repeat: true">
+        <div id="projectPics" class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-scrollspy="cls: uk-animation-slide-top; repeat: true">
     
             <ul class="uk-slider-items uk-child-width-1-2 uk-child-width-1-3@s uk-child-width-1-4@m">
                 <li>
@@ -220,7 +221,7 @@
                             <img src="../assets/image/slider/slider1.png"  style="width: 500px; height: 265px;" alt="">
                             <div class="uk-position-center uk-panel"></div>
                         </a>
-                    </div>
+                    </div>  
                     
                </li>    
                 <li>
@@ -241,6 +242,7 @@
                     </div>
                     
                 </li>
+                
                 <li>
                     <div uk-lightbox>
                         <a class="uk-button uk-button-default" href="../assets/image/slider/slider4.jpg">
@@ -282,12 +284,9 @@
         <div class="uk-width-2-3">
             <div class="uk-card uk-card-default uk-card-body" id="Tech" uk-scrollspy="cls: uk-animation-slide-left; repeat: true"> 
                 <h3 class="uk-card-title"  style="text-align: center;"> Technical Data </h3> 
-                <p> 
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas auctor lorem vel purus efficitur, quis fringilla dolor molestie. Sed faucibus purus id mauris vestibulum, in vestibulum turpis venenatis. Aenean varius massa sit amet nisi fermentum, eu fermentum risus efficitur. Duis non velit quis libero iaculis molestie eu at ex. Quisque dapibus pretium mollis. Ut consequat venenatis ligula commodo congue. Maecenas id vehicula dui, vitae elementum augue. Vestibulum posuere vitae urna at molestie.
-                </p>
-                <p>
-                    In nec ligula scelerisque, vulputate erat eu, dictum quam. Donec vel felis tempus lacus viverra hendrerit. Vivamus mollis arcu vel fermentum condimentum. Aliquam auctor orci urna, sed posuere enim faucibus vel. Donec lacus neque, varius in diam ac, lacinia egestas augue. Nulla sollicitudin, velit eu tempus rhoncus, justo diam dapibus velit, eu blandit turpis lacus non libero. Cras posuere enim in enim scelerisque, nec tincidunt diam semper. Quisque tempus magna neque, pellentesque scelerisque elit cursus nec. Fusce non orci dapibus, volutpat diam ac, finibus elit.
-                </p>
+                <div id="technicalData">
+                    Technical data...
+                </div>
                 
             </div>
 
@@ -295,9 +294,9 @@
 
         <div class="uk-width-1-3@m">
             <div class="uk-card uk-card-default uk-card-body"  uk-scrollspy="cls: uk-animation-slide-right; repeat: true">
-                <h3 class="uk-card-title"  style="text-align: center;"> Required Investment </h3>
-                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas auctor lorem vel purus efficitur, quis fringilla dolor molestie. Sed faucibus purus id mauris vestibulum, in vestibulum turpis venenatis. Aenean varius massa sit amet nisi fermentum, eu fermentum risus efficitur. Duis non velit quis libero iaculis molestie eu at ex. Quisque dapibus pretium mollis. Ut consequat venenatis ligula commodo congue. Maecenas id vehicula dui, vitae elementum augue. Vestibulum posuere vitae urna at molestie.
-                </p> 
+                <h3 class="uk-card-tiitle"  style="text-align: center;"> Required Investment </h3>
+               <div id="investment">Investment</div>
+               <div id="investmentSpecs">investmentSpecs</div>
                 
             </div>
         </div>
@@ -309,12 +308,29 @@
         <!-- This is the modal -->
         <div id="modal-example" uk-modal>
             <div class="uk-modal-dialog uk-modal-body">
+            <form id="contactMsg" name="contactMsg" action="">
                 <h2 class="uk-modal-title">Contact Team Form</h2>
-                <textarea class="uk-textarea" rows="5" placeholder="Enter your message to Team Leader"></textarea>
+                <div class="uk-margin">
+                <label for="msgName"> Name: <input id="msgName" name="msgName" class="uk-input uk-form-width-medium" type="text" placeholder="Your name">
+                </label> 
+                </div>
+
+                <div class="uk-margin">
+                    <label for="msgEmail"> E-mail: <input id="msgEmail" name="msgEmail" class="uk-input uk-form-width-medium" type="text" placeholder="Your E-mail">
+                    </label> 
+                </div>
+
+                <div class="uk-margin">
+                    <label for="msgPhone"> Phone: <input id="msgPhone" name="msgPhone" class="uk-input uk-form-width-medium" type="text" placeholder="Your Phone">
+                    </label> 
+                </div>
+                
+                <textarea id="msgText" name="msgText" class="uk-textarea" rows="5" placeholder="Your message to Team Leader"></textarea>
                 <p class="uk-text-right">
                  <button class="uk-button uk-button-default uk-modal-close" type="button">Cancel</button>
-                <button class="uk-button uk-button-primary" type="button">send</button>
+                <button id="msgSend" class="uk-button uk-button-primary" type="button">send</button>
                 </p>
+            </form>
             </div>
         </div>
 
